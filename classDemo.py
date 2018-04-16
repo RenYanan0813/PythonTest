@@ -71,5 +71,5 @@ if __name__ == '__main__':
 	"""
 	import json
 	d2 = dict(name='Rob', age=330, score=818)
-	j = json.dumps(d2)
-	print(j)
+	j = json.dumps(d2)  #将str转换为json
+	print(j)  
