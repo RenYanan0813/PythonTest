@@ -69,7 +69,23 @@ if __name__ == '__main__':
 	JSON不仅是标准格式，并且比XML更快，
 	而且可以直接在Web页面中读取，非常方便。
 	"""
+	"""
 	import json
 	d2 = dict(name='Rob', age=330, score=818)
 	j = json.dumps(d2)  #将str转换为json
 	print(j)  
+	"""
+
+
+	import re
+
+	r1 = r'[0-9a-zA-Z]{5}@(163|qq)(.com)'
+	r2 = input("输入一个邮箱: ")
+	#r2 = "1e2@163.com"
+	r3 = re.match(r'^[0-9a-zA-Z]{5}@(163|qq|126|gmail)(.com)$', r2)
+
+	
+	print(r3)
+	print(r3.groups())
+	print(r3.group(1))
+		

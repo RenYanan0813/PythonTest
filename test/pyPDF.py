@@ -38,13 +38,9 @@ def get_one_page(url):
 	headers = {
 		'User-Agent':""" Mozilla/5.0 (Windows NT 10.0; WOW64; rv:59.0) Gecko/20100101 Firefox/59.0"""
 	}
-
-
 	try:
-        # 获取网页内容，返回html格式数据
+	    # 获取网页内容，返回html格式数据        
         response = requests.get(url, headers=headers)
-        
-        #response = requests.get(url, headers=headers)　　　　
         # 通过状态码判断是否获取成功
         if response.status_code == 200:
             # 指定编码，否则中文出现乱码
