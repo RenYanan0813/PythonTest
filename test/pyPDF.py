@@ -43,6 +43,7 @@ def get_one_page(url):
 	try:
         # 获取网页内容，返回html格式数据
         response = requests.get(url, headers=headers)
+        
         #response = requests.get(url, headers=headers)　　　　
         # 通过状态码判断是否获取成功
         if response.status_code == 200:
