@@ -77,15 +77,26 @@ if __name__ == '__main__':
 	"""
 
 
+	"""
+		re 练习：
+		1. 邮箱匹配 :  r'^[0-9a-zA-Z]{5}@(163|qq|126|gmail)(.com)$'
+		2. 优化一： r'^\w+@(\w+)(.\w+)$', 不严谨
+			优化二： r'^\w+@(\w+)(.[a-zA-Z]+)$'
+		3. \w 匹配 [0-9a-zA-Z]
+		   \d 匹配 [0-9]
+
+	"""
+
 	import re
 
-	r1 = r'[0-9a-zA-Z]{5}@(163|qq)(.com)'
+	r1 = r'^\w+@(\w+)(.[a-zA-Z]+)$'
 	r2 = input("输入一个邮箱: ")
 	#r2 = "1e2@163.com"
-	r3 = re.match(r'^[0-9a-zA-Z]{5}@(163|qq|126|gmail)(.com)$', r2)
+	r3 = re.match(r1, r2)
 
 	
 	print(r3)
 	print(r3.groups())
+	print(r3.group(0))
 	print(r3.group(1))
 		
