@@ -7,6 +7,7 @@ import urllib3
 import urllib
 from urllib import request
 from random import Random
+import time
 
 
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"}
@@ -23,7 +24,7 @@ with urlopen(req) as fp:
 #pattern = '<a title=".*?" href="(.+?)" target="_blank">(.+?)</a>'
 pattern = '<div class="bizhiin"><a href="(.+?)" target="_blank">(.+?)</a></div>'
 result = findall(pattern, content)
-x = 1119
+x = time()
 for index, item in enumerate(result):
     # url = urllib.request.Request(url=str(item), headers=headers)
     url1 = 'http://www.zhuoku.com/zhuomianbizhi/star-starcn/' + item[0] + '#turn'
