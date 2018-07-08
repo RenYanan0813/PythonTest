@@ -2,8 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="722f3a2a-2ff9-4dd5-9aaa-5db2307a68f8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/fonts/fontawesome/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/fonts/fontawesome/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/fonts/fontawesome/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/fonts/fontawesome/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/images/apple-touch-icon-precomposed-152.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/images/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-fontsettings/buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-fontsettings/website.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-highlight/ebook.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-highlight/website.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-search/lunr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-search/search.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-search/search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/plugins/gitbook-plugin-sharing/buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/gitbook/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/images/mvt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/app.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/applist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/migrate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/server.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/shell.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/templates.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/test1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/workon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part1/images/workon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part2/images/orm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/4_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/4_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/4_3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/images/handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/images/login.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/images/redirect1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part3/images/redirect2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/csrf1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/csrf2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/csrf3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/escape.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/page.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part4/images/verifycode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/images/city.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/images/static.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part5/images/templates.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/images/editor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part6/images/static.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/2_1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/2_2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/images/git0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/images/init0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/part7/images/init1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjangoBook/search_index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/multiprocessingDemo/multiprocessing.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/db.sqlite3" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PythonTest.iml" afterPath="$PROJECT_DIR$/.idea/PythonTest.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py" afterPath="$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoTest/dailyfresh/dailyfresh/settings.py" afterPath="$PROJECT_DIR$/djangoTest/dailyfresh/dailyfresh/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoTest/dailyfresh/df_food/models.py" afterPath="$PROJECT_DIR$/djangoTest/dailyfresh/df_food/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/urls.py" afterPath="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py" afterPath="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/a1.py" afterPath="$PROJECT_DIR$/test/a1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/multiprocessingDemo/poolDemo.py" afterPath="$PROJECT_DIR$/test/multiprocessingDemo/poolDemo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/multiprocessingDemo/processDemo.py" afterPath="$PROJECT_DIR$/test/multiprocessingDemo/processDemo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,119 +124,127 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PythonTest$queueDemo.coverage" NAME="queueDemo Coverage Results" MODIFIED="1528723212141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$sock_client.coverage" NAME="sock_client Coverage Results" MODIFIED="1530350223356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/socketDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$models.coverage" NAME="models Coverage Results" MODIFIED="1530459304184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc" />
+    <SUITE FILE_PATH="coverage/PythonTest$processDemo.coverage" NAME="processDemo Coverage Results" MODIFIED="1528630996095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$initdb.coverage" NAME="initdb Coverage Results" MODIFIED="1530435908249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/blog" />
+    <SUITE FILE_PATH="coverage/PythonTest$querysetdemo.coverage" NAME="querysetdemo Coverage Results" MODIFIED="1530449180392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
     <SUITE FILE_PATH="coverage/PythonTest$digui.coverage" NAME="digui Coverage Results" MODIFIED="1528117319494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonTest$getWeChatPicSpider.coverage" NAME="getWeChatPicSpider Coverage Results" MODIFIED="1529405048313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapyDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$sock_server.coverage" NAME="sock_server Coverage Results" MODIFIED="1530350218070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/socketDemo" />
     <SUITE FILE_PATH="coverage/PythonTest$pyPDF.coverage" NAME="pyPDF Coverage Results" MODIFIED="1527778726551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/PythonTest$ChristmasTree.coverage" NAME="ChristmasTree Coverage Results" MODIFIED="1527777261554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/PythonTest$queueDemo.coverage" NAME="queueDemo Coverage Results" MODIFIED="1528723212141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$socket_http.coverage" NAME="socket_http Coverage Results" MODIFIED="1530352483840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/socketDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$calcbook.coverage" NAME="calcbook Coverage Results" MODIFIED="1530460164001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
     <SUITE FILE_PATH="coverage/PythonTest$getLongStr_re.coverage" NAME="getLongStr_re Coverage Results" MODIFIED="1528641202561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/reDemo" />
     <SUITE FILE_PATH="coverage/PythonTest$poolDemo.coverage" NAME="poolDemo Coverage Results" MODIFIED="1528638911102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
     <SUITE FILE_PATH="coverage/PythonTest$queue.coverage" NAME="queue Coverage Results" MODIFIED="1528723142315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
+    <SUITE FILE_PATH="coverage/PythonTest$initdb__1_.coverage" NAME="initdb (1) Coverage Results" MODIFIED="1530459821913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
     <SUITE FILE_PATH="coverage/PythonTest$pillowDemo.coverage" NAME="pillowDemo Coverage Results" MODIFIED="1528630105709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/PythonTest$processDemo.coverage" NAME="processDemo Coverage Results" MODIFIED="1528630996095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/multiprocessingDemo" />
-    <SUITE FILE_PATH="coverage/PythonTest$a1.coverage" NAME="a1 Coverage Results" MODIFIED="1528814206876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/PythonTest$a1.coverage" NAME="a1 Coverage Results" MODIFIED="1530438311187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/items.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/ZiQiangXueTang/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="470">
+              <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="everyCityinSD1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/spiders/everyCityinSD1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getWeChatPicSpider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-              <folding>
-                <element signature="e#38#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="time.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1184660488/time.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="random.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python36/Lib/random.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python36/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5544">
-              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1184660488/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53244">
-              <caret line="2958" column="8" lean-forward="false" selection-start-line="2958" selection-start-column="8" selection-end-line="2958" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python36/Lib/urllib/request.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getTukuPicSpider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyDemo/getPicSpider/getPicSpider/spiders/getTukuPicSpider.py">
+      <file leaf-file-name="myMiddleware.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/myMiddleware.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapyDemo/getPicSpider/getPicSpider/items.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="216">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initdb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/initdb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-352">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcbook.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calcbook.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extra_tag.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templatetags/extra_tag.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+              <folding>
+                <element signature="e#103#130#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -153,7 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mysite/mysite/settings.py" />
         <option value="$PROJECT_DIR$/mysite/booktest/models.py" />
         <option value="$PROJECT_DIR$/test/ChristmasTree" />
         <option value="$PROJECT_DIR$/test/ChristmasTree.py" />
@@ -169,7 +287,6 @@
         <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/urls.py" />
         <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/admin.py" />
         <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/models.py" />
-        <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py" />
         <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_food/models.py" />
         <option value="$PROJECT_DIR$/test/pillowDemo.py" />
         <option value="$PROJECT_DIR$/test/multiprocessingDemo/processDemo.py" />
@@ -184,9 +301,28 @@
         <option value="$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/settings.py" />
         <option value="$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/spiders/everyCityinSD1.py" />
         <option value="$PROJECT_DIR$/digui.py" />
-        <option value="$PROJECT_DIR$/test/a1.py" />
         <option value="$PROJECT_DIR$/scrapyDemo/getPicSpider/getPicSpider/items.py" />
         <option value="$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py" />
+        <option value="$PROJECT_DIR$/test/socketDemo/sock_server.py" />
+        <option value="$PROJECT_DIR$/test/socketDemo/sock_client.py" />
+        <option value="$PROJECT_DIR$/test/socketDemo/socket_http.py" />
+        <option value="$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/blog/models.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/blog/initdb.py" />
+        <option value="$PROJECT_DIR$/test/a1.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/querysetdemo.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/templatetags/__init__.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/templatetags/extra_tag.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templatetags/extra_tag.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/1.html" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/urls.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/initdb.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/models.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calcbook.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/views.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/home.html" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/myMiddleware.py" />
+        <option value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/ZiQiangXueTang/settings.py" />
       </list>
     </option>
   </component>
@@ -197,10 +333,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="387" />
-    <option name="y" value="38" />
+    <option name="x" value="49" />
+    <option name="y" value="79" />
     <option name="width" value="1186" />
-    <option name="height" value="788" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -236,7 +372,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,19 +380,34 @@
               <item name="PythonTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonTest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PythonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="djangoTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonTest" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="C:/Python36/python3.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitRepository\PythonTest\djangoTest\ZiQiangXueTang\calc" />
+      <recent name="D:\GitRepository\PythonTest\djangoTest\ZiQiangXueTang" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitRepository\PythonTest\image" />
       <recent name="D:\GitRepository\PythonTest\djangoTest\dailyfresh\templates\df_user" />
@@ -275,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.getWeChatPicSpider">
+  <component name="RunManager" selected="Python.calcbook">
     <configuration name="a1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,92 +444,92 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="getLongStr_re" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calcbook" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/reDemo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonTest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/reDemo/getLongStr_re.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calcbook.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="getWeChatPicSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="initdb (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapyDemo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonTest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/initdb.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="queue" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/multiprocessingDemo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonTest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\GitRepository\PythonTest\test\multiprocessingDemo\queueDemo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="queueDemo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="querysetdemo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/multiprocessingDemo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonTest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/multiprocessingDemo/queueDemo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/djangoTest/ZiQiangXueTang/querysetdemo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.getLongStr_re" />
-      <item index="1" class="java.lang.String" itemvalue="Python.queue" />
-      <item index="2" class="java.lang.String" itemvalue="Python.queueDemo" />
-      <item index="3" class="java.lang.String" itemvalue="Python.a1" />
-      <item index="4" class="java.lang.String" itemvalue="Python.getWeChatPicSpider" />
+      <item index="0" class="java.lang.String" itemvalue="Python.initdb (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.a1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.querysetdemo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.calcbook" />
+      <item index="4" class="java.lang.String" itemvalue="Python.models" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.getWeChatPicSpider" />
-        <item index="1" class="java.lang.String" itemvalue="Python.a1" />
-        <item index="2" class="java.lang.String" itemvalue="Python.queueDemo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.queue" />
-        <item index="4" class="java.lang.String" itemvalue="Python.getLongStr_re" />
+        <item index="0" class="java.lang.String" itemvalue="Python.calcbook" />
+        <item index="1" class="java.lang.String" itemvalue="Python.initdb (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.models" />
+        <item index="3" class="java.lang.String" itemvalue="Python.querysetdemo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.a1" />
       </list>
     </recent_temporary>
   </component>
@@ -399,20 +549,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="387" y="38" width="1186" height="788" extended-state="0" />
+    <frame x="49" y="79" width="1186" height="775" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35555556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22557727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4549483" sideWeight="0.2794872" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4549483" sideWeight="0.7205128" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6459016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18876755" sideWeight="0.7205128" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6568779" sideWeight="0.82905984" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40655738" sideWeight="0.82905984" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -452,197 +611,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/a1.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1184660488/_sha1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/hashlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_food/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/site-packages/django/db/models/fields/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="360" column="8" lean-forward="false" selection-start-line="360" selection-start-column="8" selection-end-line="360" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1184660488/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="552" column="0" lean-forward="false" selection-start-line="552" selection-start-column="0" selection-end-line="552" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/zq123.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/pillowDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/multiprocessing/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/multiprocessing/queues.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="343" column="0" lean-forward="false" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/multiprocessing/pool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="820" column="32" lean-forward="false" selection-start-line="820" selection-start-column="32" selection-end-line="820" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/reDemo/getLongStr_re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/multiprocessingDemo/poolDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/multiprocessingDemo/multiprocessing.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/multiprocessing/reduction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/multiprocessingDemo/processDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/multiprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="84" column="6" lean-forward="false" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/multiprocessingDemo/queueDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyDemo/scrapy.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/spiders/everyCitySD.py" />
-    <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/myFirstSpider/spiders/everyCityinSD.py" />
     <entry file="file://$PROJECT_DIR$/scrapyDemo/myFirstSpider/weather.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -686,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/a1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -718,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,9 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,7 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5544">
           <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53244">
           <caret line="2958" column="8" lean-forward="false" selection-start-line="2958" selection-start-column="8" selection-end-line="2958" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1926">
           <caret line="132" column="16" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,25 +758,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding>
-            <element signature="e#38#72#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1184660488/time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,6 +772,250 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyDemo/getWeChatPicSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/socketDemo/sock_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/socketDemo/socket_http.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#86#119#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/pyMysqlDemo/toMysqlFirst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1530115910884" expanded="true" signature="4095:4143" ph="SELECT * FRO... student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/dailyfresh/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="126" column="23" lean-forward="false" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/socketDemo/sock_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/django/db/models/fields/related.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="783" column="27" lean-forward="false" selection-start-line="783" selection-start-column="27" selection-end-line="783" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/booktest/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/ZiQiangXueTang/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/ZiQiangXueTang/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/a1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="63" lean-forward="true" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/querysetdemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="69" column="47" lean-forward="false" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+          <folding>
+            <element signature="e#86#119#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/django/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/learn/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/learn/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/dailyfresh/df_user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/initdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/templatetags/extra_tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="e#103#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calc/myMiddleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/ZiQiangXueTang/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoTest/ZiQiangXueTang/calcbook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>

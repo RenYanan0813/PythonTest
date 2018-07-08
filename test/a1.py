@@ -4,6 +4,7 @@ def a(a, b):
     return  a + b
 
 c = a
-print(type(a))
-print(type(c))
-print(c(2,3))
+import random
+# print(str(random.choice(range(10))) for _ in range(9))
+
+print(''.join(str(random.choice(range(10))) for a in range(4)))

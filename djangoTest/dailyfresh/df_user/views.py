@@ -5,12 +5,17 @@ from django.shortcuts import render, redirect
 import  hashlib
 #改pycharm的原因，同级目录的模块不能直接导入，需加包名，服务器不会报错
 #也可在df_user包点击右键--> make directory as设为资源根包,但服务器仍然不会认识，但操作字段会方便很多
-from df_user.models import *
-from  models import *
+
+from .models import UserInfo
+import pymysql
+# from  models import *
 import json
 
 
 # Create your views here.
+
+def get_useinfo(request):
+    usermess = UserInfo.objects.all()
 
 def register(request):
     return render(request, 'df_user/register.html')
@@ -44,5 +49,34 @@ def register_exist(request):
     count = UserInfo.objects.filter(uname = uname).count()
     return JsonResponse({'count': count})
 
+
+
+from django.conf import settings
+from django.http import HttpResponse
+def imgload(request):
+    return render(request, 'loadimg.html')
+
+def upload(request):
+    if request.method == "POST":
+        f1 = request.FILES['pic']
+        fname = '%s/%s' % (settings.MEDIA_ROOT,f1.name)
+        with open(fname, 'wb') as pic: #'w'时，读取的数据结构为str，'wb'时为byte
+            for c in f1.chunks():
+                pic.write(c)
+        return HttpResponse("ok")
+    else:
+        return HttpResponse("error")
+
+
+def upload1(request):
+    if request.method == 'POST':
+        f1 = request.FILES['pic3']
+        fname = '%s/%s' % (settings.MEDIA_ROOT, f1.name)
+        with open(fname, 'wb') as fp:
+            for b in f1.chunks():
+                fp.write(b)
+        return HttpResponse("success!")
+    else:
+        return HttpResponse("fail....")
 
 

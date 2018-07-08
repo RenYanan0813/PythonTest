@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}   {% endblock %} -xqxt</title>
+</head>
+<body>
+{#{% include 'nav.html' %}#}
+
+{% block content %}
+    <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+{% endblock %}
+
+{#{% include 'button.html' %}#}
+{#{% include 'tongji.html' %}#}
+        <div class="footer no-mp">
+            <div class="foot_link">
+                <a href="#">关于我们</a>
+                <span>|</span>
+                <a href="#">联系我们</a>
+                <span>|</span>
+                <a href="#">招聘人才</a>
+                <span>|</span>
+                <a href="#">友情链接</a>
+            </div>
+            <p>CopyRight © 2016 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
+            <p>电话：010-****888    京ICP备*******8号</p>
+        </div>
+</body>
+</html>

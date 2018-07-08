@@ -1,0 +1,20 @@
+2018-06-29 23:40:38,314 - main.core - ERROR - Core Error
+2018-06-29 23:42:05,574 - main.core - ERROR - Core Error
+2018-06-29 23:42:05,574 - main.core - ERROR - Core1 Error
+2018-06-29 23:49:50,961 - main.core - ERROR - Core Error
+2018-06-29 23:49:50,962 - main.core - ERROR - Core1 Error
+Traceback (most recent call last):
+  File "D:\GitRepository\PythonTest\test\loggingDemo\core1.py", line 14, in run
+    result = 5 / 0
+ZeroDivisionError: division by zero
+2018-06-29 23:51:03,559 - main.core - ERROR - Core Error
+2018-06-29 23:51:03,559 - main.core - ERROR - Core1 Error
+Traceback (most recent call last):
+  File "D:\GitRepository\PythonTest\test\loggingDemo\core1.py", line 14, in run
+    result = 5 / 0
+ZeroDivisionError: division by zero
+2018-06-29 23:51:03,560 - main.core - ERROR - error
+Traceback (most recent call last):
+  File "D:\GitRepository\PythonTest\test\loggingDemo\core1.py", line 14, in run
+    result = 5 / 0
+ZeroDivisionError: division by zero

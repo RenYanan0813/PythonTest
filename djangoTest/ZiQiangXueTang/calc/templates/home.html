@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ziqiangxuetang</title>
+</head>
+<body>
+<!-- 版本不同-->
+{#    <a href="{% url 'add2' 4 5 %}"> 计算 4 + 5</a>#}
+    <a href="{% url 'add3' 422 543 %}"> 计算 4 + 5</a>
+<br>
+{% load extra_tag %}
+{{v}}
+<p>'' " v | cut: "o" "</p>
+{% current_time "%Y-%m-%d %H:%M:%S" %}
+</body>
+</html>

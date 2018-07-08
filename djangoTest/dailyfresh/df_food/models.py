@@ -1,5 +1,5 @@
 from django.db import models
-from tinymce.models import H
+from tinymce.models import HTMLfield
 
 # Create your models here.
 

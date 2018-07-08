@@ -1,0 +1,8 @@
+2018/06/29 21:24:11 - __main__ - INFO - 71 - baseConfigDemo - This is a log info
+2018/06/29 21:24:11 - __main__ - DEBUG - 72 - baseConfigDemo - Debugging
+2018/06/29 21:24:11 - __main__ - WARNING - 73 - baseConfigDemo - Warning exists
+2018/06/29 21:24:11 - __main__ - INFO - 74 - baseConfigDemo - Finish
+2018/06/29 21:25:06 - __main__ - INFO - 71 - baseConfigDemo - This is a log info
+2018/06/29 21:25:06 - __main__ - DEBUG - 72 - baseConfigDemo - Debugging
+2018/06/29 21:25:06 - __main__ - WARNING - 73 - baseConfigDemo - Warning exists
+2018/06/29 21:25:06 - __main__ - INFO - 74 - baseConfigDemo - Finish
