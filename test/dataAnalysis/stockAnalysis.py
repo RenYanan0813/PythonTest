@@ -22,9 +22,22 @@ import seaborn as sns
 
 from datetime import datetime
 
+#修复连接yahoo的错误
 yf.pdr_override()
-start = datetime(2018,7,2)
 #阿里巴巴股票的数据获取
 alibaba = pdr.get_data_yahoo('BABA', start="2017-07-01", end="2018-07-08")
+#写入csv文件里
+alibaba.to_csv('./BABA.csv')
+alibabaData= pd.read_csv('./BABA.csv')
+# alibaba.head()
 
-print(alibaba)
+first_twelve = alibabaData[0:20]
+
+
+# alibabaData['Adj Close'].plot(legend=True)
+plt.plot(first_twelve['Date'], first_twelve['Adj Close'])
+# 将x轴下面文字旋转90度
+plt.xticks(rotation=90)
+# 设置x轴的标签
+plt.xlabel('Month')
+plt.show()
