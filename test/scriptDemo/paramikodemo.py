@@ -8,10 +8,9 @@ import paramiko
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect('180.2.35.186', username='zhiban', password='zhiban')
-stdin, stdout, stderr = client.exec_command('ls')
-
-for line in stdout:
-    print('...' + line.strip('\n'))
+transport = client.connect('180.2.34.203', username='cln', password='cln')
+ssh = paramiko.SSHClient.f(client)
+# ssh = paramiko.SFTPClient.ge
+ssh.get('/home/cln/ryn/pexpectdemo.py','e:/sshclient/')
 
 client.close()
