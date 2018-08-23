@@ -883,7 +883,314 @@ def stop_fisk(hostinfo):
         ssh.close()
 
 
+#停灾备交易keepsvr
+def stop_zaibei_tra_keep(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+    print('停灾备交易keepsvr成功')
 
+
+#停灾备交易bussvr
+def stop_zaibei_tra_bus(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+    print('停灾备交易bussvr成功')
+
+
+#停灾备交易其他
+def stop_zaibei_tra_other(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+    print('停灾备交易其他成功')
+
+
+# 启灾备交易keepsvr
+def run_zaibei_tra_keep(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            # 检查流文件
+            stdin, stdout, stderr = ssh.exec_command(host['check_flow_path'])
+            result = stdout.read()
+            # 如果流文件为空，则执行后续操作
+            if 0 == int(result):
+                stdin_1, stdout_1, stderr_1 = ssh.exec_command(host['script_run'])
+                time.sleep(3)
+                stdin_2, stdout_2, stderr_2 = ssh.exec_command(ps)
+                result_2 = stdout_2.read()
+                if str(host['check']) in result_2:
+                    print(host['hostname'] + '启灾备交易keepsvr成功....')
+                else:
+                    print(host['hostname'], '启灾备交易keepsvr失败，请手动检查')
+                    exit(1)
+            else:
+                print(host['hostname'], '启灾备交易keepsvr失败，请检查流文件是否移走....')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启灾备交易keepsvr失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+    print('启灾备交易keepsvr成功')
+
+
+# 启灾备交易bussvr
+def run_zaibei_tra_bus(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+            time.sleep(3)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'] + '启灾备交易bussvr成功....')
+            else:
+                print(host['hostname'], '启灾备交易bussvr失败，请手动检查')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启灾备交易bussvr失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+    print('启灾备交易bussvr成功')
+
+
+# 启灾备交易其他服务
+def run_zaibei_tra_other(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    traser_len = len(hostinfo)
+    print('servernum %d'%traser_len)
+    # print(hostinfo)
+    time.sleep(5)
+    for host in hostinfo:
+        print('ready to start server: %s on %s '%(host['script_run'],host['hostname']))
+        # try:
+        ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+        stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+        time.sleep(8)
+        stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+        result = stdout_1.read()
+        time.sleep(1)
+        if str(host['check']) in result:
+            print(host['hostname'] + host['sername'] + ' success !')
+            time.sleep(5)
+        else:
+            print(host['hostname'] + ' 启灾备交易其他 '  + host['sername'] + '服务失败，请手动检查')
+            exit(1)
+        # except Exception as e:
+        #     print(host['hostname'], '启交易', host['sername'], '失败，服务器可能连接失败')
+        #     print(e)
+        # finally:
+        #     ssh.close()
+    print('启灾备交易其他服务成功 ！')
+
+
+#停灾备登记ctrlsvr
+def stop_zaibei_reg_ctrlsvr(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+    print('停灾备登记ctrlsvr成功')
+
+
+#停灾备登记acctsvr
+def stop_zaibei_reg_acctsvr(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+    print('停灾备登记acctsvr成功')
+
+
+# 停灾备登记其他服务
+def stop_zaibei_reg_other(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(2)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停登记其他服务', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停登记其他服务', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停登记其他服务', host['sername'], '失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+
+# 启灾备登记ctrlsvr
+def run_zaibei_reg_ctrlsvr(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            # 检查流文件
+            stdin1, stdout1, stderr1 = ssh.exec_command(host['check_flow_path'])
+            result = stdout1.read()
+            # 如果流文件为空，则执行后续操作
+            if 0 == int(result):
+                stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+                # 暂停3s，防止服务没启动
+                time.sleep(3)
+                stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+                result = stdout_1.read()
+                if str(host['check']) in result:
+                    print(host['hostname'] + '*************** 启灾备登记ctrlsvr成功 ! *****************')
+                else:
+                    print(host['hostname'], '启灾备登记ctrlsvr失败，请手动检查')
+                    exit(1)
+        except Exception as e:
+            print(host['hostname'], '启灾备登记ctrlsvr失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+
+
+# 启灾备登记acctsvr
+def run_zaibei_reg_acctsvr(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+            time.sleep(3)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'] + '***************** 启灾备登记acctsvr成功 ! ****************')
+            else:
+                print(host['hostname'], '启灾备登记失败，请手动检查')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启灾备登记acctsvr失败，服务器可能连接失败，请手动检查')
+            print(e)
+        finally:
+            ssh.close()
+
+
+# 启灾备登记其他服务
+def run_zaibei_reg_other(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    # 遍历启登记其他服务
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            print(host['script_run'])
+            # time.sleep(10)
+            stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+            time.sleep(5)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'] + '启灾备登记' + host['sername'] + '服务成功....')
+            else:
+                print(host['hostname'] + '启灾备登记' + host['sername'] + '服务失败，请手动检查')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启灾备登记', host['sername'], '服务失败，服务器可能连接失败，请手动检查')
+            print(e)
+        # finally:
+        #     ssh.close()
 
 # 根据提供的服务名列表获取到服务器信息
 def get_need_hostinfo(data_list, search_list):
@@ -906,6 +1213,11 @@ def self_choice():
         print('16)启动交易keepsvr                 17)启动交易bussvr             18)启动交易其他服务')
         print('19)重启黄马甲审计日志              20)启动仓储                   21)启动ETF系统')
         print('22)启动风控系统                    23)启动数据同步               24)启动监控服务')
+        print('25)停灾备交易keepsvr               26)停灾备交易bussvr           27)停灾备交易其他服务')
+        print('28)启动灾备交易keepsvr                29)启动灾备交易bussvr           30)启动灾备交易其他服务')
+        print('31)停灾备登记ctrlsvr               32)停灾备登记acctsvr           33)停灾备登记其他服务')
+        print('34)启动灾备登记ctrlsvr             35)启动灾备登记acctsvr         36)启动灾备登记其他服务')
+        print('37)启动灾备交易同步服务syncsvr          38)启动灾备登记同步服务syncsvr         ')
         print('99)回到上一级操作选项\n\n')
 
         choice = raw_input('请输入操作选项：')
@@ -1036,7 +1348,7 @@ def self_choice():
             hostinfo = get_need_hostinfo(data_list, ['bridgesvr_reg-A', 'acsvr_etf-A', 'acsvr_int-A', 'acsvr_qury-A',
                                                      'acsvr_shau-A', 'acsvr_trad-A', 'acsvr_web', 'acsvr_acct',
                                                      'acsvr_wh','acsvr_bank', 'bridgesvr_reg-B', 'acsvr_etf-B', 'acsvr_int-B',
-                                                     'acsvr_qury-B', 'acsvr_shau-B', 'acsvr_trad-B', 'acsvr_wm', 'acsvr_inta'
+                                                     'acsvr_qury-B', 'acsvr_shau-B', 'acsvr_trad-B', 'acsvr_wm'
                                                      ])
             run_reg_other(hostinfo)
             continue
@@ -1109,6 +1421,126 @@ def self_choice():
             run_monitor(hostinfo)
             print('启动所有监控服务完成！！')
             continue
+        elif choice == '25':
+            choice_again = raw_input('回车进行 停止灾备交易keepsvr服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list,['zaibei_keepsvr-A', 'zaibei_keepsvr-B'])
+            # hostinfo = get_need_hostinfo(data_list,['reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228'])
+
+            print('开始 停止灾备交易keepsvr服务！')
+            stop_zaibei_tra_keep(hostinfo)
+            print('停止灾备交易keepsvr服务完成！')
+            continue
+        elif choice == '26':
+            choice_again = raw_input('回车进行 停止灾备交易bussvr服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list,['zaibei_bussvr-A', 'zaibei_bussvr-B'])
+
+            print('开始 停止灾备交易bussvr服务！')
+            stop_zaibei_tra_bus(hostinfo)
+            print('停止灾备交易bussvr服务完成！')
+            continue
+        elif choice == '27':
+            choice_again = raw_input('回车进行 停止灾备交易其他服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list,['zaibei_matchsvr-A', 'zaibei_bridgesvr_tra-A', 'zaibei_intacsvr',
+                                                    'zaibei_quotaacsvr', 'zaibei_qsvrA', 'zaibei_acsvrA', 'zaibei_qrysvr-A',
+                                                    'zaibei_matchsvr-B', 'zaibei_bridgesvr_tra-B', 'zaibei_qrysvr-B',
+                                                    'zaibei_acsvrB', 'zaibei_qsvrB'
+                                                    ])
+            print('开始 停止灾备交易其他服务！')
+            stop_zaibei_tra_other(hostinfo)
+            print('停止灾备交易其他服务完成！')
+            continue
+        elif choice == '28':
+            choice_again = raw_input('回车进行 启动灾备交易keepsvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_keepsvr-A', 'zaibei_keepsvr-B'])
+            run_zaibei_tra_keep(hostinfo)
+            continue
+        elif choice == '29':
+            choice_again = raw_input('回车进行 启动灾备交易bussvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_bussvr-A', 'zaibei_bussvr-B'])
+            run_zaibei_tra_bus(hostinfo)
+            continue
+        elif choice == '30':
+            choice_again = raw_input('回车进行 启动灾备交易其他服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_matchsvr-A', 'zaibei_bridgesvr_tra-A', 'zaibei_intacsvr',
+                                                    'zaibei_quotaacsvr', 'zaibei_qsvrA', 'zaibei_acsvrA', 'zaibei_qrysvr-A',
+                                                    'zaibei_matchsvr-B', 'zaibei_bridgesvr_tra-B', 'zaibei_qrysvr-B',
+                                                    'zaibei_acsvrB', 'zaibei_qsvrB'])
+            run_zaibei_tra_other(hostinfo)
+            continue
+        elif choice == '31':
+            choice_again = raw_input('回车进行 停止灾备登记ctrlsvr服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list,['zaibei_ctrlsvr-A', 'zaibei_ctrlsvr-B'])
+            # hostinfo = get_need_hostinfo(data_list,['reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228'])
+
+            print('开始 停止灾备登记ctrlsvr服务！')
+            stop_zaibei_reg_ctrlsvr(hostinfo)
+            print('停止灾备登记ctrlsvr服务完成！')
+            continue
+        elif choice == '32':
+            choice_again = raw_input('回车进行 停止灾备登记acctsvr服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list,['zaibei_acctsvr-A', 'zaibei_acctsvr-B'])
+            # hostinfo = get_need_hostinfo(data_list,['reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228'])
+
+            print('开始 停止灾备登记acctsvr服务！')
+            stop_zaibei_reg_acctsvr(hostinfo)
+            print('停止灾备登记acctsvr服务完成！')
+            continue
+        elif choice == '33':
+            choice_again = raw_input('回车进行 停止灾备登记其他服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_acsvr_acct', 'zaibei_acsvr_bank', 'zaibei_acsvr_web',
+                                                     'zaibei_acsvr_wh', 'zaibei_acsvr_wm', 'zaibei_acsvr_etf-A',
+                                                     'zaibei_acsvr_int-A', 'zaibei_acsvr_qury-A', 'zaibei_acsvr_shau-A',
+                                                     'zaibei_acsvr_trad-A', 'zaibei_bridgesvr-A', 'zaibei_acsvr_etf-B',
+                                                     'zaibei_acsvr_int-B', 'zaibei_acsvr_qury-B', 'zaibei_acsvr_shau-B',
+                                                     'zaibei_acsvr_trad-B', 'zaibei_bridgesvr-B'
+                                                     ])
+            stop_zaibei_reg_other(hostinfo)
+            continue
+        elif choice == '34':
+            choice_again = raw_input('回车进行 启动灾备登记ctrlsvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_ctrlsvr-A', 'zaibei_ctrlsvr-B'])
+            run_reg_ctrlsvr(hostinfo)
+            continue
+        elif choice == '35':
+            choice_again = raw_input('回车进行 启动灾备登记acctsvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_acctsvr-A', 'zaibei_acctsvr-B'])
+            run_zaibei_reg_acctsvr(hostinfo)
+            continue
+        elif choice == '36':
+            choice_again = raw_input('回车进行 启动灾备登记其他服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['zaibei_acsvr_acct', 'zaibei_acsvr_bank', 'zaibei_acsvr_web',
+                                                     'zaibei_acsvr_wh', 'zaibei_acsvr_wm', 'zaibei_acsvr_etf-A',
+                                                     'zaibei_acsvr_int-A', 'zaibei_acsvr_qury-A', 'zaibei_acsvr_shau-A',
+                                                     'zaibei_acsvr_trad-A', 'zaibei_bridgesvr-A', 'zaibei_acsvr_etf-B',
+                                                     'zaibei_acsvr_int-B', 'zaibei_acsvr_qury-B', 'zaibei_acsvr_shau-B',
+                                                     'zaibei_acsvr_trad-B', 'zaibei_bridgesvr-B'
+                                                     ])
+            run_zaibei_reg_other(hostinfo)
+            continue
         elif choice == '99':
             break
 
@@ -1140,5 +1572,5 @@ def choice_op():
             continue
 
 if __name__ == '__main__':
-    data_list = get_all_data('liantiao-0817.xls')  # 全部源数据
+    data_list = get_all_data('liantiao-0820.xls')  # 全部源数据
     choice_op()

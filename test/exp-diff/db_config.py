@@ -29,4 +29,5 @@ user2 = "reg_user"
 pw2 = "oracle123!"
 dsn2 = "180.2.34.16:1521/sgehisdb"
 
-sql_txt = '/home/zhiban/hjx/ryn/exp-diff/sql.txt'
+# sql_txt = '/home/zhiban/hjx/ryn/exp-diff/sql.txt'
+sql_txt = 'D:\\gitRepository\\PythonTest\\test\\exp-diff\\sql.txt'

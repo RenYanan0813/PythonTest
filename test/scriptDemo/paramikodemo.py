@@ -6,11 +6,10 @@ __author__ = "renyanan"
 
 import paramiko
 
-client = paramiko.SSHClient()
-client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-transport = client.connect('180.2.34.203', username='cln', password='cln')
-ssh = paramiko.SSHClient.f(client)
-# ssh = paramiko.SFTPClient.ge
-ssh.get('/home/cln/ryn/pexpectdemo.py','e:/sshclient/')
+t = paramiko.Transport(('180.2.34.203', 22))
+t.connect(username='cln', password='cln')
 
-client.close()
+sftp = paramiko.SFTPClient.from_transport(t)
+sftp.get('/home/cln/ryn/ryn1.tar','d:\\sshclient1')
+
+sftp.close()

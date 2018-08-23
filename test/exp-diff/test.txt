@@ -1,0 +1,40 @@
+server_port = 7777
+server_ip = '180.2.32.20'（watch服务所在服务器）
+
+
+
+db_conf = { 
+    "main": {
+        "pwd": "@enc@dmj/PFlLa04C5Q==",
+        "user": "REG_USER", 
+        "sid": "180.2.35.69:1521/sgeregdb"
+    },  
+
+    "cln": {
+        "pwd": "@enc@dmj/PFlLa04C5Q==",
+        "user": "CLN_USER", 
+        "sid": "180.2.35.146:1521/sgeclndb"
+    },  
+
+    "his" : { 
+        "pwd" : "@enc@dmj/PFlLa04C5Q==",
+        "user" : "his",
+        "sid": "180.2.35.143:1521/sgehisdb"
+    },  
+
+    "etf" : { 
+        "pwd" : "@enc@dmj/PFlLa04C5Q==",
+        "user" : "ETF_USER",
+        "sid": "180.2.35.68:1521/sgetradb"
+    }   
+}
+
+
+
+ ip_white_lst = [
+   ('180.2.35.63','1'), #'1' member server
+   ('180.2.31.229','2'), #'2' acsvr_wh
+   ('180.2.35.36','3'), #'3' business server
+   ('180.2.35.37','4'), #'4' warehouse server
+    ('180.2.32.20','5'), #'5' watch server
+]
