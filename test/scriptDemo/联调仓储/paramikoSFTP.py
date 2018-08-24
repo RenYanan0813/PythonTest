@@ -716,7 +716,7 @@ def main():
             queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...\n")
             if queren == "99":
                     continue
-            cangchu(tarTxt)
+            cangchu()
             print "---------------完成更换仓储核心操作-----------------"
 
         else:
