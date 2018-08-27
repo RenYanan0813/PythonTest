@@ -190,6 +190,7 @@ def changeIpconfFile(target_txt, target_txt1):
     ('180.2.35.36', '3'),  # '3' business server
     ('180.2.35.37', '4'),  # '4' warehouse server
     ('180.2.32.20', '5'),  # '5' watch server
+    ('180.2.32.17', '2'),  # '2' intl_svr
 '''
     try:
         with open(target_txt, 'r') as fp1:
@@ -300,21 +301,21 @@ def cangchu():
     wh_config.old_wh['new_wh_file'] = 'wh%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
 
     getFileToLocal(new_wh_add, local_add_file, wh_config.new_wh['hostname'], wh_config.new_wh['username'], wh_config.new_wh['password'])
-    print "压缩包下载本地完成！"
+    print "最新版wh压缩包下载本地完成！"
 
     old_wh_add = '%swh%s.tar.gz'%(wh_config.old_wh['old_wh_address'], datetime.datetime.now().strftime('%Y%m%d'))
     putFileToServer(local_add_file , old_wh_add, wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.new_wh['password'])
-    print "压缩包上传服务器完成！"
+    print "将新版本wh压缩包上传至wh服务器完成！"
 
     #将原来的文件重命名备份
     renameFile(wh_config.old_wh['old_wh_address'],'wh', wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.old_wh['password'])
     print "wh旧版本文件重命名完成！"
 
     tarFile(wh_config.old_wh['old_wh_address'], wh_config.old_wh['new_wh_file'], wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.old_wh['password'])
-    print '解压 wh.tar.gz 完成！'
+    print '解压 wh{date}.tar.gz 完成！'
 
     getAllFile(wh_config.old_wh['old_wh_conf_add'], wh_config.local_wh['local_address'], wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.old_wh['password'])
-    print "下载文件完成！"
+    print "下载wh需要更改的配置文件完成！"
 
     tar_svr = wh_config.local_wh['local_address'] + 'server_conf.py'
     tar_svr2 = wh_config.local_wh['local_address'] + 'server_conf1.py'

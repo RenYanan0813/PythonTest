@@ -1,7 +1,25 @@
 # -*- coding:utf-8 -*-
 
+import paramiko
 import re
 import xlrd
+import config
+import datetime
+import os
+
+#创建本地文件夹
+def mkdir(path):
+    path = path.strip()
+    path = path.rstrip("\\")
+    isExists = os.path.exists(path)
+
+    if not isExists:
+        os.makedirs(path)
+        print path + ' 创建成功'
+        # return TrueF
+    else:
+        print path + ' 目录已存在'
+        # return False
 
 #获取全部数据
 def get_all_data(filename):
@@ -62,6 +80,7 @@ def change_tra_acsvr(target_txt, target_txt1):
         fp1.close()
         fp2.close()
 
+
 #更改交易前置quotaacsvr
 def change_tra_quotaacsvr(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
@@ -96,6 +115,7 @@ def change_tra_quotaacsvr(target_txt, target_txt1):
     finally:
         fp1.close()
         fp2.close()
+
 
 #更改交易前置intacsvr
 def change_tra_intacsvr(target_txt, target_txt1):
@@ -132,6 +152,7 @@ def change_tra_intacsvr(target_txt, target_txt1):
         fp1.close()
         fp2.close()
 
+
 #更改登记前置acct
 def change_reg_acct(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
@@ -166,6 +187,7 @@ def change_reg_acct(target_txt, target_txt1):
     finally:
         fp1.close()
         fp2.close()
+
 
 #更改登记前置bank
 def change_reg_bank(target_txt, target_txt1):
@@ -219,6 +241,7 @@ def change_reg_bank(target_txt, target_txt1):
         fp1.close()
         fp2.close()
 
+
 #更改登记前置wm
 def change_reg_wm(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
@@ -253,6 +276,7 @@ def change_reg_wm(target_txt, target_txt1):
     finally:
         fp1.close()
         fp2.close()
+
 
 #更改etf前置etfsvr
 def change_etf_etfsvr(target_txt, target_txt1):
@@ -290,6 +314,137 @@ def change_etf_etfsvr(target_txt, target_txt1):
         fp2.close()
 
 
+#将服务器下载到本地
+#com_add为服务器文件路径， target_add为本地文件路径
+#svr_add为服务器地址
+def getFileToLocal(com_add, target_add, svr_add, username, psd):
+    t = paramiko.Transport((svr_add, 22))
+    t.connect(username=username, password=psd)
+    sftp = paramiko.SFTPClient.from_transport(t)
+    # com_add = '/home/cln/ryn.tar'
+    # target_add = raw_input('输入文件存放地址:')
+    # target_add = 'd:\\sshclient\\ryn.tar'
+    try:
+        sftp.get(com_add, target_add)
+        print '下载至本地完成[=========================] 100%  \n', "文件存放在:%s" % (target_add)
+    except:
+        print '服务器没有该文件! \n'
+    finally:
+        sftp.close()
+        t.close()
+
+#将本地文件上传到服务器
+#com_add为本地文件路径， target_add为服务器文件路径
+#svr_add为服务器地址
+def putFileToServer(com_add, target_add, svr_add, username, psd):
+    # t = paramiko.Transport(('180.2.34.203', 22))
+    t = paramiko.Transport((svr_add, 22))
+    t.connect(username=username, password=psd)
+    sftp = paramiko.SFTPClient.from_transport(t)
+    # com_add = raw_input('输入文件来源地址:')
+    # target_add = raw_input('输入文件存放地址:')
+    # com_add = 'd:\\sshclient\\ryn.tar'
+    # target_add = '/home/cln/ryn/ryn.tar'
+    try:
+        sftp.put(com_add, target_add)
+        print '上传至服务器完成[=========================] 100%  ', "文件上传至:%s" % (target_add)
+    except:
+        print '本地未找到该文件! '
+    finally:
+        t.close()
+        sftp.close()
+
+# 通用，重命名文件
+def renameFile(file_local, target_file, svr_add, username, psd):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=svr_add, username=username, password=psd)
+    date = datetime.datetime.now().strftime('%Y%m%d')
+    target_file_date = target_file + date
+    com = 'cd %s; mv %s %s' % (file_local, target_file, target_file_date)
+    try:
+        stdin, stdout, stderr = ssh.exec_command(com)
+        print("重命名完成!")
+    except Exception as e:
+        print("重命名失败!")
+    finally:
+        ssh.close()
+
+# 将服务器上的tar压缩包解压
+# tar_add 文件路径, tarTxt 文件名
+def tarFile(tar_add, tarTxt, svr_add, username, psd):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=svr_add, username=username, password=psd)
+    com = 'cd %s; tar -xf %s' % (tar_add, tarTxt)
+    try:
+        stdin, stdout, stderr = ssh.exec_command(com)
+        print stdout.read()
+        print '解压成功!'
+    except Exception as e:
+        print '解压失败!'
+    finally:
+        ssh.close()
+
+# 删除文件
+def delFile(tarTxt, svr_add, username, psd):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname=svr_add, username=username, password=psd)
+    com = 'rm -rf %s' % (tarTxt)
+    try:
+        stdin, stdout, stderr = ssh.exec_command(com)
+        print("删除原文件完成!")
+    except Exception as e:
+        print("删除原文件失败!")
+    finally:
+        ssh.close()
+
+#更换前置服务acsvr
+def acsvr():
+    new_acsvr_add = config.new_acsvr['new_acsvr_address'] + config.new_acsvr['new_acsvr_file']
+    local_add_file = '%sacsvr%s.tar.gz' % (config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_acsvr['new_acsvr_file'] = 'acsvr%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_acsvr_add, local_add_file, config.new_acsvr['hostname'], config.new_acsvr['username'], config.new_acsvr['password'])
+    print "最新版acsvr压缩包下载本地完成！"
+
+    old_acsvr_add = '%sacsvr%s.tar.gz' % (config.old_acsvr['old_acsvr_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_acsvr_add, config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print "将新版本acsvr压缩包上传至acsvr服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_acsvr['old_acsvr_address'], 'acsvr', config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print "acsvr旧版本文件重命名完成！"
+
+    tarFile(config.old_acsvr['old_acsvr_address'], config.old_acsvr['new_acsvr_file'], config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print '解压 acsvr{date}.tar.gz 完成！'
+
+    local_acsvr_conf_file =  '%s%s'%(config.local_svr['local_address'], config.old_acsvr['acsvr_conf_file'])
+    getFileToLocal(config.old_acsvr['acsvr_conf_file'], local_acsvr_conf_file ,config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print "下载acsvr需要更改的配置文件完成！"
+
+    local_acsvr_conf_file1 = '%s%s1'%(config.local_svr['local_address'], config.old_acsvr['acsvr_conf_file'])
+    change_tra_acsvr(local_acsvr_conf_file, local_acsvr_conf_file1)
+    print "更改acsvr配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr_conf_file = '%s%s' % (config.old_acsvr['old_acsvr_conf_add'], config.old_acsvr['acsvr_conf_file'])
+
+    #删除服务器上的原文件
+    delFile(old_acsvr_conf_file, config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print "删除原acsvr配置文件完成！"
+
+    #上传到服务器上的文件
+    old_acsvr_conf_file = '%s%s'%(config.old_acsvr['old_acsvr_conf_add'], config.old_acsvr['acsvr_conf_file'])
+    putFileToServer(local_acsvr_conf_file1, old_acsvr_conf_file, config.old_acsvr['hostname'], config.old_acsvr['username'], config.old_acsvr['password'])
+    print "上传更改后的acsvr配置文件至服务器完成"
+
+
+#更换前置服务quotaacsvr
+def quotaacsvr():
+    pass
+
 def main():
     flag = True
     while flag:
@@ -303,13 +458,22 @@ def main():
             continue
         elif com == '1':
             print "更改交易前置acsvr"
-            wh_config = raw_input("输入  ，(如 /home/zhiban/guoqing/20180822/wh/):")
-            # wh_config.new_wh['new_wh_file'] = raw_input("输入最新仓储核心文件，(如 wh.tar.gz):")
+            config.new_acsvr['new_acsvr_address'] = raw_input("输入最新版acsvr地址 ，(如 /home/zhiban/guoqing/20180822/wh/):")
+            config.new_acsvr['new_acsvr_file'] = raw_input("输入最新acsvr核心文件，(如 wh.tar.gz):")
             queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
             if queren == "99":
                     continue
-            # cangchu()
-            print "---------------完成 更换更改交易前置acsvr 操作-----------------"
+            acsvr()
+            print "---------------完成 更换更改交易前置 acsvr 操作-----------------"
+        elif com == '2':
+            print "更改交易前置quotaacsvr"
+            quotaacsvr_config = raw_input("输入最新版quotaacsvr地址 ，(如 /home/zhiban/guoqing/20180822/wh/):")
+            quotaacsvr_file = raw_input("输入最新quotaacsvr核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                    continue
+            quotaacsvr()
+            print "---------------完成 更换更改交易前置 quotaacsvr 操作-----------------"
         elif com == '8':
             flag = False
         else:
@@ -317,5 +481,9 @@ def main():
 
 
 if __name__ == '__main__':
-    data_list = get_all_data('liantiao-0824.xls')  # 全部源数据
+    # data_list = get_all_data('liantiao-0824.xls')  # 全部源数据
+    mkdir(config.local_svr['local_address'])
     main()
+    print "删除 %s" % (config.local_svr['local_address'],)
+    os.removedirs(config.local_svr['local_address'])
+    print "已删除 %s 目录" % (config.local_svr['local_address'],)
