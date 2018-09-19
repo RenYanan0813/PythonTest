@@ -32,7 +32,7 @@ def connectOracle(user1 , password1, database1, table1, sql_txt):
             sql = fields[1]
             curs.execute(sql)
             rows = curs.fetchall()
-            out_file = './'+ table1 +'/' + filename + '.txt'
+            out_file = './' + table1 + '/' + filename + '.txt'
             mkdir('./' + table1)
             fp = open(out_file, "w+")
             for row in rows:
@@ -58,7 +58,7 @@ def getFileToLocal(com_add, target_add):
     print '下载完成[=========================] 100%  ', "文件存放在:%s" % (target_add)
     sftp.close()
 
-def changeFile():
+def changeData():
     com_txt = '/home/cln/ryn/text.py'
     target_txt = 'd:\\sshclient\\text\\text.py'
     getFileToLocal(com_txt, target_txt)
@@ -78,11 +78,19 @@ def changeFile():
         fp1.close()
         fp2.close()
 
-
+import time
 def main():
     # connectOracle('reg_user', 'oracle123', '180.2.35.162:1521/djtest','162', './sql.txt')
-    changeFile()
-
+    # changeData()
+    # t = time.time()
+    # txt = 'sql.txt'
+    # fd_sql = open(txt, 'r')
+    # with open(txt, 'r') as f:
+    #     num = f.readlines()
+    # for i in range(len(num)):
+    #     print(num[i])
+    # print(time.time() - t)
+    connectOracle('reg_user', 'oracle123', '180.2.35.162:1521/djtest','162', './sql.txt')
 
 
 if __name__ == "__main__":

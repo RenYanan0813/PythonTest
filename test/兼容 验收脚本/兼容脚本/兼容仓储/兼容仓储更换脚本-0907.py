@@ -129,7 +129,7 @@ def getAllFile( svr_conf_add, local_add, svr_add, username, psd):
         tarTxt = '%s%s' % (local_add, filename[i])
         # tarTxt = '/home/cln/wh/wh/config/'
         comTxt = '%s%s' % (svr_conf_add, filename[i])
-        getFileToLocal(comTxt, tarTxt)
+        getFileToLocal(comTxt, tarTxt, svr_add, username, psd)
 
 
 # 更改仓储的server_conf.py配置文件
@@ -151,13 +151,13 @@ def changeServer_confFile(target_txt, target_txt1):
                     if "server_port" in lenght[i]:
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
-                        lenght[i] = 'server_port = 7777'
+                        lenght[i] = 'server_port = 12350'
                         # fp2.write(s)
                         print "更改 server——port 成功 %s" % (lenght[i])
                     if "server_ip" in lenght[i]:
                         # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
                         # fp2.write(str(s1))
-                        lenght[i] = "server_ip = '180.2.32.20'"
+                        lenght[i] = "server_ip = '180.2.32.25'"
                         print "更改 server——ip 成功 %s" % (lenght[i])
 
                     fp2.write(lenght[i])
@@ -184,13 +184,13 @@ def changeIpconfFile(target_txt, target_txt1):
     # getFileToLocal(com_txt, target_txt)
     # txt = '/home/cln/ryn/ryn/pexpectdemo.py'
     # fd_sql = open(target_txt, 'r')
-    ip_white_lst = '''ip_white_lst = [
-    ('180.2.35.63', '1'),  # '1' member server
-    ('180.2.31.229', '2'),  # '2' acsvr_wh
-    ('180.2.35.36', '3'),  # '3' business server
-    ('180.2.35.37', '4'),  # '4' warehouse server
-    ('180.2.32.20', '5'),  # '5' watch server
-    ('180.2.32.17', '2'),  # '2' intl_svr
+    ip_white_lst = '''ip_white_lst = [    
+    ('180.2.35.163','1'), # '1' member server
+    ('180.2.32.25','5'), # '5' watch server
+    ('180.2.35.61','3'), # '3' business server
+    ('180.2.35.62','4'), # '4' warehouse server
+    ('180.2.32.25','2'), # '2' acsvr_wh
+
 '''
     try:
         with open(target_txt, 'r') as fp1:
@@ -229,29 +229,13 @@ def changeDBconfFile(target_txt, target_txt1):
 #coding:utf-8
 
 db_conf = {
+    db_conf = {
     "main": {
-        "pwd": "@enc@dmj/PFlLa04C5Q==",
-        "user": "REG_USER",
-        "sid": "180.2.35.69:1521/sgeregdb"
-    },
+        "pwd": "@enc@Vmj/PFlLa04C5Q==", 
+        "user": "reg_user", 
+        "sid": "180.2.35.93:1521/sgeregdb"
+    }, 
 
-    "cln": {
-        "pwd": "@enc@dmj/PFlLa04C5Q==",
-        "user": "CLN_USER",
-        "sid": "180.2.35.146:1521/sgeclndb"
-    },
-
-    "his": {
-        "pwd": "@enc@dmj/PFlLa04C5Q==",
-        "user": "his",
-        "sid": "180.2.35.143:1521/sgehisdb"
-    },
-
-    "etf": {
-        "pwd": "@enc@dmj/PFlLa04C5Q==",
-        "user": "ETF_USER",
-        "sid": "180.2.35.68:1521/sgetradb"
-    }
 }'''
     try:
         with open(target_txt, 'r') as fp1:
@@ -304,7 +288,7 @@ def cangchu():
     print "最新版wh压缩包下载本地完成！"
 
     old_wh_add = '%swh%s.tar.gz'%(wh_config.old_wh['old_wh_address'], datetime.datetime.now().strftime('%Y%m%d'))
-    putFileToServer(local_add_file , old_wh_add, wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.new_wh['password'])
+    putFileToServer(local_add_file , old_wh_add, wh_config.old_wh['hostname'], wh_config.old_wh['username'], wh_config.old_wh['password'])
     print "将新版本wh压缩包上传至wh服务器完成！"
 
     #将原来的文件重命名备份

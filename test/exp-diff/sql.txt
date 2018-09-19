@@ -1,1 +1,0 @@
-T_REG_ACCT_AVAILABLEselect * from t_reg_acct_available where f_account_code = '20013700401442'

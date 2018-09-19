@@ -1,0 +1,7 @@
+T_REG_ACCT_AVAILABLEselect * from t_reg_acct_available where f_account_code = '20013700401442'
+T_REG_ACCT_AVAILABLE222select * from t_reg_acct_available where f_account_code = '20013700401442'
+T_REG_ACCT_AVAILABLE333select * from t_reg_acct_available where f_account_code = '20013700401442'
+1
+1
+1
+2

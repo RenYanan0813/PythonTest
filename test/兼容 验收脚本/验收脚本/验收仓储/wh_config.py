@@ -2,7 +2,7 @@
 
 #最新wh版本信息
 new_wh = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_wh_address': '', #最新wh路径
@@ -11,7 +11,7 @@ new_wh = {
 
 #要更换wh版本的服务器信息
 old_wh = {
-    'hostname': '182.2.32.20', #服务器地址
+    'hostname': '180.2.35.233', #服务器地址
     'username': 'reg1', #服务器用户名
     'password': 'reg1', #服务器密码
     'old_wh_address': '/home/reg1/', #wh路径
@@ -27,7 +27,7 @@ local_wh = {
 
 #仓储服务信息
 wh_svr = {
-    'hostname': '182.2.32.20', #服务器地址
+    'hostname': '180.2.35.233', #服务器地址
     'username': 'reg1', #服务器用户名
     'password': 'reg1', #服务器密码
     'svr_address':'/home/reg1/wh/', #服务地址
