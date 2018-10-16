@@ -1,5 +1,12 @@
 # -*-coding:utf-8-*-
 
+"""
+
+更新 20181011 ：
+    1.添加报价服务的启动和暂停
+
+"""
+
 import time
 import os
 import datetime
@@ -1287,6 +1294,38 @@ def run_zaibei_reg_syncsvr(hostinfo):
         finally:
             ssh.close()
 
+# 启报价authsvr
+def run_qte_auth(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            # 检查流文件
+            stdin, stdout, stderr = ssh.exec_command(host['check_flow_path'])
+            result = stdout.read()
+            # 如果流文件为空，则执行后续操作
+            if 0 == int(result):
+                stdin_1, stdout_1, stderr_1 = ssh.exec_command(host['script_run'])
+                time.sleep(3)
+                stdin_2, stdout_2, stderr_2 = ssh.exec_command(ps)
+                result_2 = stdout_2.read()
+                if str(host['check']) in result_2:
+                    print(host['hostname'] + '启报价authsvr成功....')
+                else:
+                    print(host['hostname'], '启报价authsvr失败，请手动检查')
+                    exit(1)
+            else:
+                print(host['hostname'], '启报价authsvr失败，请检查流文件是否移走....')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启报价authsvr失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+    print('启报价authsvr成功')
+
+
 # 根据提供的服务名列表获取到服务器信息
 def get_need_hostinfo(data_list, search_list):
     res = list(filter(lambda data: data if str(data.keys()[0]) in search_list else False, data_list))
@@ -1307,7 +1346,7 @@ def self_choice():
         print('13)启动登记ctrlsvr                 14)启动登记acctsvr            15)启动登记其他服务')
         print('16)启动交易keepsvr                 17)启动交易bussvr             18)启动交易其他服务')
         print('19)重启黄马甲审计日志              20)启动仓储                   21)启动ETF系统')
-        print('22)启动风控系统                    23)启动数据同步               24)启动监控服务')
+        print('22)启动风控系统                    23)启动登记、交易、报价数据同步               24)启动监控服务')
         print('25)停灾备交易keepsvr               26)停灾备交易bussvr           27)停灾备交易其他服务')
         print('28)启动灾备交易keepsvr                29)启动灾备交易bussvr           30)启动灾备交易其他服务')
         print('31)停灾备登记ctrlsvr               32)停灾备登记acctsvr           33)停灾备登记其他服务')
@@ -1315,6 +1354,8 @@ def self_choice():
         print('37)停交易keepsvr、bussvr、 syncsvr 服务          38)停登记ctrlsvr、acctsvr、syncsvr 服务 ')
         print('39)启动交易keepsvr、bussvr、 syncsvr 服务          40)启动登记ctrlsvr、acctsvr、syncsvr 服务 ')
         print('41)备份灾备交易服务日志                 42)备份灾备登记服务日志  ')
+        print('43)启动报价authsvr、corpsvr 服务     44)启动报价其他服务             45)停报价服务')
+        print('46)启动报价初始化 ')
         print('99)回到上一级操作选项\n\n')
 
         choice = raw_input('请输入操作选项：')
@@ -1444,7 +1485,8 @@ def self_choice():
             hostinfo = get_need_hostinfo(data_list, ['bridgesvr_reg-A', 'acsvr_etf-A', 'acsvr_int-A', 'acsvr_qury-A',
                                                      'acsvr_shau-A', 'acsvr_trad-A', 'acsvr_web', 'acsvr_acct',
                                                      'acsvr_wh','acsvr_bank', 'bridgesvr_reg-B', 'acsvr_etf-B', 'acsvr_int-B',
-                                                     'acsvr_qury-B', 'acsvr_shau-B', 'acsvr_trad-B', 'acsvr_wm', 'acsvr_inta'
+                                                     'acsvr_qury-B', 'statesvr','acsvr_shau-B', 'acsvr_trad-B', 'acsvr_wm', 'acsvr_inta',
+                                                     'bridgesvr_qte-A', 'bridgesvr_qte-B'
                                                      ])
             run_reg_other(hostinfo)
             continue
@@ -1503,7 +1545,7 @@ def self_choice():
             choice_again = raw_input('回车进行 启动数据同步服务 [99回到选择菜单]....')
             if choice_again == '99':
                 continue
-            hostinfo = get_need_hostinfo(data_list, ['d2msvr','m2dsvr','magic_m2d','trans_mem2dbsvr', 'quot_mem2dbsvr'])
+            hostinfo = get_need_hostinfo(data_list, ['d2msvr','m2dsvr','magic_m2d','trans_mem2dbsvr', 'quot_mem2dbsvr', 'qte_mem2dbsvr'])
             run_sync(hostinfo)
             continue
         elif choice == '24':
@@ -1678,6 +1720,20 @@ def self_choice():
                 continue
             hostinfo = get_need_hostinfo(data_list, ['zaibei_ctrlsvr-A', 'zaibei_ctrlsvr-B'])
             bak_log(hostinfo)
+            continue
+        elif choice == '43':
+            choice_again = raw_input('回车进行 启动报价authsvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['authsvr-A', 'authsvr-B'])
+            run_qte_auth(hostinfo)
+            continue
+        elif choice == '44':
+            choice_again = raw_input('回车进行 启动交易bussvr [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['bussvr-A', 'bussvr-B'])
+            run_tra_bus(hostinfo)
             continue
         elif choice == '99':
             break

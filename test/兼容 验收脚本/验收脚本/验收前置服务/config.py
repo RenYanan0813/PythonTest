@@ -81,7 +81,7 @@ new_quotaacsvr = {
 
 #要更换quotaacsvr版本的服务器信息
 old_quotaacsvr = {
-    'hostname': '180.2.35.229', #服务器地址
+    'hostname': '180.2.35.230', #服务器地址
     'username': 'sge', #服务器用户名
     'password': 'sge', #服务器密码
     'old_quotaacsvr_address': '/home/sge/install/', #quotaacsvr路径(最后要加'/')
@@ -103,7 +103,7 @@ new_intacsvr = {
 
 #要更换intacsvr版本的服务器信息
 old_intacsvr = {
-    'hostname': '180.2.35.229', #服务器地址
+    'hostname': '180.2.35.230', #服务器地址
     'username': 'sge', #服务器用户名
     'password': 'sge', #服务器密码
     'old_intacsvr_address': '/home/sge/install/', #intacsvr路径(最后要加'/')

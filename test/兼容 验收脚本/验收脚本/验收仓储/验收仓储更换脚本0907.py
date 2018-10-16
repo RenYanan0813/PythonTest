@@ -7,6 +7,7 @@ import wh_config
 import os
 import datetime
 import re
+import shutil
 
 
 
@@ -383,5 +384,5 @@ if __name__ == "__main__":
     mkdir(wh_config.local_wh['local_address'])
     main()
     print "删除 %s"%(wh_config.local_wh['local_address'],)
-    os.removedirs(wh_config.local_wh['local_address'])
+    shutil.rmtree(wh_config.local_wh['local_address'])
     print "已删除 %s 目录" % (wh_config.local_wh['local_address'],)

@@ -2,7 +2,7 @@
 
 #新版交易前置acsvrA信息
 new_acsvrA = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_acsvrA_address': '', #最新acsvrA路径
@@ -24,7 +24,7 @@ old_acsvrA = {
 
 #新版交易前置acsvrB信息
 new_acsvrB = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_acsvrB_address': '', #最新acsvrB路径
@@ -46,7 +46,7 @@ old_acsvrB = {
 
 #新版交易前置quotaacsvr信息
 new_quotaacsvr = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_quotaacsvr_address': '', #最新quotaacsvr路径
@@ -68,7 +68,7 @@ old_quotaacsvr = {
 
 #新版交易前置intacsvr信息
 new_intacsvr = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_intacsvr_address': '', #最新intacsvr路径
@@ -90,7 +90,7 @@ old_intacsvr = {
 
 #新版交易前置etfsvr信息
 new_etfsvr = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_etfsvr_address': '', #最新etfsvr路径
@@ -112,7 +112,7 @@ old_etfsvr = {
 
 #新版交易前置acsvr_acct信息
 new_acsvr_acct = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_acsvr_acct_address': '', #最新acsvr_acct路径
@@ -123,7 +123,7 @@ new_acsvr_acct = {
 old_acsvr_acct = {
     'hostname': '180.2.31.229', #服务器地址
     'username': 'reg1', #服务器用户名
-    'password': 'reg1', #服务器密码
+    'password': 'dengji35', #服务器密码
     'old_acsvr_acct_address': '/home/reg1/install/', #acsvr_acct路径(最后要加'/')
     'old_acsvr_acct_file': 'acsvr_acct', #acsvr_acct的文件名
     'new_acsvr_acct_file': '', #從本地上傳的新版本acsvr_acct(为空，不要填)
@@ -134,7 +134,7 @@ old_acsvr_acct = {
 
 #新版交易前置acsvr_bank信息
 new_acsvr_bank = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_acsvr_bank_address': '', #最新acsvr_bank路径
@@ -145,7 +145,7 @@ new_acsvr_bank = {
 old_acsvr_bank = {
     'hostname': '180.2.31.229', #服务器地址
     'username': 'reg1', #服务器用户名
-    'password': 'reg1', #服务器密码
+    'password': 'dengji35', #服务器密码
     'old_acsvr_bank_address': '/home/reg1/install/', #acsvr_bank路径(最后要加'/')
     'old_acsvr_bank_file': 'acsvr_bank', #acsvr_bank的文件名
     'new_acsvr_bank_file': '', #從本地上傳的新版本acsvr_bank(为空，不要填)
@@ -156,7 +156,7 @@ old_acsvr_bank = {
 
 #新版交易前置acsvr_wm信息
 new_acsvr_wm = {
-    'hostname': '182.2.35.130', #服务器地址
+    'hostname': '180.2.35.130', #服务器地址
     'username': 'zhiban', #服务器用户名
     'password': 'zhiban', #服务器密码
     'new_acsvr_wm_address': '', #最新acsvr_wm路径
@@ -167,7 +167,7 @@ new_acsvr_wm = {
 old_acsvr_wm = {
     'hostname': '180.2.31.229', #服务器地址
     'username': 'reg1', #服务器用户名
-    'password': 'reg1', #服务器密码
+    'password': 'dengji35', #服务器密码
     'old_acsvr_wm_address': '/home/reg1/install/', #acsvr_wm路径(最后要加'/')
     'old_acsvr_wm_file': 'acsvr_wm', #acsvr_wm的文件名
     'new_acsvr_wm_file': '', #從本地上傳的新版本acsvr_wm(为空，不要填)

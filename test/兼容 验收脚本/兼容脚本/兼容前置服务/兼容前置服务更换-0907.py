@@ -6,6 +6,7 @@ import xlrd
 import config
 import datetime
 import os
+import shutil
 
 #创建本地文件夹
 def mkdir(path):
@@ -940,7 +941,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrA()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrA 操作-----------------"
         elif com == '2':
@@ -953,7 +954,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             quotaacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 quotaacsvr 操作-----------------"
         elif com == '3':
@@ -966,7 +967,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             intacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 intacsvr 操作-----------------"
         elif com == '4':
@@ -979,7 +980,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             etfsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 etfsvr 操作-----------------"
         elif com == '5':
@@ -992,7 +993,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_acct()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_acct 操作-----------------"
         elif com == '6':
@@ -1005,7 +1006,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_bank()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_bank 操作-----------------"
         elif com == '7':
@@ -1018,7 +1019,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_wm()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_wm 操作-----------------"
         elif com == '8':
@@ -1031,7 +1032,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrB()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrB 操作-----------------"
         elif com == '9':
@@ -1045,5 +1046,5 @@ if __name__ == '__main__':
     # mkdir(config.local_svr['local_address'])
     main()
     # print "删除 %s" % (config.local_svr['local_address'],)
-    # os.removedirs(config.local_svr['local_address'])
+    # shutil.rmtree(config.local_svr['local_address'])
     # print "已删除 %s 目录" % (config.local_svr['local_address'],)

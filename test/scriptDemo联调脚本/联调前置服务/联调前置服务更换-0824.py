@@ -6,6 +6,7 @@ import xlrd
 import config
 import datetime
 import os
+import shutil
 
 #创建本地文件夹
 def mkdir(path):
@@ -72,6 +73,13 @@ def change_tra_acsvrA(target_txt, target_txt1):
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s"%(lenght[i])
 
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 105,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
+
                     fp2.write(lenght[i])
         print 'acsvr配置文件更改完成，存储为%s'%(target_txt1)
     except IOError as e:
@@ -107,6 +115,12 @@ def change_tra_acsvrB(target_txt, target_txt1):
                         lenght[i]=''
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s"%(lenght[i])
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 103,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
 
                     fp2.write(lenght[i])
         print 'acsvr配置文件更改完成，存储为%s'%(target_txt1)
@@ -487,8 +501,9 @@ def acsvrA():
            config.old_acsvrA['username'], config.old_acsvrA['password'])
     print "acsvrA新版本文件重命名完成！"
 
+    old_file = config.old_acsvrA['old_acsvrA_conf_add'] + config.old_acsvrA['acsvrA_conf_file']
     local_acsvrA_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvrA['acsvrA_conf_file'])
-    getFileToLocal(config.old_acsvrA['acsvrA_conf_file'], local_acsvrA_conf_file, config.old_acsvrA['hostname'],
+    getFileToLocal(old_file, local_acsvrA_conf_file, config.old_acsvrA['hostname'],
                    config.old_acsvrA['username'], config.old_acsvrA['password'])
     print "下载acsvrA需要更改的配置文件完成！"
 
@@ -544,8 +559,9 @@ def acsvrB():
                config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "acsvrB新版本文件重命名完成！"
 
+    old_file = config.old_acsvrB['old_acsvrB_conf_add'] + config.old_acsvrB['acsvrB_conf_file']
     local_acsvrB_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvrB['acsvrB_conf_file'])
-    getFileToLocal(config.old_acsvrB['acsvrB_conf_file'], local_acsvrB_conf_file, config.old_acsvrB['hostname'],
+    getFileToLocal(old_file, local_acsvrB_conf_file, config.old_acsvrB['hostname'],
                    config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "下载acsvrB需要更改的配置文件完成！"
 
@@ -597,9 +613,10 @@ def quotaacsvr():
             config.old_quotaacsvr['password'])
     print "删除 quotaacsvr{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_quotaacsvr['old_quotaacsvr_conf_add'] + config.old_quotaacsvr['quotaacsvr_conf_file']
     local_quotaacsvr_conf_file = '%s%s' % (
     config.local_svr['local_address'], config.old_quotaacsvr['quotaacsvr_conf_file'])
-    getFileToLocal(config.old_quotaacsvr['quotaacsvr_conf_file'], local_quotaacsvr_conf_file,
+    getFileToLocal(old_file, local_quotaacsvr_conf_file,
                    config.old_quotaacsvr['hostname'], config.old_quotaacsvr['username'],
                    config.old_quotaacsvr['password'])
     print "下载quotaacsvr需要更改的配置文件完成！"
@@ -656,8 +673,9 @@ def intacsvr():
             config.old_intacsvr['password'])
     print "删除 intacsvr{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_intacsvr['old_intacsvr_conf_add'] + config.old_intacsvr['intacsvr_conf_file']
     local_intacsvr_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_intacsvr['intacsvr_conf_file'])
-    getFileToLocal(config.old_intacsvr['intacsvr_conf_file'], local_intacsvr_conf_file, config.old_intacsvr['hostname'],
+    getFileToLocal(old_file, local_intacsvr_conf_file, config.old_intacsvr['hostname'],
                    config.old_intacsvr['username'], config.old_intacsvr['password'])
     print "下载intacsvr需要更改的配置文件完成！"
 
@@ -712,8 +730,9 @@ def etfsvr():
             config.old_etfsvr['password'])
     print "删除 etfsvr{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_etfsvr['old_etfsvr_conf_add'] + config.old_etfsvr['etfsvr_conf_file']
     local_etfsvr_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_etfsvr['etfsvr_conf_file'])
-    getFileToLocal(config.old_etfsvr['etfsvr_conf_file'], local_etfsvr_conf_file, config.old_etfsvr['hostname'],
+    getFileToLocal(old_file, local_etfsvr_conf_file, config.old_etfsvr['hostname'],
                    config.old_etfsvr['username'], config.old_etfsvr['password'])
     print "下载etfsvr需要更改的配置文件完成！"
 
@@ -766,9 +785,10 @@ def acsvr_acct():
             config.old_acsvr_acct['password'])
     print "删除 acsvr_acct{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_acsvr_acct['old_acsvr_acct_conf_add'] + config.old_acsvr_acct['acsvr_acct_conf_file']
     local_acsvr_acct_conf_file = '%s%s' % (
     config.local_svr['local_address'], config.old_acsvr_acct['acsvr_acct_conf_file'])
-    getFileToLocal(config.old_acsvr_acct['acsvr_acct_conf_file'], local_acsvr_acct_conf_file,
+    getFileToLocal(old_file, local_acsvr_acct_conf_file,
                    config.old_acsvr_acct['hostname'], config.old_acsvr_acct['username'],
                    config.old_acsvr_acct['password'])
     print "下载acsvr_acct需要更改的配置文件完成！"
@@ -825,9 +845,10 @@ def acsvr_bank():
             config.old_acsvr_bank['password'])
     print "删除 acsvr_bank{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_acsvr_bank['old_acsvr_bank_conf_add'] + config.old_acsvr_bank['acsvr_bank_conf_file']
     local_acsvr_bank_conf_file = '%s%s' % (
     config.local_svr['local_address'], config.old_acsvr_bank['acsvr_bank_conf_file'])
-    getFileToLocal(config.old_acsvr_bank['acsvr_bank_conf_file'], local_acsvr_bank_conf_file,
+    getFileToLocal(old_file, local_acsvr_bank_conf_file,
                    config.old_acsvr_bank['hostname'], config.old_acsvr_bank['username'],
                    config.old_acsvr_bank['password'])
     print "下载acsvr_bank需要更改的配置文件完成！"
@@ -884,8 +905,9 @@ def acsvr_wm():
             config.old_acsvr_wm['password'])
     print "删除 acsvr_wm{date}.tar.gz 压缩包完成！"
 
+    old_file = config.old_acsvr_wm['old_acsvr_wm_conf_add'] + config.old_acsvr_wm['acsvr_wm_conf_file']
     local_acsvr_wm_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvr_wm['acsvr_wm_conf_file'])
-    getFileToLocal(config.old_acsvr_wm['acsvr_wm_conf_file'], local_acsvr_wm_conf_file, config.old_acsvr_wm['hostname'],
+    getFileToLocal(old_file, local_acsvr_wm_conf_file, config.old_acsvr_wm['hostname'],
                    config.old_acsvr_wm['username'], config.old_acsvr_wm['password'])
     print "下载acsvr_wm需要更改的配置文件完成！"
 
@@ -932,7 +954,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrA()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrA 操作-----------------"
         elif com == '2':
@@ -945,7 +967,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             quotaacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 quotaacsvr 操作-----------------"
         elif com == '3':
@@ -958,7 +980,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             intacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 intacsvr 操作-----------------"
         elif com == '4':
@@ -971,7 +993,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             etfsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 etfsvr 操作-----------------"
         elif com == '5':
@@ -984,7 +1006,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_acct()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_acct 操作-----------------"
         elif com == '6':
@@ -997,7 +1019,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_bank()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_bank 操作-----------------"
         elif com == '7':
@@ -1010,7 +1032,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_wm()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_wm 操作-----------------"
         elif com == '8':
@@ -1023,7 +1045,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrB()
             print "删除 %s" % (config.local_svr['local_address'],)
-            os.removedirs(config.local_svr['local_address'])
+            shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrB 操作-----------------"
         elif com == '9':
@@ -1037,5 +1059,5 @@ if __name__ == '__main__':
     # mkdir(config.local_svr['local_address'])
     main()
     # print "删除 %s" % (config.local_svr['local_address'],)
-    # os.removedirs(config.local_svr['local_address'])
+    # shutil.rmtree(config.local_svr['local_address'])
     # print "已删除 %s 目录" % (config.local_svr['local_address'],)
