@@ -7,6 +7,7 @@ import wh_config
 import os
 import datetime
 import re
+import shutil
 
 
 
@@ -185,12 +186,12 @@ def changeIpconfFile(target_txt, target_txt1):
     # txt = '/home/cln/ryn/ryn/pexpectdemo.py'
     # fd_sql = open(target_txt, 'r')
     ip_white_lst = '''ip_white_lst = [
-    ('180.2.35.63', '1'),  # '1' member server
-    ('180.2.31.229', '2'),  # '2' acsvr_wh
-    ('180.2.35.36', '3'),  # '3' business server
-    ('180.2.35.37', '4'),  # '4' warehouse server
-    ('180.2.32.20', '5'),  # '5' watch server
-    ('180.2.32.17', '2'),  # '2' intl_svr
+    ('180.2.35.63','1'),  # '1' member server
+    ('180.2.31.229','2'),  # '2' acsvr_wh
+    ('180.2.35.36','3'),  # '3' business server
+    ('180.2.35.37','4'),  # '4' warehouse server
+    ('180.2.32.20','5'),  # '5' watch server
+    ('180.2.32.17','2'),  # '2' intl_svr
 '''
     try:
         with open(target_txt, 'r') as fp1:
@@ -402,5 +403,5 @@ if __name__ == "__main__":
     mkdir(wh_config.local_wh['local_address'])
     main()
     print "删除 %s"%(wh_config.local_wh['local_address'],)
-    os.removedirs(wh_config.local_wh['local_address'])
+    shutil.rmtree(wh_config.local_wh['local_address'])
     print "已删除 %s 目录" % (wh_config.local_wh['local_address'],)

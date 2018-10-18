@@ -3,7 +3,7 @@
 """
 
 更新 20181011 ：
-    1.添加报价服务的启动和暂停
+    1.添加报价服务的启动和停止、同步服务、报价初始化等（同步服务无法启动；初始化无法验证）
 
 """
 
@@ -1326,6 +1326,120 @@ def run_qte_auth(hostinfo):
     print('启报价authsvr成功')
 
 
+# 启报价corpsvr
+def run_qte_corp(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+            time.sleep(3)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'] + '启报价corpsvr成功....')
+            else:
+                print(host['hostname'], '启报价corpsvr失败，请手动检查')
+                exit(1)
+        except Exception as e:
+            print(host['hostname'], '启报价corpsvr失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+    print('启报价corpsvr成功')
+
+
+# 启报价其他服务
+def run_qte_other(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    traser_len = len(hostinfo)
+    print('servernum %d'%traser_len)
+    # print(hostinfo)
+    time.sleep(5)
+    for host in hostinfo:
+        print('ready to start server: %s on %s '%(host['script_run'],host['hostname']))
+        # try:
+        ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+        stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+        time.sleep(8)
+        stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+        result = stdout_1.read()
+        time.sleep(1)
+        if str(host['check']) in result:
+            print(host['hostname'] + host['sername'] + ' success !')
+            time.sleep(5)
+        else:
+            print(host['hostname'] + ' 启报价其他服务 '  + host['sername'] + '服务失败，请手动检查')
+            exit(1)
+        # except Exception as e:
+        #     print(host['hostname'], '启交易', host['sername'], '失败，服务器可能连接失败')
+        #     print(e)
+        # finally:
+        #     ssh.close()
+    print('启报价其他服务成功 ！')
+
+# 停报价服务
+def stop_qte_allsvr(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    for host in hostinfo:
+        try:
+            ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+            stdin, stdout, stderr = ssh.exec_command(host['script_stop'])
+            time.sleep(3)
+            stdin_1, stdout_1, stderr_1 = ssh.exec_command(ps)
+            result = stdout_1.read()
+            if str(host['check']) in result:
+                print(host['hostname'], '停报价服务', host['sername'], '失败，请手动检查')
+                exit(1)
+            else:
+                print(host['hostname'], '停报价服务', host['sername'], '成功....')
+        except Exception as e:
+            print(host['hostname'], '停报价服务', host['sername'], '失败，服务器可能连接失败')
+            print(e)
+        finally:
+            ssh.close()
+    print('停报价服务成功')
+
+# 报价初始化
+def init_qte(hostinfo):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    host = hostinfo[0]
+    try:
+        ssh.connect(hostname=host['hostname'], username=host['username'], password=host['password'])
+        stdin, stdout, stderr = ssh.exec_command(host['script_run'])
+        time.sleep(10)
+        date = datetime.datetime.now().strftime('%Y%m%d')
+        date1 = int(date) + 1
+        cmd = 'cd /nfs/data/%s;ls *.csv|wc -l'% (date1,)
+        time_total = 0
+
+        while True:
+            if time_total > 1800:
+                print(host['hostname'], '报价初始化超时，请手动检查')
+                exit(1)
+            else:
+                stdin_1, stdout_1, stderr_1 = ssh.exec_command(cmd)
+                result = stdout_1.read()
+                if result == 125 or result == "125":
+                    print('************************ 报价初始化完成 ! ********************')
+                    break
+                else:
+                    print('正在报价初始化中....')
+                    time.sleep(3)
+                    time_total += 3
+    except Exception as e:
+        print(host['hostname'], '报价初始化失败，服务器可能连接失败')
+        print(e)
+    finally:
+        ssh.close()
+
+
 # 根据提供的服务名列表获取到服务器信息
 def get_need_hostinfo(data_list, search_list):
     res = list(filter(lambda data: data if str(data.keys()[0]) in search_list else False, data_list))
@@ -1354,8 +1468,8 @@ def self_choice():
         print('37)停交易keepsvr、bussvr、 syncsvr 服务          38)停登记ctrlsvr、acctsvr、syncsvr 服务 ')
         print('39)启动交易keepsvr、bussvr、 syncsvr 服务          40)启动登记ctrlsvr、acctsvr、syncsvr 服务 ')
         print('41)备份灾备交易服务日志                 42)备份灾备登记服务日志  ')
-        print('43)启动报价authsvr、corpsvr 服务     44)启动报价其他服务             45)停报价服务')
-        print('46)启动报价初始化 ')
+        print('43)启动报价authsvr 服务            44) 启动报价corpsvr 服务          45)启动报价其他服务    ')
+        print('46)停报价服务                      47)启动报价初始化 ')
         print('99)回到上一级操作选项\n\n')
 
         choice = raw_input('请输入操作选项：')
@@ -1729,11 +1843,40 @@ def self_choice():
             run_qte_auth(hostinfo)
             continue
         elif choice == '44':
-            choice_again = raw_input('回车进行 启动交易bussvr [99回到选择菜单]....')
+            choice_again = raw_input('回车进行 启动报价corpsvr [99回到选择菜单]....')
             if choice_again == '99':
                 continue
-            hostinfo = get_need_hostinfo(data_list, ['bussvr-A', 'bussvr-B'])
-            run_tra_bus(hostinfo)
+            hostinfo = get_need_hostinfo(data_list, ['corpsvr-A', 'corpsvr-B'])
+            run_qte_corp(hostinfo)
+            continue
+        elif choice == '45':
+            choice_again = raw_input('回车进行 启动报价其他服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['qte_bridgesvr_qte-A', 'qte_bridgesvr_qte-B', 'dealsvr-A', 'dealsvr-B',
+                                                     'infosvr-A', 'infosvr-B', 'loginsvr-A', 'loginsvr-B', 'qte_acsvr-A',
+                                                     'qte_acsvr-B', 'qte_quotaacsvr-A', 'qte_quotaacsvr-B', 'qte_qy_acsvr-A', 'qte_qy_acsvr-B'])
+            run_qte_other(hostinfo)
+            continue
+        elif choice == '46':
+            choice_again = raw_input('回车进行 停报价所有服务 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['authsvr-A', 'authsvr-B','corpsvr-A', 'corpsvr-B', 'qte_bridgesvr_qte-A', 'qte_bridgesvr_qte-B',
+                                                     'dealsvr-A', 'dealsvr-B',
+                                                     'infosvr-A', 'infosvr-B', 'loginsvr-A', 'loginsvr-B',
+                                                     'qte_acsvr-A',
+                                                     'qte_acsvr-B', 'qte_quotaacsvr-A', 'qte_quotaacsvr-B',
+                                                     'qte_qy_acsvr-A', 'qte_qy_acsvr-B'
+                                                     ])
+            stop_qte_allsvr(hostinfo)
+            continue
+        elif choice == '47':
+            choice_again = raw_input('回车进行 启动报价初始化 [99回到选择菜单]....')
+            if choice_again == '99':
+                continue
+            hostinfo = get_need_hostinfo(data_list, ['qte_initsvr'])
+            init_qte(hostinfo)
             continue
         elif choice == '99':
             break

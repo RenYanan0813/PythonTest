@@ -1,5 +1,11 @@
 # -*- coding:utf-8 -*-
 
+"""
+更新20181018
+1.修复 acsvr前置的配置文件，不断累加的bug
+
+"""
+
 import paramiko
 import re
 import xlrd
@@ -758,7 +764,7 @@ def acsvr102():
                    config.old_acsvr102['username'], config.old_acsvr102['password'])
     print "下载acsvr102需要更改的配置文件完成！"
 
-    local_acsvr102_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvr102['acsvr102_conf_file'])
+    local_acsvr102_conf_file1 = '%s%s2' % (config.local_svr['local_address'], config.old_acsvr102['acsvr102_conf_file'])
     change_tra_acsvr102(local_acsvr102_conf_file, local_acsvr102_conf_file1)
     print "更改acsvr102配置文件完成！"
 
@@ -817,7 +823,7 @@ def acsvr103():
                    config.old_acsvr103['username'], config.old_acsvr103['password'])
     print "下载acsvr103需要更改的配置文件完成！"
 
-    local_acsvr103_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvr103['acsvr103_conf_file'])
+    local_acsvr103_conf_file1 = '%s%s3' % (config.local_svr['local_address'], config.old_acsvr103['acsvr103_conf_file'])
     change_tra_acsvr103(local_acsvr103_conf_file, local_acsvr103_conf_file1)
     print "更改acsvr103配置文件完成！"
 
@@ -876,7 +882,7 @@ def acsvr104():
                    config.old_acsvr104['username'], config.old_acsvr104['password'])
     print "下载acsvr104需要更改的配置文件完成！"
 
-    local_acsvr104_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvr104['acsvr104_conf_file'])
+    local_acsvr104_conf_file1 = '%s%s4' % (config.local_svr['local_address'], config.old_acsvr104['acsvr104_conf_file'])
     change_tra_acsvr104(local_acsvr104_conf_file, local_acsvr104_conf_file1)
     print "更改acsvr104配置文件完成！"
 
@@ -935,7 +941,7 @@ def acsvr105():
                    config.old_acsvr105['username'], config.old_acsvr105['password'])
     print "下载acsvr105需要更改的配置文件完成！"
 
-    local_acsvr105_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvr105['acsvr105_conf_file'])
+    local_acsvr105_conf_file1 = '%s%s5' % (config.local_svr['local_address'], config.old_acsvr105['acsvr105_conf_file'])
     change_tra_acsvr105(local_acsvr105_conf_file, local_acsvr105_conf_file1)
     print "更改acsvr105配置文件完成！"
 

@@ -1,5 +1,11 @@
 # -*- coding:utf-8 -*-
 
+"""
+更新20181018
+1.修复 acsvr前置的配置文件，不断累加的bug
+
+"""
+
 import paramiko
 import re
 import xlrd
@@ -565,7 +571,7 @@ def acsvrB():
                    config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "下载acsvrB需要更改的配置文件完成！"
 
-    local_acsvrB_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvrB['acsvrB_conf_file'])
+    local_acsvrB_conf_file1 = '%s%s2' % (config.local_svr['local_address'], config.old_acsvrB['acsvrB_conf_file'])
     change_tra_acsvrB(local_acsvrB_conf_file, local_acsvrB_conf_file1)
     print "更改acsvrB配置文件完成！"
 
@@ -939,7 +945,7 @@ def main():
         com = raw_input(" 1) 更改交易前置acsvrA             2) 更改交易前置quotaacsvr \n"
                         " 3) 更改交易前置intacsvr           4) 更改etf前置etfsvr \n"
                         " 5) 更改登记前置acsvr_acct         6) 更改登记前置acsvr_bank \n"
-                        " 7) 更改登记前置acsvr_wm           8) 更改交易前置acsvrB "
+                        " 7) 更改登记前置acsvr_wm           8) 更改交易前置acsvrB \n" 
                         "9) 退出 \n"
                         " 请输入指令：")
         if com == '99':
