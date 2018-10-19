@@ -1,50 +1,61 @@
 # -*- coding:utf-8 -*-
 
-import xlrd
 
-# 获取全部数据
-def get_all_data(filename):
-    table = xlrd.open_workbook(filename)
-    data = table.sheet_by_name('Sheet1')
-    row1 = data.row_values(0)
-    data_list = []
-    for r in xrange(1, data.nrows):
-        sername = data.row_values(r)[0]  # 获取服务名
-        each = data.row_values(r)  # 每一个服务对应的信息列表
-        temp_dict = dict(zip(row1, each))
-        temp = {sername : temp_dict}
-        data_list.append(temp)
-    return data_list
+import os
+import qte_config
+import shutil
+
+#创建本地文件夹
+def mkdir(path):
+    path = path.strip()
+    path = path.rstrip("\\")
+    isExists = os.path.exists(path)
+
+    if not isExists:
+        os.makedirs(path)
+        print path + ' 创建成功'
+        # return TrueF
+    else:
+        print path + ' 目录已存在'
+        # return False
 
 
-# 操作选项
-def choice_op():
-    while True:
-        print('根据下面的提示选择操作\n')
-        print('1)启动验收服务器                      3)自定义操作')
-        print('2)停止验收服务器                      90)查询系统磁盘空间')
-        print('99)退出\n\n')
-
-        choice = raw_input('请输入操作选项：')
-
-        if choice == '1':
-            print('启动验收服务器')
+def main():
+    flag = True
+    while flag:
+        print "\n根据下面提示输入指令:\n"
+        com = raw_input(" 1) 更换报价 34.23 的核心服务          2) 更换报价 34.24 的核心服务 \n"                        
+                        "88) 退出 \n"
+                        " 请输入指令：")
+        if com == '99':
             continue
-        elif choice == '2':
-            print('停止验收服务器')
-            continue
-        elif choice == '90':
-            print('查询系统磁盘空间')
-            continue
-        elif choice == '99':
-            print('正在退出....')
-            break
-        elif choice == '3':
-            self_choice()
+        elif com == '1':
+            print "更换报价 34.23 的核心服务"
+            qte_config.new_version['new_version_address'] = raw_input("输入最新版报价地址 ，(如 /home/zhiban/guoqing/20180822/sha/  (最后要加'/')):")
+            qte_config.new_version['new_version_file'] = raw_input("输入最新acsvrA核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                    continue
+            mkdir(config.local_svr['local_address'])
+            acsvr101()
+            print "---------------完成 更换更改交易前置 acsvrA 操作-----------------"
+        elif com == '2':
+            print "更改交易前置quotaacsvr"
+            config.new_quotaacsvr['new_quotaacsvr_address'] = raw_input("输入最新版quotaacsvr地址 ，(如 /home/zhiban/guoqing/20180822/wh/  (最后要加'/')):")
+            config.new_quotaacsvr['new_quotaacsvr_file'] = raw_input("输入最新quotaacsvr核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                    continue
+            mkdir(config.local_svr['local_address'])
+            quotaacsvr()
+            print "---------------完成 更换更改交易前置 quotaacsvr 操作-----------------"
         else:
-            print("")
+            print "没有该命令，请重新输入..."
             continue
 
 if __name__ == '__main__':
-    data_list = get_all_data('liantiao-0824.xls')  # 全部源数据
-    choice_op()
+    mkdir(qte_config.local_info['local_address'])
+    main()
+    print "删除 %s" % (qte_config.local_svr['local_address'],)
+    shutil.rmtree(qte_config.local_svr['local_address'])
+    print "已删除 %s 目录" % (qte_config.local_svr['local_address'],)
