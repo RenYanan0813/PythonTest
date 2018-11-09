@@ -52,12 +52,12 @@ def get_need_hostinfo(data_list, search_list):
     return need_list
 
 
-#更改交易前置acsvrA
+#更改交易前置acsvr101
 def change_tra_acsvrA(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
         com_txt = '/home/sge/install/acsvrA/conf/acsvr.cfg'
         target_txt = 'd:\\sshclient\\acsvr.cfg'
-        target_txt1 = 'd:\\sshclient\\acsvr1.cfg'
+        target_txt1 = 'd:\\sshclient\\acsvr101.cfg'
     try:
         with open(target_txt, 'r+') as fp1:
             lenght = fp1.readlines()
@@ -69,9 +69,25 @@ def change_tra_acsvrA(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvrA",\n'
+                        lenght[i] = '        "name" : "/ssd/log/acsvr101",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s"%(lenght[i])
+                    if '"listen_ports":{' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i + 1] = ''
+                        lenght[i + 2] = ''
+                        lenght[i + 1] = '                   7777:1,\n'
+                        lenght[i + 2] = '                   16999:2\n'
+                        # fp2.write(s)
+                        print "更改 listen_ports 成功 %s"%(lenght[i])
+                    if '"listen_port"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "listen_port" : 9311,\n'
+                        # fp2.write(s)
+                        print "更改 listen_port 成功 %s"%(lenght[i])
                     if '"grp_cfg"' in lenght[i]:
                         # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
                         # fp2.write(str(s1))
@@ -83,24 +99,23 @@ def change_tra_acsvrA(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
                         # fp2.write(str(s1))
                         lenght[i]=''
-                        lenght[i] = '        "dev" : 105,\n'
+                        lenght[i] = '        "dev" : 101,\n'
                         print "更改 dev 成功 %s"%(lenght[i])
 
                     fp2.write(lenght[i])
-        print 'acsvr配置文件更改完成，存储为%s'%(target_txt1)
+        print 'acsvr101 配置文件更改完成，存储为%s'%(target_txt1)
     except IOError as e:
         print("更改出错。")
     finally:
         fp1.close()
         fp2.close()
 
-
-#更改交易前置acsvrB
-def change_tra_acsvrB(target_txt, target_txt1):
+#更改交易前置acsvr102
+def change_tra_acsvr102(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
         com_txt = '/home/sge/install/acsvrA/conf/acsvr.cfg'
         target_txt = 'd:\\sshclient\\acsvr.cfg'
-        target_txt1 = 'd:\\sshclient\\acsvr1.cfg'
+        target_txt1 = 'd:\\sshclient\\acsvr102.cfg'
     try:
         with open(target_txt, 'r+') as fp1:
             lenght = fp1.readlines()
@@ -112,15 +127,90 @@ def change_tra_acsvrB(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvrB",\n'
+                        lenght[i] = '        "name" : "/ssd/log/acsvr102",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s"%(lenght[i])
+                    if '"listen_ports":{' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i + 1] = ''
+                        lenght[i + 2] = ''
+                        lenght[i + 1] = '                   7776:1,\n'
+                        lenght[i + 2] = '                   16998:2\n'
+                        # fp2.write(s)
+                        print "更改 listen_ports 成功 %s"%(lenght[i])
+                    if '"listen_port"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "listen_port" : 9312,\n'
+                        # fp2.write(s)
+                        print "更改 listen_port 成功 %s"%(lenght[i])
                     if '"grp_cfg"' in lenght[i]:
                         # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
                         # fp2.write(str(s1))
                         lenght[i]=''
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s"%(lenght[i])
+
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 102,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
+
+                    fp2.write(lenght[i])
+        print 'acsvr102 配置文件更改完成，存储为%s'%(target_txt1)
+    except IOError as e:
+        print("更改出错。")
+    finally:
+        fp1.close()
+        fp2.close()
+
+#更改交易前置acsvr103
+def change_tra_acsvr103(target_txt, target_txt1):
+    if target_txt1 == '' and target_txt == '':
+        com_txt = '/home/sge/install/acsvrA/conf/acsvr.cfg'
+        target_txt = 'd:\\sshclient\\acsvr.cfg'
+        target_txt1 = 'd:\\sshclient\\acsvr103.cfg'
+    try:
+        with open(target_txt, 'r+') as fp1:
+            lenght = fp1.readlines()
+            print("正在读取原数据...")
+            for i in range(len(lenght)):
+                # print 'lenght %s' %(lenght[i])
+                with open(target_txt1, 'a') as fp2:
+                    if '"name"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "name" : "/ssd/log/acsvr102",\n'
+                        # fp2.write(s)
+                        print "更改 name 成功 %s"%(lenght[i])
+                    if '"listen_ports":{' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i + 1] = ''
+                        lenght[i + 2] = ''
+                        lenght[i + 1] = '                   7775:1,\n'
+                        lenght[i + 2] = '                   16997:2\n'
+                        # fp2.write(s)
+                        print "更改 listen_ports 成功 %s"%(lenght[i])
+                    if '"listen_port"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "listen_port" : 9313,\n'
+                        # fp2.write(s)
+                        print "更改 listen_port 成功 %s"%(lenght[i])
+                    if '"grp_cfg"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
+                        print "更改 grp_cfg 成功 %s"%(lenght[i])
+
                     if '"dev"' in lenght[i]:
                         # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
                         # fp2.write(str(s1))
@@ -129,13 +219,117 @@ def change_tra_acsvrB(target_txt, target_txt1):
                         print "更改 dev 成功 %s"%(lenght[i])
 
                     fp2.write(lenght[i])
-        print 'acsvr配置文件更改完成，存储为%s'%(target_txt1)
+        print 'acsvr103 配置文件更改完成，存储为%s'%(target_txt1)
     except IOError as e:
         print("更改出错。")
     finally:
         fp1.close()
         fp2.close()
 
+#更改交易前置acsvr104
+def change_tra_acsvrB(target_txt, target_txt1):
+    if target_txt1 == '' and target_txt == '':
+        com_txt = '/home/sge/install/acsvrA/conf/acsvr.cfg'
+        target_txt = 'd:\\sshclient\\acsvr.cfg'
+        target_txt1 = 'd:\\sshclient\\acsvr104.cfg'
+    try:
+        with open(target_txt, 'r+') as fp1:
+            lenght = fp1.readlines()
+            print("正在读取原数据...")
+            for i in range(len(lenght)):
+                # print 'lenght %s' %(lenght[i])
+                with open(target_txt1, 'a') as fp2:
+                    if '"name"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "name" : "/ssd/log/acsvr104",\n'
+                        # fp2.write(s)
+                        print "更改 name 成功 %s"%(lenght[i])
+                    if '"listen_port"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "listen_port" : 9313,\n'
+                        # fp2.write(s)
+                        print "更改 listen_port 成功 %s"%(lenght[i])
+                    if '"grp_cfg"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
+                        print "更改 grp_cfg 成功 %s"%(lenght[i])
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 106,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
+
+                    fp2.write(lenght[i])
+        print 'acsvr104 配置文件更改完成，存储为%s'%(target_txt1)
+    except IOError as e:
+        print("更改出错。")
+    finally:
+        fp1.close()
+        fp2.close()
+
+#更改交易前置acsvr105
+def change_tra_acsvr105(target_txt, target_txt1):
+    if target_txt1 == '' and target_txt == '':
+        com_txt = '/home/sge/install/acsvrA/conf/acsvr.cfg'
+        target_txt = 'd:\\sshclient\\acsvr.cfg'
+        target_txt1 = 'd:\\sshclient\\acsvr105.cfg'
+    try:
+        with open(target_txt, 'r+') as fp1:
+            lenght = fp1.readlines()
+            print("正在读取原数据...")
+            for i in range(len(lenght)):
+                # print 'lenght %s' %(lenght[i])
+                with open(target_txt1, 'a') as fp2:
+                    if '"name"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "name" : "/ssd/log/acsvr105",\n'
+                        # fp2.write(s)
+                        print "更改 name 成功 %s"%(lenght[i])
+                    if '"listen_ports":{' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i + 1] = ''
+                        lenght[i + 2] = ''
+                        lenght[i + 1] = '                   7776:1,\n'
+                        lenght[i + 2] = '                   16998:2\n'
+                        # fp2.write(s)
+                        print "更改 listen_ports 成功 %s"%(lenght[i])
+                    if '"listen_port"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "listen_port" : 9312,\n'
+                        # fp2.write(s)
+                        print "更改 listen_port 成功 %s"%(lenght[i])
+                    if '"grp_cfg"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
+                        print "更改 grp_cfg 成功 %s"%(lenght[i])
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 105,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
+
+                    fp2.write(lenght[i])
+        print 'acsvr105 配置文件更改完成，存储为%s'%(target_txt1)
+    except IOError as e:
+        print("更改出错。")
+    finally:
+        fp1.close()
+        fp2.close()
 
 
 #更改交易前置quotaacsvr
@@ -143,7 +337,7 @@ def change_tra_quotaacsvr(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
         com_txt = '/home/reg1/wh/config/quotaacsvr.cfg'
         target_txt = 'd:\\sshclient\\quotaacsvr.cfg'
-        target_txt1 = 'd:\\sshclient\\quotaacsvr1.cfg'
+        target_txt1 = 'd:\\sshclient\\quotaacsvrB.cfg'
     try:
         with open(target_txt, 'r+') as fp1:
             lenght = fp1.readlines()
@@ -155,7 +349,7 @@ def change_tra_quotaacsvr(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/quotaacsvr",\n'
+                        lenght[i] = '        "name" : "/ssd/log/quotaacsvrB",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:
@@ -164,14 +358,63 @@ def change_tra_quotaacsvr(target_txt, target_txt1):
                         lenght[i] = ''
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s" % (lenght[i])
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 9502,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
 
                     fp2.write(lenght[i])
-        print 'quotaacsvr配置文件更改完成，存储为%s' % (target_txt1)
+                fp2.close()
+        print 'quotaacsvrB配置文件更改完成，存储为%s' % (target_txt1)
     except IOError as e:
         print("更改出错。")
     finally:
         fp1.close()
-        fp2.close()
+
+
+#更改交易前置quotaacsvrA
+def change_tra_quotaacsvrA(target_txt, target_txt1):
+    if target_txt1 == '' and target_txt == '':
+        com_txt = '/home/reg1/wh/config/quotaacsvr.cfg'
+        target_txt = 'd:\\sshclient\\quotaacsvr.cfg'
+        target_txt1 = 'd:\\sshclient\\quotaacsvrA.cfg'
+    try:
+        with open(target_txt, 'r+') as fp1:
+            lenght = fp1.readlines()
+            print("正在读取原数据...")
+            for i in range(len(lenght)):
+                # print 'lenght %s' %(lenght[i])
+                with open(target_txt1, 'a') as fp2:
+                    if '"name"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "name" : "/ssd/log/quotaacsvrA",\n'
+                        # fp2.write(s)
+                        print "更改 name 成功 %s" % (lenght[i])
+                    if '"grp_cfg"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i] = ''
+                        lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
+                        print "更改 grp_cfg 成功 %s" % (lenght[i])
+                    if '"dev"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i]=''
+                        lenght[i] = '        "dev" : 9501,\n'
+                        print "更改 dev 成功 %s"%(lenght[i])
+
+                    fp2.write(lenght[i])
+                fp2.close()
+        print 'quotaacsvrA配置文件更改完成，存储为%s' % (target_txt1)
+    except IOError as e:
+        print("更改出错。")
+    finally:
+        fp1.close()
+
 
 
 #更改交易前置intacsvr
@@ -179,7 +422,7 @@ def change_tra_intacsvr(target_txt, target_txt1):
     if target_txt1 == '' and target_txt == '':
         com_txt = '/home/sge/install/intacsvr/conf/intacsvr.cfg'
         target_txt = 'd:\\sshclient\\intacsvr.cfg'
-        target_txt1 = 'd:\\sshclient\\intacsvr1.cfg'
+        target_txt1 = 'd:\\sshclient\\intacsvrA.cfg'
     try:
         with open(target_txt, 'r+') as fp1:
             lenght = fp1.readlines()
@@ -191,7 +434,7 @@ def change_tra_intacsvr(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/intacsvr",\n'
+                        lenght[i] = '        "name" : "/ssd/log/intacsvrA",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:
@@ -202,12 +445,48 @@ def change_tra_intacsvr(target_txt, target_txt1):
                         print "更改 grp_cfg 成功 %s" % (lenght[i])
 
                     fp2.write(lenght[i])
+                fp2.close()
         print 'intacsvr配置文件更改完成，存储为%s' % (target_txt1)
     except IOError as e:
         print("更改出错。")
     finally:
         fp1.close()
-        fp2.close()
+        # fp2.close()
+
+#更改交易前置intacsvrB
+def change_tra_intacsvrB(target_txt, target_txt1):
+    if target_txt1 == '' and target_txt == '':
+        com_txt = '/home/sge/install/intacsvr/conf/intacsvr.cfg'
+        target_txt = 'd:\\sshclient\\intacsvr.cfg'
+        target_txt1 = 'd:\\sshclient\\intacsvrB.cfg'
+    try:
+        with open(target_txt, 'r+') as fp1:
+            lenght = fp1.readlines()
+            print("正在读取原数据...")
+            for i in range(len(lenght)):
+                # print 'lenght %s' %(lenght[i])
+                with open(target_txt1, 'a') as fp2:
+                    if '"name"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
+                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
+                        lenght[i] = ''
+                        lenght[i] = '        "name" : "/ssd/log/intacsvrB",\n'
+                        # fp2.write(s)
+                        print "更改 name 成功 %s" % (lenght[i])
+                    if '"grp_cfg"' in lenght[i]:
+                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
+                        # fp2.write(str(s1))
+                        lenght[i] = ''
+                        lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
+                        print "更改 grp_cfg 成功 %s" % (lenght[i])
+
+                    fp2.write(lenght[i])
+                fp2.close()
+        print 'intacsvrB配置文件更改完成，存储为%s' % (target_txt1)
+    except IOError as e:
+        print("更改出错。")
+    finally:
+        fp1.close()
 
 
 #更改登记前置acct
@@ -491,7 +770,7 @@ def acsvrA():
     print "将新版本acsvrA压缩包上传至acsvrA服务器完成！"
 
     # 将原来的文件重命名备份
-    renameFile(config.old_acsvrA['old_acsvrA_address'], 'acsvrA', config.old_acsvrA['hostname'],
+    renameFile(config.old_acsvrA['old_acsvrA_address'], 'acsvr101', config.old_acsvrA['hostname'],
                config.old_acsvrA['username'], config.old_acsvrA['password'])
     print "acsvrA旧版本文件重命名完成！"
 
@@ -503,9 +782,10 @@ def acsvrA():
             config.old_acsvrA['password'])
     print "删除 acsvrA{date}.tar.gz 压缩包完成！"
 
-    mvFile(config.old_acsvrA['old_acsvrA_address'], 'acsvr', 'acsvrA', config.old_acsvrA['hostname'],
+    #重命名新文件夹名为acsvr101
+    mvFile(config.old_acsvrA['old_acsvrA_address'], 'acsvr', 'acsvr101', config.old_acsvrA['hostname'],
            config.old_acsvrA['username'], config.old_acsvrA['password'])
-    print "acsvrA新版本文件重命名完成！"
+    print "acsvr101新版本文件重命名完成！"
 
     old_file = config.old_acsvrA['old_acsvrA_conf_add'] + config.old_acsvrA['acsvrA_conf_file']
     local_acsvrA_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvrA['acsvrA_conf_file'])
@@ -513,7 +793,7 @@ def acsvrA():
                    config.old_acsvrA['username'], config.old_acsvrA['password'])
     print "下载acsvrA需要更改的配置文件完成！"
 
-    local_acsvrA_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_acsvrA['acsvrA_conf_file'])
+    local_acsvrA_conf_file1 = '%s%s101' % (config.local_svr['local_address'], config.old_acsvrA['acsvrA_conf_file'])
     change_tra_acsvrA(local_acsvrA_conf_file, local_acsvrA_conf_file1)
     print "更改acsvrA配置文件完成！"
 
@@ -526,10 +806,132 @@ def acsvrA():
     print "删除原acsvrA配置文件完成！"
 
     # 上传到服务器上的文件
-    old_acsvrA_conf_file = '%s%s' % (config.old_acsvrA['old_acsvrA_conf_add'], config.old_acsvrA['acsvrA_conf_file'])
+    old_acsvrA_conf_file = '%s%s' % (config.old_acsvrA['old_acsvrA_conf_add'], 'acsvr-101.cfg')
     putFileToServer(local_acsvrA_conf_file1, old_acsvrA_conf_file, config.old_acsvrA['hostname'],
                     config.old_acsvrA['username'], config.old_acsvrA['password'])
     print "上传更改后的acsvrA配置文件至服务器完成"
+
+
+#更换前置服务acsvr102
+def acsvr102():
+    new_acsvr102_add = config.new_acsvr102['new_acsvr102_address'] + config.new_acsvr102['new_acsvr102_file']
+    local_add_file = '%sacsvr102%s.tar.gz' % (
+    config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_acsvr102['new_acsvr102_file'] = 'acsvr102%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_acsvr102_add, local_add_file, config.new_acsvr102['hostname'], config.new_acsvr102['username'],
+                   config.new_acsvr102['password'])
+    print "最新版acsvr102压缩包下载本地完成！"
+
+    old_acsvr102_add = '%sacsvr102%s.tar.gz' % (
+    config.old_acsvr102['old_acsvr102_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_acsvr102_add, config.old_acsvr102['hostname'], config.old_acsvr102['username'],
+                    config.old_acsvr102['password'])
+    print "将新版本acsvr102压缩包上传至acsvr102服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_acsvr102['old_acsvr102_address'], 'acsvr102', config.old_acsvr102['hostname'],
+               config.old_acsvr102['username'], config.old_acsvr102['password'])
+    print "acsvr102旧版本文件重命名完成！"
+
+    tarFile(config.old_acsvr102['old_acsvr102_address'], config.old_acsvr102['new_acsvr102_file'],
+            config.old_acsvr102['hostname'], config.old_acsvr102['username'], config.old_acsvr102['password'])
+    print '解压 acsvr102{date}.tar.gz 完成！'
+
+    delFile(old_acsvr102_add, config.old_acsvr102['hostname'], config.old_acsvr102['username'],
+            config.old_acsvr102['password'])
+    print "删除 acsvr102{date}.tar.gz 压缩包完成！"
+
+    #重命名新文件夹名为acsvr101
+    mvFile(config.old_acsvr102['old_acsvr102_address'], 'acsvr', 'acsvr102', config.old_acsvr102['hostname'],
+           config.old_acsvr102['username'], config.old_acsvr102['password'])
+    print "acsvr101新版本文件重命名完成！"
+
+    old_file = config.old_acsvr102['old_acsvr102_conf_add'] + config.old_acsvr102['acsvr102_conf_file']
+    local_acsvr102_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvr102['acsvr102_conf_file'])
+    getFileToLocal(old_file, local_acsvr102_conf_file, config.old_acsvr102['hostname'],
+                   config.old_acsvr102['username'], config.old_acsvr102['password'])
+    print "下载acsvr102需要更改的配置文件完成！"
+
+    local_acsvr102_conf_file1 = '%s%s102' % (config.local_svr['local_address'], config.old_acsvr102['acsvr102_conf_file'])
+    change_tra_acsvr102(local_acsvr102_conf_file, local_acsvr102_conf_file1)
+    print "更改acsvr102配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr102_conf_file = '%s%s' % (config.old_acsvr102['old_acsvr102_conf_add'], config.old_acsvr102['acsvr102_conf_file'])
+
+    # 删除服务器上的原文件
+    delFile(old_acsvr102_conf_file, config.old_acsvr102['hostname'], config.old_acsvr102['username'],
+            config.old_acsvr102['password'])
+    print "删除原acsvr102配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr102_conf_file = '%s%s' % (config.old_acsvr102['old_acsvr102_conf_add'], 'acsvr-102.cfg')
+    putFileToServer(local_acsvr102_conf_file1, old_acsvr102_conf_file, config.old_acsvr102['hostname'],
+                    config.old_acsvr102['username'], config.old_acsvr102['password'])
+    print "上传更改后的acsvr102配置文件至服务器完成"
+
+
+#更换前置服务acsvr103
+def acsvr103():
+    new_acsvr103_add = config.new_acsvr103['new_acsvr103_address'] + config.new_acsvr103['new_acsvr103_file']
+    local_add_file = '%sacsvr103%s.tar.gz' % (
+    config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_acsvr103['new_acsvr103_file'] = 'acsvr103%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_acsvr103_add, local_add_file, config.new_acsvr103['hostname'], config.new_acsvr103['username'],
+                   config.new_acsvr103['password'])
+    print "最新版acsvr103压缩包下载本地完成！"
+
+    old_acsvr103_add = '%sacsvr103%s.tar.gz' % (
+    config.old_acsvr103['old_acsvr103_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_acsvr103_add, config.old_acsvr103['hostname'], config.old_acsvr103['username'],
+                    config.old_acsvr103['password'])
+    print "将新版本acsvr103压缩包上传至acsvr103服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_acsvr103['old_acsvr103_address'], 'acsvr103', config.old_acsvr103['hostname'],
+               config.old_acsvr103['username'], config.old_acsvr103['password'])
+    print "acsvr103旧版本文件重命名完成！"
+
+    tarFile(config.old_acsvr103['old_acsvr103_address'], config.old_acsvr103['new_acsvr103_file'],
+            config.old_acsvr103['hostname'], config.old_acsvr103['username'], config.old_acsvr103['password'])
+    print '解压 acsvr103{date}.tar.gz 完成！'
+
+    delFile(old_acsvr103_add, config.old_acsvr103['hostname'], config.old_acsvr103['username'],
+            config.old_acsvr103['password'])
+    print "删除 acsvr103{date}.tar.gz 压缩包完成！"
+
+    #重命名新文件夹名为acsvr101
+    mvFile(config.old_acsvr103['old_acsvr103_address'], 'acsvr', 'acsvr103', config.old_acsvr103['hostname'],
+           config.old_acsvr103['username'], config.old_acsvr103['password'])
+    print "acsvr101新版本文件重命名完成！"
+
+    old_file = config.old_acsvr103['old_acsvr103_conf_add'] + config.old_acsvr103['acsvr103_conf_file']
+    local_acsvr103_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvr103['acsvr103_conf_file'])
+    getFileToLocal(old_file, local_acsvr103_conf_file, config.old_acsvr103['hostname'],
+                   config.old_acsvr103['username'], config.old_acsvr103['password'])
+    print "下载acsvr103需要更改的配置文件完成！"
+
+    local_acsvr103_conf_file1 = '%s%s103' % (config.local_svr['local_address'], config.old_acsvr103['acsvr103_conf_file'])
+    change_tra_acsvr103(local_acsvr103_conf_file, local_acsvr103_conf_file1)
+    print "更改acsvr103配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr103_conf_file = '%s%s' % (config.old_acsvr103['old_acsvr103_conf_add'], config.old_acsvr103['acsvr103_conf_file'])
+
+    # 删除服务器上的原文件
+    delFile(old_acsvr103_conf_file, config.old_acsvr103['hostname'], config.old_acsvr103['username'],
+            config.old_acsvr103['password'])
+    print "删除原acsvr103配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr103_conf_file = '%s%s' % (config.old_acsvr103['old_acsvr103_conf_add'], 'acsvr-103.cfg')
+    putFileToServer(local_acsvr103_conf_file1, old_acsvr103_conf_file, config.old_acsvr103['hostname'],
+                    config.old_acsvr103['username'], config.old_acsvr103['password'])
+    print "上传更改后的acsvr103配置文件至服务器完成"
+
+
 
 #更换前置服务acsvrB
 def acsvrB():
@@ -549,7 +951,7 @@ def acsvrB():
     print "将新版本acsvrB压缩包上传至acsvrB服务器完成！"
 
     # 将原来的文件重命名备份
-    renameFile(config.old_acsvrB['old_acsvrB_address'], 'acsvrB', config.old_acsvrB['hostname'],
+    renameFile(config.old_acsvrB['old_acsvrB_address'], 'acsvr104', config.old_acsvrB['hostname'],
                config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "acsvrB旧版本文件重命名完成！"
 
@@ -561,7 +963,7 @@ def acsvrB():
                     config.old_acsvrB['password'])
     print "删除 acsvrB{date}.tar.gz 压缩包完成！"
 
-    mvFile(config.old_acsvrB['old_acsvrB_address'], 'acsvr', 'acsvrB', config.old_acsvrB['hostname'],
+    mvFile(config.old_acsvrB['old_acsvrB_address'], 'acsvr', 'acsvr104', config.old_acsvrB['hostname'],
                config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "acsvrB新版本文件重命名完成！"
 
@@ -571,7 +973,7 @@ def acsvrB():
                    config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "下载acsvrB需要更改的配置文件完成！"
 
-    local_acsvrB_conf_file1 = '%s%s2' % (config.local_svr['local_address'], config.old_acsvrB['acsvrB_conf_file'])
+    local_acsvrB_conf_file1 = '%s%s104' % (config.local_svr['local_address'], config.old_acsvrB['acsvrB_conf_file'])
     change_tra_acsvrB(local_acsvrB_conf_file, local_acsvrB_conf_file1)
     print "更改acsvrB配置文件完成！"
 
@@ -584,12 +986,73 @@ def acsvrB():
     print "删除原acsvrB配置文件完成！"
 
     # 上传到服务器上的文件
-    old_acsvrB_conf_file = '%s%s' % (config.old_acsvrB['old_acsvrB_conf_add'], config.old_acsvrB['acsvrB_conf_file'])
+    old_acsvrB_conf_file = '%s%s' % (config.old_acsvrB['old_acsvrB_conf_add'], 'acsvr-104.cfg')
     putFileToServer(local_acsvrB_conf_file1, old_acsvrB_conf_file, config.old_acsvrB['hostname'],
                     config.old_acsvrB['username'], config.old_acsvrB['password'])
     print "上传更改后的acsvrB配置文件至服务器完成"
 
-#更换前置服务quotaacsvr
+
+#更换前置服务acsvr105
+def acsvr105():
+    new_acsvr105_add = config.new_acsvr105['new_acsvr105_address'] + config.new_acsvr105['new_acsvr105_file']
+    local_add_file = '%sacsvr105%s.tar.gz' % (
+    config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_acsvr105['new_acsvr105_file'] = 'acsvr105%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_acsvr105_add, local_add_file, config.new_acsvr105['hostname'], config.new_acsvr105['username'],
+                   config.new_acsvr105['password'])
+    print "最新版acsvr105压缩包下载本地完成！"
+
+    old_acsvr105_add = '%sacsvr105%s.tar.gz' % (
+    config.old_acsvr105['old_acsvr105_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_acsvr105_add, config.old_acsvr105['hostname'], config.old_acsvr105['username'],
+                    config.old_acsvr105['password'])
+    print "将新版本acsvr105压缩包上传至acsvr105服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_acsvr105['old_acsvr105_address'], 'acsvr105', config.old_acsvr105['hostname'],
+               config.old_acsvr105['username'], config.old_acsvr105['password'])
+    print "acsvr105旧版本文件重命名完成！"
+
+    tarFile(config.old_acsvr105['old_acsvr105_address'], config.old_acsvr105['new_acsvr105_file'],
+            config.old_acsvr105['hostname'], config.old_acsvr105['username'], config.old_acsvr105['password'])
+    print '解压 acsvr105{date}.tar.gz 完成！'
+
+    delFile(old_acsvr105_add, config.old_acsvr105['hostname'], config.old_acsvr105['username'],
+            config.old_acsvr105['password'])
+    print "删除 acsvr105{date}.tar.gz 压缩包完成！"
+
+    #重命名新文件夹名为acsvr105
+    mvFile(config.old_acsvr105['old_acsvr105_address'], 'acsvr', 'acsvr105', config.old_acsvr105['hostname'],
+           config.old_acsvr105['username'], config.old_acsvr105['password'])
+    print "acsvr105新版本文件重命名完成！"
+
+    old_file = config.old_acsvr105['old_acsvr105_conf_add'] + config.old_acsvr105['acsvr105_conf_file']
+    local_acsvr105_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_acsvr105['acsvr105_conf_file'])
+    getFileToLocal(old_file, local_acsvr105_conf_file, config.old_acsvr105['hostname'],
+                   config.old_acsvr105['username'], config.old_acsvr105['password'])
+    print "下载acsvr105需要更改的配置文件完成！"
+
+    local_acsvr105_conf_file1 = '%s%s105' % (config.local_svr['local_address'], config.old_acsvr105['acsvr105_conf_file'])
+    change_tra_acsvr105(local_acsvr105_conf_file, local_acsvr105_conf_file1)
+    print "更改acsvr105配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr105_conf_file = '%s%s' % (config.old_acsvr105['old_acsvr105_conf_add'], config.old_acsvr105['acsvr105_conf_file'])
+
+    # 删除服务器上的原文件
+    delFile(old_acsvr105_conf_file, config.old_acsvr105['hostname'], config.old_acsvr105['username'],
+            config.old_acsvr105['password'])
+    print "删除原acsvr105配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_acsvr105_conf_file = '%s%s' % (config.old_acsvr105['old_acsvr105_conf_add'], 'acsvr-105.cfg')
+    putFileToServer(local_acsvr105_conf_file1, old_acsvr105_conf_file, config.old_acsvr105['hostname'],
+                    config.old_acsvr105['username'], config.old_acsvr105['password'])
+    print "上传更改后的acsvr105配置文件至服务器完成"
+
+
+#更换前置服务quotaacsvrB
 def quotaacsvr():
     new_quotaacsvr_add = config.new_quotaacsvr['new_quotaacsvr_address'] + config.new_quotaacsvr['new_quotaacsvr_file']
     local_add_file = '%squotaacsvr%s.tar.gz' % (
@@ -607,7 +1070,7 @@ def quotaacsvr():
     print "将新版本quotaacsvr压缩包上传至quotaacsvr服务器完成！"
 
     # 将原来的文件重命名备份
-    renameFile(config.old_quotaacsvr['old_quotaacsvr_address'], 'quotaacsvr', config.old_quotaacsvr['hostname'],
+    renameFile(config.old_quotaacsvr['old_quotaacsvr_address'], 'quotaacsvrB', config.old_quotaacsvr['hostname'],
                config.old_quotaacsvr['username'], config.old_quotaacsvr['password'])
     print "quotaacsvr旧版本文件重命名完成！"
 
@@ -619,6 +1082,10 @@ def quotaacsvr():
             config.old_quotaacsvr['password'])
     print "删除 quotaacsvr{date}.tar.gz 压缩包完成！"
 
+    mvFile(config.old_quotaacsvr['old_quotaacsvr_address'], 'quotaacsvr', 'quotaacsvrB', config.old_quotaacsvr['hostname'],
+           config.old_quotaacsvr['username'], config.old_quotaacsvr['password'])
+    print "quotaacsvrB新版本文件重命名完成！"
+    
     old_file = config.old_quotaacsvr['old_quotaacsvr_conf_add'] + config.old_quotaacsvr['quotaacsvr_conf_file']
     local_quotaacsvr_conf_file = '%s%s' % (
     config.local_svr['local_address'], config.old_quotaacsvr['quotaacsvr_conf_file'])
@@ -627,7 +1094,7 @@ def quotaacsvr():
                    config.old_quotaacsvr['password'])
     print "下载quotaacsvr需要更改的配置文件完成！"
 
-    local_quotaacsvr_conf_file1 = '%s%s1' % (
+    local_quotaacsvr_conf_file1 = '%s%sB' % (
     config.local_svr['local_address'], config.old_quotaacsvr['quotaacsvr_conf_file'])
     change_tra_quotaacsvr(local_quotaacsvr_conf_file, local_quotaacsvr_conf_file1)
     print "更改quotaacsvr配置文件完成！"
@@ -643,11 +1110,73 @@ def quotaacsvr():
 
     # 上传到服务器上的文件
     old_quotaacsvr_conf_file = '%s%s' % (
-    config.old_quotaacsvr['old_quotaacsvr_conf_add'], config.old_quotaacsvr['quotaacsvr_conf_file'])
+    config.old_quotaacsvr['old_quotaacsvr_conf_add'], 'quotaacsvr-B.cfg')
     putFileToServer(local_quotaacsvr_conf_file1, old_quotaacsvr_conf_file, config.old_quotaacsvr['hostname'],
                     config.old_quotaacsvr['username'], config.old_quotaacsvr['password'])
     print "上传更改后的quotaacsvr配置文件至服务器完成"
 
+#更换前置服务quotaacsvrA
+def quotaacsvrA():
+    new_quotaacsvrA_add = config.new_quotaacsvrA['new_quotaacsvrA_address'] + config.new_quotaacsvrA['new_quotaacsvrA_file']
+    local_add_file = '%squotaacsvrA%s.tar.gz' % (
+    config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_quotaacsvrA['new_quotaacsvrA_file'] = 'quotaacsvrA%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_quotaacsvrA_add, local_add_file, config.new_quotaacsvrA['hostname'],
+                   config.new_quotaacsvrA['username'], config.new_quotaacsvrA['password'])
+    print "最新版quotaacsvrA压缩包下载本地完成！"
+
+    old_quotaacsvrA_add = '%squotaacsvrA%s.tar.gz' % (
+    config.old_quotaacsvrA['old_quotaacsvrA_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_quotaacsvrA_add, config.old_quotaacsvrA['hostname'],
+                    config.old_quotaacsvrA['username'], config.old_quotaacsvrA['password'])
+    print "将新版本quotaacsvrA压缩包上传至quotaacsvrA服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_quotaacsvrA['old_quotaacsvrA_address'], 'quotaacsvrA', config.old_quotaacsvrA['hostname'],
+               config.old_quotaacsvrA['username'], config.old_quotaacsvrA['password'])
+    print "quotaacsvrA旧版本文件重命名完成！"
+
+    tarFile(config.old_quotaacsvrA['old_quotaacsvrA_address'], config.old_quotaacsvrA['new_quotaacsvrA_file'],
+            config.old_quotaacsvrA['hostname'], config.old_quotaacsvrA['username'], config.old_quotaacsvrA['password'])
+    print '解压 quotaacsvrA{date}.tar.gz 完成！'
+
+    delFile(old_quotaacsvrA_add, config.old_quotaacsvrA['hostname'], config.old_quotaacsvrA['username'],
+            config.old_quotaacsvrA['password'])
+    print "删除 quotaacsvrA{date}.tar.gz 压缩包完成！"
+
+    mvFile(config.old_quotaacsvrA['old_quotaacsvrA_address'], 'quotaacsvr', 'quotaacsvrA', config.old_quotaacsvrA['hostname'],
+           config.old_quotaacsvrA['username'], config.old_quotaacsvrA['password'])
+    print "quotaacsvrA新版本文件重命名完成！"
+
+    old_file = config.old_quotaacsvrA['old_quotaacsvrA_conf_add'] + config.old_quotaacsvrA['quotaacsvrA_conf_file']
+    local_quotaacsvrA_conf_file = '%s%s' % (
+    config.local_svr['local_address'], config.old_quotaacsvrA['quotaacsvrA_conf_file'])
+    getFileToLocal(old_file, local_quotaacsvrA_conf_file,
+                   config.old_quotaacsvrA['hostname'], config.old_quotaacsvrA['username'],
+                   config.old_quotaacsvrA['password'])
+    print "下载quotaacsvrA需要更改的配置文件完成！"
+
+    local_quotaacsvrA_conf_file1 = '%s%sA' % (
+    config.local_svr['local_address'], config.old_quotaacsvrA['quotaacsvrA_conf_file'])
+    change_tra_quotaacsvrA(local_quotaacsvrA_conf_file, local_quotaacsvrA_conf_file1)
+    print "更改quotaacsvrA配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_quotaacsvrA_conf_file = '%s%s' % (
+    config.old_quotaacsvrA['old_quotaacsvrA_conf_add'], config.old_quotaacsvrA['quotaacsvrA_conf_file'])
+
+    # 删除服务器上的原文件
+    delFile(old_quotaacsvrA_conf_file, config.old_quotaacsvrA['hostname'], config.old_quotaacsvrA['username'],
+            config.old_quotaacsvrA['password'])
+    print "删除原quotaacsvrA配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_quotaacsvrA_conf_file = '%s%s' % (
+    config.old_quotaacsvrA['old_quotaacsvrA_conf_add'], 'quotaacsvr-A.cfg')
+    putFileToServer(local_quotaacsvrA_conf_file1, old_quotaacsvrA_conf_file, config.old_quotaacsvrA['hostname'],
+                    config.old_quotaacsvrA['username'], config.old_quotaacsvrA['password'])
+    print "上传更改后的quotaacsvrA配置文件至服务器完成"
 
 #更换前置服务intacsvr
 def intacsvr():
@@ -667,7 +1196,7 @@ def intacsvr():
     print "将新版本intacsvr压缩包上传至intacsvr服务器完成！"
 
     # 将原来的文件重命名备份
-    renameFile(config.old_intacsvr['old_intacsvr_address'], 'intacsvr', config.old_intacsvr['hostname'],
+    renameFile(config.old_intacsvr['old_intacsvr_address'], 'intacsvrA', config.old_intacsvr['hostname'],
                config.old_intacsvr['username'], config.old_intacsvr['password'])
     print "intacsvr旧版本文件重命名完成！"
 
@@ -685,7 +1214,7 @@ def intacsvr():
                    config.old_intacsvr['username'], config.old_intacsvr['password'])
     print "下载intacsvr需要更改的配置文件完成！"
 
-    local_intacsvr_conf_file1 = '%s%s1' % (config.local_svr['local_address'], config.old_intacsvr['intacsvr_conf_file'])
+    local_intacsvr_conf_file1 = '%s%sA' % (config.local_svr['local_address'], config.old_intacsvr['intacsvr_conf_file'])
     change_tra_intacsvr(local_intacsvr_conf_file, local_intacsvr_conf_file1)
     print "更改intacsvr配置文件完成！"
 
@@ -700,11 +1229,71 @@ def intacsvr():
 
     # 上传到服务器上的文件
     old_intacsvr_conf_file = '%s%s' % (
-    config.old_intacsvr['old_intacsvr_conf_add'], config.old_intacsvr['intacsvr_conf_file'])
+    config.old_intacsvr['old_intacsvr_conf_add'], 'intacsvr-A.cfg')
     putFileToServer(local_intacsvr_conf_file1, old_intacsvr_conf_file, config.old_intacsvr['hostname'],
                     config.old_intacsvr['username'], config.old_intacsvr['password'])
     print "上传更改后的intacsvr配置文件至服务器完成"
 
+#更换前置服务intacsvrB
+def intacsvrB():
+    new_intacsvrB_add = config.new_intacsvrB['new_intacsvrB_address'] + config.new_intacsvrB['new_intacsvrB_file']
+    local_add_file = '%sintacsvrB%s.tar.gz' % (
+    config.local_svr['local_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    config.old_intacsvrB['new_intacsvrB_file'] = 'intacsvrB%s.tar.gz' % (datetime.datetime.now().strftime('%Y%m%d'),)
+
+    getFileToLocal(new_intacsvrB_add, local_add_file, config.new_intacsvrB['hostname'], config.new_intacsvrB['username'],
+                   config.new_intacsvrB['password'])
+    print "最新版intacsvrB压缩包下载本地完成！"
+
+    old_intacsvrB_add = '%sintacsvrB%s.tar.gz' % (
+    config.old_intacsvrB['old_intacsvrB_address'], datetime.datetime.now().strftime('%Y%m%d'))
+    putFileToServer(local_add_file, old_intacsvrB_add, config.old_intacsvrB['hostname'], config.old_intacsvrB['username'],
+                    config.old_intacsvrB['password'])
+    print "将新版本intacsvrB压缩包上传至intacsvrB服务器完成！"
+
+    # 将原来的文件重命名备份
+    renameFile(config.old_intacsvrB['old_intacsvrB_address'], 'intacsvrB', config.old_intacsvrB['hostname'],
+               config.old_intacsvrB['username'], config.old_intacsvrB['password'])
+    print "intacsvrB旧版本文件重命名完成！"
+
+    tarFile(config.old_intacsvrB['old_intacsvrB_address'], config.old_intacsvrB['new_intacsvrB_file'],
+            config.old_intacsvrB['hostname'], config.old_intacsvrB['username'], config.old_intacsvrB['password'])
+    print '解压 intacsvrB{date}.tar.gz 完成！'
+
+    delFile(old_intacsvrB_add, config.old_intacsvrB['hostname'], config.old_intacsvrB['username'],
+            config.old_intacsvrB['password'])
+    print "删除 intacsvrB{date}.tar.gz 压缩包完成！"
+
+    #将文件夹改名为intacsvrB
+    mvFile(config.old_intacsvrB['old_intacsvrB_address'], 'intacsvr', 'intacsvrB', config.old_intacsvrB['hostname'],
+           config.old_intacsvrB['username'], config.old_intacsvrB['password'])
+    print "intacsvrB新版本文件重命名完成！"
+
+    old_file = config.old_intacsvrB['old_intacsvrB_conf_add'] + config.old_intacsvrB['intacsvrB_conf_file']
+    local_intacsvrB_conf_file = '%s%s' % (config.local_svr['local_address'], config.old_intacsvrB['intacsvrB_conf_file'])
+    getFileToLocal(old_file, local_intacsvrB_conf_file, config.old_intacsvrB['hostname'],
+                   config.old_intacsvrB['username'], config.old_intacsvrB['password'])
+    print "下载intacsvrB需要更改的配置文件完成！"
+
+    local_intacsvrB_conf_file1 = '%s%sB' % (config.local_svr['local_address'], config.old_intacsvrB['intacsvrB_conf_file'])
+    change_tra_intacsvrB(local_intacsvrB_conf_file, local_intacsvrB_conf_file1)
+    print "更改intacsvrB配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_intacsvrB_conf_file = '%s%s' % (
+    config.old_intacsvrB['old_intacsvrB_conf_add'], config.old_intacsvrB['intacsvrB_conf_file'])
+
+    # 删除服务器上的原文件
+    delFile(old_intacsvrB_conf_file, config.old_intacsvrB['hostname'], config.old_intacsvrB['username'],
+            config.old_intacsvrB['password'])
+    print "删除原intacsvrB配置文件完成！"
+
+    # 上传到服务器上的文件
+    old_intacsvrB_conf_file = '%s%s' % (
+    config.old_intacsvrB['old_intacsvrB_conf_add'], 'intacsvr-B.cfg')
+    putFileToServer(local_intacsvrB_conf_file1, old_intacsvrB_conf_file, config.old_intacsvrB['hostname'],
+                    config.old_intacsvrB['username'], config.old_intacsvrB['password'])
+    print "上传更改后的intacsvrB配置文件至服务器完成"
 
 #更换前置服务etfsvr
 def etfsvr():
@@ -942,11 +1531,14 @@ def main():
     flag = True
     while flag:
         print "\n根据下面提示输入指令:\n"
-        com = raw_input(" 1) 更改交易前置acsvrA             2) 更改交易前置quotaacsvr \n"
+        com = raw_input(" 1) 更改交易前置acsvr101             2) 更改交易前置quotaacsvr \n"
                         " 3) 更改交易前置intacsvr           4) 更改etf前置etfsvr \n"
                         " 5) 更改登记前置acsvr_acct         6) 更改登记前置acsvr_bank \n"
-                        " 7) 更改登记前置acsvr_wm           8) 更改交易前置acsvrB \n" 
-                        "9) 退出 \n"
+                        " 7) 更改登记前置acsvr_wm           8) 更改交易前置acsvr104 \n" 
+                        " 9) 更改登记前置acsvr102           10) 更改交易前置acsvr103 \n" 
+                        " 11) 更改登记前置acsvr105          12) 更改交易前置quotaacsvrA \n" 
+                        " 13) 更改登记前置intacsvrB           \n" 
+                        "88) 退出 \n"
                         " 请输入指令：")
         if com == '99':
             continue
@@ -960,7 +1552,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrA()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrA 操作-----------------"
         elif com == '2':
@@ -973,7 +1565,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             quotaacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 quotaacsvr 操作-----------------"
         elif com == '3':
@@ -986,7 +1578,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             intacsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 intacsvr 操作-----------------"
         elif com == '4':
@@ -999,7 +1591,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             etfsvr()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 etfsvr 操作-----------------"
         elif com == '5':
@@ -1012,7 +1604,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_acct()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_acct 操作-----------------"
         elif com == '6':
@@ -1025,7 +1617,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_bank()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_bank 操作-----------------"
         elif com == '7':
@@ -1038,7 +1630,7 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvr_wm()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvr_wm 操作-----------------"
         elif com == '8':
@@ -1051,10 +1643,79 @@ def main():
             mkdir(config.local_svr['local_address'])
             acsvrB()
             print "删除 %s" % (config.local_svr['local_address'],)
-            shutil.rmtree(config.local_svr['local_address'])
+            #shutil.rmtree(config.local_svr['local_address'])
             print "已删除 %s 目录" % (config.local_svr['local_address'],)
             print "---------------完成 更换更改交易前置 acsvrB 操作-----------------"
         elif com == '9':
+            print "更改交易前置acsvr102"
+            config.new_acsvr102['new_acsvr102_address'] = raw_input("输入最新版acsvr102地址 ，(如 /home/zhiban/guoqing/20180822/wh/  (最后要加'/')):")
+            config.new_acsvr102['new_acsvr102_file'] = raw_input("输入最新acsvr102核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                    continue
+            mkdir(config.local_svr['local_address'])
+            acsvr102()
+            print "删除 %s" % (config.local_svr['local_address'],)
+            #shutil.rmtree(config.local_svr['local_address'])
+            print "已删除 %s 目录" % (config.local_svr['local_address'],)
+            print "---------------完成 更换更改交易前置 acsvr102 操作-----------------"
+        elif com == '10':
+            print "更改交易前置acsvr103"
+            config.new_acsvr103['new_acsvr103_address'] = raw_input(
+            "输入最新版acsvr103地址 ，(如 /home/zhiban/guoqing/20180822/wh/  (最后要加'/')):")
+            config.new_acsvr103['new_acsvr103_file'] = raw_input("输入最新acsvr103核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                continue
+            mkdir(config.local_svr['local_address'])
+            acsvr103()
+            print "删除 %s" % (config.local_svr['local_address'],)
+            #shutil.rmtree(config.local_svr['local_address'])
+            print "已删除 %s 目录" % (config.local_svr['local_address'],)
+            print "---------------完成 更换更改交易前置 acsvr103 操作-----------------"
+        elif com == '11':
+            print "更改交易前置acsvr105"
+            config.new_acsvr105['new_acsvr105_address'] = raw_input(
+                "输入最新版acsvr105地址 ，(如 /home/zhiban/guoqing/20180822/wh/  (最后要加'/')):")
+            config.new_acsvr105['new_acsvr105_file'] = raw_input("输入最新acsvr105核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                continue
+            mkdir(config.local_svr['local_address'])
+            acsvr105()
+            print "删除 %s" % (config.local_svr['local_address'],)
+            #shutil.rmtree(config.local_svr['local_address'])
+            print "已删除 %s 目录" % (config.local_svr['local_address'],)
+            print "---------------完成 更换更改交易前置 acsvr105 操作-----------------"
+        elif com == '12':
+            print "更改交易前置quotaacsvrA"
+            config.new_quotaacsvrA['new_quotaacsvrA_address'] = raw_input(
+                "输入最新版quotaacsvrA地址 ，(如 /home/zhiban/guoqing/20180822/wh/  (最后要加'/')):")
+            config.new_quotaacsvrA['new_quotaacsvrA_file'] = raw_input("输入最新quotaacsvrA核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                continue
+            mkdir(config.local_svr['local_address'])
+            quotaacsvrA()
+            print "删除 %s" % (config.local_svr['local_address'],)
+            #shutil.rmtree(config.local_svr['local_address'])
+            print "已删除 %s 目录" % (config.local_svr['local_address'],)
+            print "---------------完成 更换更改交易前置 quotaacsvrA 操作-----------------"
+        elif com == '13':
+            print "更改交易前置intacsvrB"
+            config.new_intacsvrB['new_intacsvrB_address'] = raw_input(
+                "输入最新版intacsvrB地址 ，(如 /home/zhiban/guoqing/20180822/wh/   (最后要加'/')):")
+            config.new_intacsvrB['new_intacsvrB_file'] = raw_input("输入最新intacsvrB核心文件，(如 wh.tar.gz):")
+            queren = raw_input("重新检查服务器地址 输入 99， 否则回车继续进行...")
+            if queren == "99":
+                continue
+            mkdir(config.local_svr['local_address'])
+            intacsvrB()
+            print "删除 %s" % (config.local_svr['local_address'],)
+            #shutil.rmtree(config.local_svr['local_address'])
+            print "已删除 %s 目录" % (config.local_svr['local_address'],)
+            print "---------------完成 更换更改交易前置 intacsvrB 操作-----------------"
+        elif com == '88':
             flag = False
         else:
             print "没有该命令，请重新输入:"
@@ -1065,5 +1726,5 @@ if __name__ == '__main__':
     # mkdir(config.local_svr['local_address'])
     main()
     # print "删除 %s" % (config.local_svr['local_address'],)
-    # shutil.rmtree(config.local_svr['local_address'])
-    # print "已删除 %s 目录" % (config.local_svr['local_address'],)
+    shutil.rmtree(config.local_svr['local_address'])
+    print "已删除 %s 目录" % (config.local_svr['local_address'],)

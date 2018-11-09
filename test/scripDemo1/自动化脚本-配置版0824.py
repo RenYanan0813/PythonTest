@@ -1416,7 +1416,7 @@ def init_qte(hostinfo):
         time.sleep(10)
         date = datetime.datetime.now().strftime('%Y%m%d')
         date1 = int(date) + 1
-        cmd = 'cd /nfs/data/%s;ls *.csv|wc -l'% (date1,)
+        cmd = 'cat /home/qte/log/qte_initsvr.log'
         time_total = 0
 
         while True:
@@ -1426,7 +1426,7 @@ def init_qte(hostinfo):
             else:
                 stdin_1, stdout_1, stderr_1 = ssh.exec_command(cmd)
                 result = stdout_1.read()
-                if result == 125 or result == "125":
+                if str(host['check']) in result :
                     print('************************ 报价初始化完成 ! ********************')
                     break
                 else:
@@ -1478,8 +1478,8 @@ def self_choice():
             if choice_again == '99':
                 continue
             hostinfo = get_need_hostinfo(data_list, ['trans_mem2dbsvr', 'quot_mem2dbsvr', 'bussvr-A',
-                                                     'keepsvr-A', 'matchsvr-A', 'qsvr-A', 'quotaacsvr-A', 'bridgesvr-A', 'acsvr101', 'acsvr102', 'intacsvr-A', 'qrysvr-A',
-                                                     'keepsvr-B', 'matchsvr-B', 'qsvr-B', 'quotaacsvr-B', 'bridgesvr-B', 'acsvr104', 'intacsvr-B', 'qrysvr-B',
+                                                     'keepsvr-A', 'matchsvr-A', 'qsvr-A', 'quotaacsvrA', 'bridgesvr-A', 'acsvr101', 'acsvr102', 'acsvr103', 'acsvr104','acsvr105', 'qrysvr-A',
+                                                     'keepsvr-B', 'matchsvr-B', 'qsvr-B', 'quotaacsvrB', 'bridgesvr-B', 'acsvr104', 'intacsvr-B', 'qrysvr-B', 'intacsvrA', 'intacsvrB',
                                                      'bussvr-B',
                                                      ])
             # for i in hostinfo:
@@ -1622,7 +1622,9 @@ def self_choice():
             choice_again = raw_input('回车进行 启动交易其他服务 [99回到选择菜单]....')
             if choice_again == '99':
                 continue
-            hostinfo = get_need_hostinfo(data_list, ['matchsvr-A', 'qsvr-A', 'quotaacsvr-A', 'bridgesvr-A', 'acsvrA','qrysvr-A','acsvrB','matchsvr-B','qsvr-B','bridgesvr-B','qrysvr-B','intacsvr-A'])
+            hostinfo = get_need_hostinfo(data_list, ['matchsvr-A', 'qsvr-A',  'bridgesvr-A','bridgesvr-B','qrysvr-B',
+                                                     'qrysvr-A','matchsvr-B','qsvr-B','acsvr101', 'acsvr102','acsvr104',
+                                                     'quotaacsvrB','quotaacsvrA','intacsvrA', 'intacsvrB'])
             run_tra(hostinfo)
             continue
         elif choice == '19':
@@ -1666,7 +1668,7 @@ def self_choice():
             choice_again = raw_input('回车进行 启动监控服务 [99回到选择菜单]....')
             if choice_again == '99':
                 continue
-            hostinfo = get_need_hostinfo(data_list,['reg229moni', 'reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228','moni31','moni32'])
+            hostinfo = get_need_hostinfo(data_list,['reg229moni', 'reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228','moni31','moni32','qte_monsver23','qte_monsver24'])
             # hostinfo = get_need_hostinfo(data_list,['reg20moni', 'moni95', 'moni97', 'moni99','moni200','moni228'])
 
             print('开始启动所有监控服务！')
