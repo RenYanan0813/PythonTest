@@ -1,0 +1,692 @@
+*********************20181123 09:56:05 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:49 up 54 days, 20:43,  2 users,  load average: 19.42, 19.95, 20.52
+... Tasks: 306 total,   1 running, 305 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   299812 free, 12342288 used, 36820480 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121016 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  57.9 23.5 834:56.86 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  36.8  0.1 492:18.63 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  36.8  0.0 450:30.55 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  36.8  0.1 449:39.29 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  26.3  0.1 310:32.94 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  26.3  0.1 299:37.72 infosvr
+... 18640 qte       20   0 25.632g   8736    960 S  15.8  0.0 298:38.40 dealsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  15.8  0.1 206:58.08 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  10.5  0.0 154:49.32 bridgesvr_+
+... 14777 qte       20   0  157844   2252   1488 R   5.3  0.0   0:00.05 top
+
+
+
+*********************20181123 09:56:07 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:51 up 54 days, 20:43,  2 users,  load average: 18.42, 19.74, 20.45
+... Tasks: 306 total,   1 running, 305 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   299348 free, 12342332 used, 36820900 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34120720 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S 105.9 23.5 834:58.39 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  70.6  0.1 492:19.61 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  64.7  0.0 450:31.46 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  64.7  0.1 449:40.18 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  41.2  0.1 310:33.47 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  35.3  0.0 298:38.96 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  35.3  0.1 299:38.29 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  35.3  0.1 206:58.49 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  23.5  0.0 154:49.64 bridgesvr_+
+... 14841 qte       20   0  157844   2252   1488 R   5.9  0.0   0:00.03 top
+
+
+
+*********************20181123 09:56:09 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:53 up 54 days, 20:43,  2 users,  load average: 18.42, 19.74, 20.45
+... Tasks: 306 total,   1 running, 305 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   298820 free, 12342632 used, 36821128 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34120540 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  80.0 23.5 834:59.68 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  46.7  0.1 492:20.42 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  46.7  0.0 450:32.21 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  40.0  0.1 449:40.93 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  26.7  0.1 310:33.91 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  26.7  0.0 298:39.41 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  26.7  0.1 299:38.77 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  20.0  0.1 206:58.82 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  13.3  0.0 154:49.90 bridgesvr_+
+...   837 root      20   0   19320   1004    824 S   6.7  0.0   3:31.06 irqbalance
+...   905 root      20   0    4368    520    492 S   6.7  0.0  11:34.46 rngd
+... 14905 qte       20   0  157844   2252   1488 R   6.7  0.0   0:00.01 top
+
+
+
+*********************20181123 09:56:11 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:54 up 54 days, 20:43,  2 users,  load average: 18.42, 19.74, 20.45
+... Tasks: 306 total,   1 running, 305 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   299916 free, 12341096 used, 36821568 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122032 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:01.09 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:21.28 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:41.74 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  37.5  0.0 450:32.99 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:34.38 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:39.29 infosvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:39.90 dealsvr
+... 14969 qte       20   0  157844   2248   1488 R  12.5  0.0   0:00.02 top
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:50.18 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  12.5  0.1 206:59.16 loginsvr
+
+
+
+*********************20181123 09:56:13 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:56 up 54 days, 20:43,  2 users,  load average: 17.43, 19.51, 20.37
+... Tasks: 306 total,   3 running, 303 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   298752 free, 12341716 used, 36822112 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121212 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:02.60 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:22.22 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:42.61 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:33.83 qte_quotaa+
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:40.47 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:39.85 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  18.8  0.1 310:34.88 authsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 206:59.57 loginsvr
+... 15033 qte       20   0  157844   2256   1488 R  12.5  0.0   0:00.02 top
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:50.49 bridgesvr_+
+
+
+
+*********************20181123 09:56:15 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:55:58 up 54 days, 20:43,  2 users,  load average: 17.43, 19.51, 20.37
+... Tasks: 306 total,   2 running, 304 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   298224 free, 12341540 used, 36822816 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121116 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  76.5 23.5 835:04.08 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  47.1  0.1 492:23.13 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  41.2  0.0 450:34.65 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  41.2  0.1 449:43.44 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  29.4  0.1 310:35.38 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  29.4  0.0 298:41.01 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  29.4  0.1 299:40.42 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  23.5  0.1 206:59.95 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  17.6  0.0 154:50.79 bridgesvr_+
+... 15097 qte       20   0  157844   2252   1488 R   5.9  0.0   0:00.02 top
+... 19545 qte       20   0  107936    608    516 S   5.9  0.0   2:12.46 tail
+
+
+
+*********************20181123 09:56:17 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:00 up 54 days, 20:43,  2 users,  load average: 17.43, 19.51, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   298384 free, 12340644 used, 36823552 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121764 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  80.0 23.5 835:05.55 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  46.7  0.1 492:24.03 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  46.7  0.1 449:44.27 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  40.0  0.0 450:35.46 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  26.7  0.1 310:35.86 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  26.7  0.0 298:41.54 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  20.0  0.1 299:40.96 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  20.0  0.1 207:00.32 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S   6.7  0.0 154:51.06 bridgesvr_+
+
+
+
+*********************20181123 09:56:18 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:02 up 54 days, 20:43,  2 users,  load average: 18.03, 19.60, 20.40
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   299000 free, 12339788 used, 36823792 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122560 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:07.03 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:24.94 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:45.10 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:36.27 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:36.35 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:42.07 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:41.49 infosvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:51.33 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:00.69 loginsvr
+
+
+
+*********************20181123 09:56:20 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:04 up 54 days, 20:43,  2 users,  load average: 18.03, 19.60, 20.40
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   298492 free, 12340020 used, 36824068 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122380 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:08.52 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:25.87 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:37.08 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  37.5  0.1 449:45.94 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:42.61 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:36.83 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:42.00 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:01.07 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:51.60 bridgesvr_+
+... 15290 qte       20   0  157848   2256   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:56:22 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:05 up 54 days, 20:43,  2 users,  load average: 17.87, 19.54, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   297432 free, 12340604 used, 36824544 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121692 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:10.04 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  56.2  0.1 492:26.88 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  50.0  0.0 450:37.94 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:46.80 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  37.5  0.0 298:43.17 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:37.33 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  18.8  0.1 299:42.53 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:01.46 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:51.85 bridgesvr_+
+
+
+
+*********************20181123 09:56:24 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:07 up 54 days, 20:43,  2 users,  load average: 17.87, 19.54, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   297808 free, 12340216 used, 36824556 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122460 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:11.48 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:27.82 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:38.77 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:47.65 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:37.82 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:43.73 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:43.06 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:01.85 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S   6.2  0.0 154:52.08 bridgesvr_+
+
+
+
+*********************20181123 09:56:26 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:09 up 54 days, 20:43,  2 users,  load average: 17.87, 19.54, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   296636 free, 12340748 used, 36825196 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121664 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:12.98 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:28.78 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:39.63 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:48.50 qte_qy_acs+
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:43.63 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:38.34 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:44.28 dealsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:02.23 loginsvr
+... 15482 qte       20   0  157848   2252   1488 R  12.5  0.0   0:00.02 top
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:52.32 bridgesvr_+
+...   905 root      20   0    4368    520    492 S   6.2  0.0  11:34.73 rngd
+
+
+
+*********************20181123 09:56:28 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:11 up 54 days, 20:43,  2 users,  load average: 17.88, 19.51, 20.36
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   296600 free, 12340908 used, 36825072 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122120 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:14.47 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:49.33 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:29.71 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:40.45 qte_quotaa+
+... 18640 qte       20   0 25.632g   8736    960 S  37.5  0.0 298:44.84 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:44.17 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:38.84 authsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:02.62 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:52.57 bridgesvr_+
+... 15546 qte       20   0  157848   2252   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:56:30 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:13 up 54 days, 20:43,  2 users,  load average: 17.88, 19.51, 20.36
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   296300 free, 12340676 used, 36825604 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122276 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:16.10 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:50.24 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:30.62 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  37.5  0.0 450:41.37 qte_quotaa+
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:45.40 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:39.40 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:44.76 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:03.03 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:52.82 bridgesvr_+
+... 19545 qte       20   0  107936    608    516 S   6.2  0.0   2:12.49 tail
+... 19580 qte       20   0  107936    604    516 S   6.2  0.0   1:09.88 tail
+
+
+
+*********************20181123 09:56:31 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:15 up 54 days, 20:43,  2 users,  load average: 17.88, 19.51, 20.36
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   295848 free, 12340832 used, 36825900 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121984 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  87.5 23.5 835:17.57 corpsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  50.0  0.0 450:42.18 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:51.03 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:31.37 qte_acsvr
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:39.90 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:45.93 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:45.29 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:03.40 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:53.06 bridgesvr_+
+... 15674 qte       20   0  157848   2252   1488 R   6.2  0.0   0:00.02 top
+
+
+
+*********************20181123 09:56:33 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:17 up 54 days, 20:43,  2 users,  load average: 17.33, 19.37, 20.31
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   294968 free, 12341324 used, 36826288 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121456 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  87.5 23.5 835:19.16 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:32.20 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  50.0  0.0 450:43.05 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:51.88 qte_qy_acs+
+... 18652 qte       20   0 25.630g  28596    996 S  37.5  0.1 299:45.87 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:40.45 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:46.51 dealsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:53.31 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:03.78 loginsvr
+...     9 root      20   0       0      0      0 S   6.2  0.0   4:01.27 rcu_sched
+...    13 root      20   0       0      0      0 S   6.2  0.0   0:11.49 ksoftirqd/1
+
+
+
+*********************20181123 09:56:35 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:18 up 54 days, 20:43,  2 users,  load average: 17.33, 19.37, 20.31
+... Tasks: 307 total,   2 running, 305 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   295220 free, 12340664 used, 36826696 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122068 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  93.3 23.5 835:20.77 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  53.3  0.1 492:33.03 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  46.7  0.0 450:43.96 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  46.7  0.1 449:52.73 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  33.3  0.0 298:47.08 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  33.3  0.1 299:46.44 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  26.7  0.1 310:40.97 authsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  20.0  0.1 207:04.17 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  13.3  0.0 154:53.56 bridgesvr_+
+
+
+
+*********************20181123 09:56:37 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:20 up 54 days, 20:43,  2 users,  load average: 17.06, 19.28, 20.28
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   294572 free, 12340944 used, 36827064 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121908 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:22.25 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:53.51 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:33.80 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:44.77 qte_quotaa+
+... 18652 qte       20   0 25.630g  28596    996 S  37.5  0.1 299:46.98 infosvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:47.60 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:41.47 authsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:04.54 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:53.79 bridgesvr_+
+... 15874 qte       20   0  157848   2256   1488 R  12.5  0.0   0:00.03 top
+... 19580 qte       20   0  107936    604    516 S   6.2  0.0   1:09.89 tail
+... 19583 qte       20   0  107936    608    516 S   6.2  0.0   1:06.53 tail
+
+
+
+*********************20181123 09:56:39 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:22 up 54 days, 20:43,  2 users,  load average: 17.06, 19.28, 20.28
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   294792 free, 12340268 used, 36827520 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122428 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  87.5 23.5 835:23.76 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:34.57 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:45.60 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:54.31 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:48.14 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:42.00 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:47.49 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:04.90 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:54.02 bridgesvr_+
+
+
+
+*********************20181123 09:56:41 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:24 up 54 days, 20:43,  2 users,  load average: 17.06, 19.28, 20.28
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   294024 free, 12340688 used, 36827868 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122012 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:25.37 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:35.40 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:46.46 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  37.5  0.1 449:55.17 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:42.51 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:48.72 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:48.03 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:05.28 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:54.28 bridgesvr_+
+... 16002 qte       20   0  157848   2256   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:56:43 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:26 up 54 days, 20:43,  2 users,  load average: 17.54, 19.35, 20.29
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   293160 free, 12340776 used, 36828644 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121652 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:26.93 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:36.23 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:56.01 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:47.34 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:43.04 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:49.26 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:48.57 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:05.66 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:54.54 bridgesvr_+
+
+
+
+*********************20181123 09:56:44 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:28 up 54 days, 20:43,  2 users,  load average: 17.54, 19.35, 20.29
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   294116 free, 12339788 used, 36828676 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122816 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:28.46 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:37.03 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:48.16 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:56.82 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:49.80 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:43.54 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:49.10 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:06.02 loginsvr
+... 16130 qte       20   0  157848   2248   1488 R  12.5  0.0   0:00.02 top
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:54.79 bridgesvr_+
+
+
+
+*********************20181123 09:56:46 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:29 up 54 days, 20:43,  2 users,  load average: 17.54, 19.35, 20.29
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   293436 free, 12340268 used, 36828876 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122516 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:29.95 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:57.63 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:37.84 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  37.5  0.0 450:48.96 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:44.09 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:50.33 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:49.63 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:06.37 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:55.04 bridgesvr_+
+
+
+
+*********************20181123 09:56:48 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:31 up 54 days, 20:43,  2 users,  load average: 18.14, 19.44, 20.32
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   293096 free, 12340260 used, 36829224 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122528 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  80.0 23.5 835:31.42 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  46.7  0.1 492:38.63 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  46.7  0.0 450:49.74 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  46.7  0.1 449:58.39 qte_qy_acs+
+... 18652 qte       20   0 25.630g  28596    996 S  33.3  0.1 299:50.21 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  26.7  0.1 310:44.62 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  26.7  0.0 298:50.84 dealsvr
+... 18634 qte       20   0 24.515g  14504    892 S  20.0  0.0 154:55.35 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  20.0  0.1 207:06.70 loginsvr
+... 16258 qte       20   0  157848   2256   1488 R  13.3  0.0   0:00.02 top
+... 19603 qte       20   0  112656    972    836 S   6.7  0.0   0:08.33 grep
+
+
+
+*********************20181123 09:56:50 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:33 up 54 days, 20:43,  2 users,  load average: 18.14, 19.44, 20.32
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   292688 free, 12340380 used, 36829512 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122532 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:32.84 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:39.39 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:50.51 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 449:59.14 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:51.32 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:50.74 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:07.03 loginsvr
+... 18355 qte       20   0 25.607g  60228    840 S  18.8  0.1 310:45.14 authsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:55.57 bridgesvr_+
+... 19545 qte       20   0  107936    608    516 S   6.2  0.0   2:12.53 tail
+
+
+
+*********************20181123 09:56:52 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:35 up 54 days, 20:43,  2 users,  load average: 18.05, 19.40, 20.30
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   291520 free, 12341064 used, 36829996 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121796 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:34.35 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 449:59.97 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:40.19 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  37.5  0.0 450:51.32 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:45.68 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:51.84 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:51.32 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:07.37 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:55.85 bridgesvr_+
+... 16386 qte       20   0  157848   2256   1488 R   6.2  0.0   0:00.01 top
+... 19647 qte       20   0  107936    608    516 S   6.2  0.0   1:29.17 tail
+
+
+
+*********************20181123 09:56:53 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:37 up 54 days, 20:43,  2 users,  load average: 18.05, 19.40, 20.30
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   291560 free, 12340540 used, 36830480 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122236 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:35.87 corpsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:52.15 qte_quotaa+
+... 18675 qte       20   0 32.738g  36884   1444 S  37.5  0.1 492:40.97 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  37.5  0.1 450:00.77 qte_qy_acs+
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:52.38 dealsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:46.20 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:51.89 infosvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:56.15 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:07.72 loginsvr
+... 16450 qte       20   0  157848   2248   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:56:55 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:39 up 54 days, 20:43,  2 users,  load average: 18.05, 19.40, 20.30
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   291308 free, 12340508 used, 36830764 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122180 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  68.8 23.5 835:37.25 corpsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  50.0  0.0 450:52.92 qte_quotaa+
+... 18675 qte       20   0 32.738g  36884   1444 S  43.8  0.1 492:41.74 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 450:01.50 qte_qy_acs+
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:52.42 infosvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:46.68 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:52.90 dealsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:08.05 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:56.44 bridgesvr_+
+... 16514 qte       20   0  157848   2252   1488 R  12.5  0.0   0:00.02 top
+
+
+
+*********************20181123 09:56:57 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:40 up 54 days, 20:43,  2 users,  load average: 18.76, 19.52, 20.34
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   290800 free, 12340520 used, 36831260 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122032 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:38.69 corpsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 450:02.29 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  37.5  0.1 492:42.53 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  37.5  0.0 450:53.70 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:47.21 authsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:52.96 infosvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:53.39 dealsvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:08.40 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S   6.2  0.0 154:56.73 bridgesvr_+
+
+
+
+*********************20181123 09:56:59 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:42 up 54 days, 20:43,  2 users,  load average: 18.76, 19.52, 20.34
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   290360 free, 12340776 used, 36831444 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34121972 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  75.0 23.5 835:40.16 corpsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  50.0  0.0 450:54.52 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 450:03.08 qte_qy_acs+
+... 18675 qte       20   0 32.738g  36884   1444 S  37.5  0.1 492:43.30 qte_acsvr
+... 18355 qte       20   0 25.607g  60228    840 S  25.0  0.1 310:47.73 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:53.86 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:53.51 infosvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:57.04 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:08.76 loginsvr
+... 16642 qte       20   0  157848   2256   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:57:01 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:44 up 54 days, 20:43,  2 users,  load average: 18.76, 19.52, 20.34
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   290148 free, 12340388 used, 36832044 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122180 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  81.2 23.5 835:41.59 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:44.13 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 450:03.88 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:55.33 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:48.27 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:54.33 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:54.06 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:09.13 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:57.32 bridgesvr_+
+... 16707 qte       20   0  157848   2248   1488 R   6.2  0.0   0:00.01 top
+
+
+
+*********************20181123 09:57:03 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:46 up 54 days, 20:43,  2 users,  load average: 19.34, 19.63, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   289496 free, 12340956 used, 36832128 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122000 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  87.5 23.5 835:43.11 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  56.2  0.1 492:45.05 qte_acsvr
+... 18765 qte       20   0 32.738g  30272   1316 S  50.0  0.1 450:04.70 qte_qy_acs+
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:56.16 qte_quotaa+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:48.81 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  31.2  0.0 298:54.84 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  31.2  0.1 299:54.63 infosvr
+... 18634 qte       20   0 24.515g  14504    892 S  18.8  0.0 154:57.61 bridgesvr_+
+... 18667 qte       20   0 24.957g  25996   9984 S  18.8  0.1 207:09.51 loginsvr
+
+
+
+*********************20181123 09:57:05 --- 180.2.34.24 服务器的---- cpu 使用情况 **********************
+... top - 09:56:48 up 54 days, 20:44,  2 users,  load average: 19.34, 19.63, 20.37
+... Tasks: 307 total,   1 running, 306 sleeping,   0 stopped,   0 zombie
+... %Cpu(s): 18.8 us, 16.8 sy,  0.0 ni, 64.2 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+... KiB Mem : 49462580 total,   289184 free, 12340772 used, 36832624 buff/cache
+... KiB Swap:  2097148 total,  1993948 free,   103200 used. 34122048 avail Mem 
+... 
+...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+... 18422 qte       20   0 42.618g 0.011t   1180 S  68.8 23.5 835:44.57 corpsvr
+... 18675 qte       20   0 32.738g  36884   1444 S  50.0  0.1 492:45.94 qte_acsvr
+... 18721 qte       20   0 32.664g  13156   1024 S  43.8  0.0 450:56.99 qte_quotaa+
+... 18765 qte       20   0 32.738g  30272   1316 S  43.8  0.1 450:05.54 qte_qy_acs+
+... 18355 qte       20   0 25.607g  60228    840 S  31.2  0.1 310:49.35 authsvr
+... 18640 qte       20   0 25.632g   8736    960 S  25.0  0.0 298:55.31 dealsvr
+... 18652 qte       20   0 25.630g  28596    996 S  25.0  0.1 299:55.18 infosvr
+... 18667 qte       20   0 24.957g  25996   9984 S  25.0  0.1 207:09.89 loginsvr
+... 18634 qte       20   0 24.515g  14504    892 S  12.5  0.0 154:57.89 bridgesvr_+
+
+
+

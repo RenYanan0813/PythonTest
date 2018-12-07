@@ -1,0 +1,495 @@
+*********************20181123 09:56:05 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:07 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:09 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:11 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:13 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:15 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:17 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:19 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:21 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:23 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:24 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:26 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:28 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:30 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:32 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:34 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:36 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:38 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:40 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:41 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:43 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:45 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:47 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:49 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:50 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:52 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:54 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:56 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:56:58 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:57:00 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:57:01 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:57:03 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+
+*********************20181123 09:57:05 --- 180.2.34.23 服务器的----  磁盘 使用情况 **********************
+... Filesystem             Size  Used Avail Use% Mounted on
+... /dev/mapper/rhel-root   50G  9.2G   41G  19% /
+... devtmpfs                24G     0   24G   0% /dev
+... tmpfs                   24G     0   24G   0% /dev/shm
+... tmpfs                   24G  2.5G   22G  11% /run
+... tmpfs                   24G     0   24G   0% /sys/fs/cgroup
+... /dev/loop0             3.6G  3.6G     0 100% /mnt/os
+... /dev/sda1             1014M  155M  860M  16% /boot
+... /dev/mapper/rhel-home  247G   44G  204G  18% /home
+... 180.2.31.223:/nfs      500G  349G  152G  70% /nfs
+... tmpfs                  4.8G     0  4.8G   0% /run/user/1001
+
+
+

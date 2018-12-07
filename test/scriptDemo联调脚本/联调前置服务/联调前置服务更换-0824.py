@@ -66,38 +66,25 @@ def change_tra_acsvrA(target_txt, target_txt1):
                 # print 'lenght %s' %(lenght[i])
                 with open(target_txt1, 'a') as fp2:
                     if '"name"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
-                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
                         lenght[i] = '        "name" : "/ssd/log/acsvr101",\n'
-                        # fp2.write(s)
                         print "更改 name 成功 %s"%(lenght[i])
                     if '"listen_ports":{' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
-                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i + 1] = ''
                         lenght[i + 2] = ''
                         lenght[i + 1] = '                   7777:1,\n'
                         lenght[i + 2] = '                   16999:2\n'
-                        # fp2.write(s)
                         print "更改 listen_ports 成功 %s"%(lenght[i])
                     if '"listen_port"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
-                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
                         lenght[i] = '        "listen_port" : 9311,\n'
-                        # fp2.write(s)
                         print "更改 listen_port 成功 %s"%(lenght[i])
                     if '"grp_cfg"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
-                        # fp2.write(str(s1))
                         lenght[i]=''
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s"%(lenght[i])
 
                     if '"dev"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
-                        # fp2.write(str(s1))
                         lenght[i]=''
                         lenght[i] = '        "dev" : 101,\n'
                         print "更改 dev 成功 %s"%(lenght[i])
@@ -185,7 +172,7 @@ def change_tra_acsvr103(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvr102",\n'
+                        lenght[i] = '        "name" : "/ssd/log/acsvr103",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s"%(lenght[i])
                     if '"listen_ports":{' in lenght[i]:
@@ -244,24 +231,22 @@ def change_tra_acsvrB(target_txt, target_txt1):
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
                         lenght[i] = '        "name" : "/ssd/log/acsvr104",\n'
-                        # fp2.write(s)
                         print "更改 name 成功 %s"%(lenght[i])
                     if '"listen_port"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
-                        # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
                         lenght[i] = '        "listen_port" : 9313,\n'
-                        # fp2.write(s)
                         print "更改 listen_port 成功 %s"%(lenght[i])
+                    if '"listen_ports":{' in lenght[i]:
+                        lenght[i + 1] = ''
+                        lenght[i + 2] = ''
+                        lenght[i + 1] = '                   7777:1,\n'
+                        lenght[i + 2] = '                   16999:2\n'
+                        print "更改 listen_ports 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
-                        # fp2.write(str(s1))
                         lenght[i]=''
                         lenght[i] = '        "grp_cfg" : "/nfs/tra_conf/group.cfg",\n'
                         print "更改 grp_cfg 成功 %s"%(lenght[i])
                     if '"dev"' in lenght[i]:
-                        # lenght[i] = re.sub(r'server_ip = (\'\w+\.\w+\.\w+\.\w+\')', "server_ip = '180.2.32.20'", lenght[i])
-                        # fp2.write(str(s1))
                         lenght[i]=''
                         lenght[i] = '        "dev" : 106,\n'
                         print "更改 dev 成功 %s"%(lenght[i])
@@ -506,7 +491,7 @@ def change_reg_acct(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvr_acct",\n'
+                        lenght[i] = '        "name" : "/home/reg1/ssd/log/acsvr_acct",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:
@@ -542,7 +527,7 @@ def change_reg_bank(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvr_bank_encrypt",\n'
+                        lenght[i] = '        "name" : "/home/reg1/ssd/log/acsvr_bank_encrypt",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:
@@ -595,7 +580,7 @@ def change_reg_wm(target_txt, target_txt1):
                         # lenght[i] = re.sub(r'server_port = (\w+)', "server_port = 7777", lenght[i])
                         # s = lenght[i].replace(r'server_port = (\w+)', 'server_port = 7777')
                         lenght[i] = ''
-                        lenght[i] = '        "name" : "/ssd/log/acsvr_wm",\n'
+                        lenght[i] = '        "name" : "/home/reg1/ssd/log/acsvr_wm",\n'
                         # fp2.write(s)
                         print "更改 name 成功 %s" % (lenght[i])
                     if '"grp_cfg"' in lenght[i]:

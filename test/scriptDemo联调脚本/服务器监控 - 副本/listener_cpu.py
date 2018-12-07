@@ -1,4 +1,3 @@
-# c:/Python36/
 # -*- coding:utf-8 -*-
 """
 目的： 实时监控特定服务器的cpu使用率，磁盘空间使用率、IO使用率
@@ -17,203 +16,105 @@ py: python3.6
 1. 不需要GUI界面
 2. 增加将结果输出到txt文件中
 
+更新：20181120
+1. 增设单独某些服务的cpu使用率
+2. 增 多少秒 监控一次
+3. 设置监控多长时间
+
+
 """
 
 
 import paramiko
 import config
 from datetime import datetime
-import tkinter as tk
-from tkinter import *
-from tkinter import Scrollbar
 from time import sleep
-import os
+import time
+import threading 
 
-def listener_cpu(hsn, usn, psw):
+def listener_cpu(hsn, usn, psw, out, svr_name, st_time, ste_time):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(hostname=hsn, username=usn, password=psw)
-    # sys.stdout = open("listener_cpu.txt", 'w+')
+    date_out = datetime.now().strftime('%Y%m%d-%H%M%S')
+    cpu_out = "%s_cpu_%s.txt"%(out, date_out)
+    svr_out = "%s_%s_%s.txt"%(out, svr_name, date_out)
+    mem_out = "%s_mem_%s.txt"%(out, date_out)
+    disk_out = "%s_disk_%s.txt"%(out, date_out)
+    stop_time = float(st_time)
+    state_time = int(ste_time) * 60
+    server_name = svr_name.split(",")
+    flag = True
+    # sys.stdout = open(out, 'w+')
     try:
-        date = datetime.now().strftime('%Y%m%d %H:%M:%S')
-        print("--------- %s 正在输出到 listener_cpu.txt 文件中... "%(date,))
-        print("*********************%s --- %s 服务器的---- cpu 使用情况 **********************"%(date, hsn), file=open("listener_cpu.txt", 'a'))
-        # stdin, stdout, stderr = ssh.exec_command("top -bi -n 1 -d 0.02")
-        stdin, stdout, stderr = ssh.exec_command("sar -P 0 -u 1 2")
+        #设置起始时间
+        start_time = time.time()
+        while(flag):
+            date = datetime.now().strftime('%Y%m%d %H:%M:%S')
 
-        for line in stdout:
-            print('... ' + line.strip('\n'), file=open("listener_cpu.txt", 'a'))
-        print("\n\n", file=open("listener_cpu.txt", 'a'))
+            print("--------- %s 正在输出到 %s 文件中... "%(date, out))
+            print("*********************%s --- %s 服务器的---- cpu 使用情况 **********************"%(date, hsn), file=open(cpu_out, 'a'))
+            stdin, stdout, stderr = ssh.exec_command("top -bi -n 1 -d 0.02")
 
-        print("*********************%s --- %s 服务器的---- 各服务使用 cpu 情况 **********************" % (date, hsn), file=open("listener_cpu.txt", 'a'))
-        stdin3, stdout3, stderr3 = ssh.exec_command("top -bi -n 1 -d 0.02")
-        # stdin3, stdout3, stderr3 = ssh.exec_command("sar -P 0 -u 1 2")
-        i = 0
-        for line in stdout3:
-            i += 1
-            if i < 10:
-                print('... ' + line.strip('\n'), file=open("listener_cpu.txt", 'a'))
-        print("\n\n", file=open("listener_cpu.txt", 'a'))
+            for line in stdout:
+                print('... ' + line.strip('\n'), file=open(cpu_out, 'a'))
+            print("\n\n", file=open(cpu_out, 'a'))
 
-        print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn), file=open("listener_cpu.txt", 'a'))
-        stdin1, stdout1, stderr1 = ssh.exec_command("free -h")
-        for line in stdout1:
-            print('... ' + line.strip('\n'), file=open("listener_cpu.txt", 'a'))
-        print("\n\n", file=open("listener_cpu.txt", 'a'))
+            print("*********************%s --- %s 服务器的---- 某些服务使用 cpu 情况 **********************" % (date, hsn), file=open(svr_out, 'a'))
+            print("...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND \n", file=open(svr_out, 'a'))
+            for svr in range(len(server_name)):
+                comd = "top -bi -n 1 -d 0.02 | grep %s"%(server_name[svr])
+                stdin3, stdout3, stderr3 = ssh.exec_command(comd)
+                for line in stdout3:
+                    print('... ' + line.strip('\n'), file=open(svr_out, 'a'))
+            print("\n\n", file=open(svr_out, 'a'))
 
-        print("*********************%s --- %s 服务器的----  磁盘 使用情况 **********************"%(date, hsn), file=open("listener_cpu.txt", 'a'))
-        stdin2, stdout2, stderr2 = ssh.exec_command("df -h")
-        for line in stdout2:
-            print('... ' + line.strip('\n'), file=open("listener_cpu.txt", 'a'))
-        print("\n\n", file=open("listener_cpu.txt", 'a'))
-        print("--------- 输出到 listener_cpu.txt 文件中, 完成 100%  ------------")
+            print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn), file=open(mem_out, 'a'))
+            stdin1, stdout1, stderr1 = ssh.exec_command("free -h")
+            print("..........                    total        used        free      shared  buff/cache   available \n", file=open(mem_out, 'a'))
+            i = 0
+            for line in stdout1:
+                i += 1
+                if i != 1:
+                    print('.......... ' + line.strip('\n'), file=open(mem_out, 'a'))
+            print("\n\n", file=open(mem_out, 'a'))
+
+            print("*********************%s --- %s 服务器的----  磁盘 使用情况 **********************"%(date, hsn), file=open(disk_out, 'a'))
+            stdin2, stdout2, stderr2 = ssh.exec_command("df -h")
+            for line in stdout2:
+                print('... ' + line.strip('\n'), file=open(disk_out, 'a'))
+            print("\n\n", file=open(disk_out, 'a'))
+            print("--------- 输出到 txt 文件中, 完成 100%  ------------" )
+
+            #间隔几秒打印一次
+            sleep(stop_time)
+
+            #设置统计时间段
+            end_time = time.time()
+            if int(int(end_time) - int(start_time)) > state_time:
+                flag = False
+
     except Exception as e:
         print("-------")
     finally:
         ssh.close()
 
-# def listener_cpu1(hsn, usn, psw):
-#     ssh = paramiko.SSHClient()
-#     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#     ssh.connect(hostname=hsn, username=usn, password=psw)
-#
-#     ssh1 = paramiko.SSHClient()
-#     ssh1.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#     ssh1.connect(hostname=hsn, username=usn, password=psw)
-#
-#     try:
-#         # while(True):
-#         out = []
-#         out1 = []
-#         out2 = []
-#         date = datetime.now().strftime('%Y%m%d %H:%M:%S')
-#         # print("*********************%s --- %s 服务器的---- cpu 使用情况 **********************" % (date, hsn))
-#         stdin, stdout, stderr = ssh.exec_command("sar -P 0 -u 1 2")
-#         out = list(stdout)
-#
-#         # print("*********************%s --- %s 服务器的---- 各服务使用 cpu 情况 **********************" % (date, hsn))
-#         stdin3, stdout3, stderr3 = ssh.exec_command("top -bi -n 1 -d 0.02")
-#         out3 = list(stdout3)
-#
-#         # print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn))
-#         stdin1, stdout1, stderr1 = ssh.exec_command("free -h")
-#         out1 = list(stdout1)
-#
-#         # print("*********************%s --- %s 服务器的----  磁盘 使用情况 **********************"%(date, hsn))
-#         stdin2, stdout2, stderr2 = ssh.exec_command("df -h")
-#         out2 = list(stdout2)
-#
-#         return out, out1, out2, out3
-#     except Exception as e:
-#         print("-------")
-#     finally:
-#         ssh.close()
-
-#按钮点击出信息
-# def get_info(hsn, usn, pwd):
-#     # text1.edit_reset()
-#     date = datetime.now().strftime('%Y%m%d %H:%M:%S')
-#     a, b, c, d = listener_cpu1(hsn, usn, pwd)
-#     # cpu 使用情况
-#     text1.insert(INSERT, "--------------时间 %s ***** 服务器 %s cpu 使用情况 -------------------------\n"%(date,hsn))
-#     for j in range(len(a)):
-#         if a[j] != "" or a[j] != None:
-#             text1.insert(INSERT, a[j])
-#
-#     text1.insert(INSERT,'\n\n')
-#     #各服务使用 cpu 情况
-#     text1.insert(INSERT, "--------------时间 %s ***** 服务器 %s 各服务使用 cpu 情况 -------------------------\n"%(date,hsn))
-#     i = 0
-#     num = 1
-#     for j in range(len(d)):
-#         if d[j] != "" or d[j] != None:
-#             i += 1
-#             if i < 6:
-#                 text1.insert(INSERT, d[j])
-#
-#     text1.insert(INSERT, '\n\n')
-#     # mem 使用情况
-#     text1.insert(INSERT, "---------------时间 %s ***** 服务器 %s mem 使用情况 -------------------------\n"%(date,hsn))
-#     for j in range(len(b)):
-#         if b[j] != "" or b[j] != None:
-#             text1.insert(INSERT, b[j])
-#
-#     text1.insert(INSERT, '\n\n')
-#     # 磁盘 使用情况
-#     text1.insert(INSERT, "---------------时间 %s ***** 服务器 %s 磁盘 使用情况 -------------------------\n"%(date,hsn))
-#     for j in range(len(c)):
-#         if c[j] != "" or c[j] != None:
-#             text1.insert(INSERT, c[j])
-#
-# def get_listener(num):
-#
-#     # text2.destory()
-#     text1.delete('1.0', '100.0')
-#     get_info('180.2.34.23', 'qte', 'qte')
-#     # get_info1('180.2.34.24', 'qte', 'qte')
-#     at1 = text1.after(5, get_listener, 1)
-#
-# def get_listener_b(num):
-#
-#     # text1.destory()
-#     text1.delete('1.0', '100.0')
-#     # get_info('180.2.34.23', 'qte', 'qte')
-#     get_info('180.2.34.24', 'qte', 'qte')
-#     at2 = text1.after(5, get_listener_b, 1)
-#
-# def get_pause():
-#     os.system('pause')
-#
-#
-# def tkinkerDemo():
-#     window = tk.Tk()
-#     window.title("服务器监控")
-#     # window.resizable(800, 500)
-#     window.geometry('800x550')
-#
-#     fm = tk.Frame(window)
-#     fm.pack()
-#     fm1 = tk.Frame(window, bg='lightgreen')
-#     text1 = Text(fm1, width=300, height=110, bg='lightpink')
-#
-#
-#     btn_qte_a = tk.Button(fm,
-#                   text='23服务',  # 显示在按钮上的文
-#                   )  # 点击按钮式执行的命令
-#     btn_qte_a.pack(side='left', padx=30, pady=20)  # 按钮位置
-#
-#     btn_qte_b = tk.Button(fm,
-#                           text='24服务',  # 显示在按钮上的文字
-#
-#                           )  # 点击按钮式执行的命令
-#     btn_qte_b.pack(side='left', padx=30, pady=20)  # 按钮位置
-#     btn_qte_pause = tk.Button(fm,
-#                           text='暂停',  # 显示在按钮上的文字
-#
-#                           command='hit_me')  # 点击按钮式执行的命令
-#     btn_qte_pause.pack(side='left', padx=30, pady=20)  # 按钮位置
-#
-#     set_sec_txt = tk.Entry(fm, textvariable ='输入秒数...').pack(side='left')
-#
-#     text1.pack()
-#     fm1.pack()
-#     btn_qte_a.bind("<Button-1>", get_listener)
-#     btn_qte_b.bind("<Button-1>", get_listener_b)
-#     # text1.after(5, get_listener_b, 1)
-#     btn_qte_pause.bind("<Button-1>", get_pause)
-#     fm.pack(padx=0, pady=10)
-#
-#     window.update()
-#     window.mainloop()
-
-
 
 if __name__ == "__main__":
 
-    while(True):
-        listener_cpu(config.qtesvr_a["hostname"], config.qtesvr_a["username"], config.qtesvr_a["psw"])
-        listener_cpu(config.qtesvr_b["hostname"], config.qtesvr_b["username"], config.qtesvr_b["psw"])
-        # sleep(1)
+    threads = []
 
-    # listener_cpu('47.105.140.34', 'root', '________')
-    # tkinkerDemo()
+    svrname = input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.qtesvr_a["hostname"],))
+    svrname1 = input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.qtesvr_b["hostname"],))
+    set_time = input("请输入 间隔多少秒 监控一次(秒)：" )
+    state_time = input("请输入 监控多长分钟（分）：")
+
+    #分两个进程，同步运行
+    t = threading.Thread(target=listener_cpu, args=(config.qtesvr_a["hostname"], config.qtesvr_a["username"], config.qtesvr_a["psw"], config.qtesvr_a["out_txt"], svrname, set_time, state_time))
+    t1 = threading.Thread(target=listener_cpu, args=(config.qtesvr_b["hostname"], config.qtesvr_b["username"], config.qtesvr_b["psw"], config.qtesvr_b["out_txt"], svrname1, set_time, state_time))
+
+    t.start()
+    t1.start()
+
+    t.join()
+    t1.join()

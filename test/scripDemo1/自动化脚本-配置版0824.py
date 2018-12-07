@@ -88,7 +88,7 @@ def init_reg(hostinfo):
         stdin, stdout, stderr = ssh.exec_command(host['script_run'])
         time.sleep(100)
         time_total = 0
-        cmd = 'cat /ssd/log/initsvr.log'  # 登记初始化检查的日志名称
+        cmd = 'cat /home/reg1/ssd/log/initsvr.log'  # 登记初始化检查的日志名称
         while True:
             if time_total > 1800:
                 print(host['hostname'] + '登记初始化，抽数据超时，请手动检查')
