@@ -146,6 +146,7 @@ def init_tra(hostinfo):
         ssh.close()
 
 
+
 # 指数初始化
 def init_tip(hostinfo):
     ssh = paramiko.SSHClient()

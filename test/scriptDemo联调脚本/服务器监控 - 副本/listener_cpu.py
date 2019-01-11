@@ -24,13 +24,12 @@ py: python3.6
 
 """
 
-
 import paramiko
 import config
 from datetime import datetime
 from time import sleep
 import time
-import threading 
+import threading
 
 def listener_cpu(hsn, usn, psw, out, svr_name, st_time, ste_time):
     ssh = paramiko.SSHClient()
@@ -67,6 +66,7 @@ def listener_cpu(hsn, usn, psw, out, svr_name, st_time, ste_time):
                 stdin3, stdout3, stderr3 = ssh.exec_command(comd)
                 for line in stdout3:
                     print('... ' + line.strip('\n'), file=open(svr_out, 'a'))
+                print(stderr3)
             print("\n\n", file=open(svr_out, 'a'))
 
             print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn), file=open(mem_out, 'a'))
@@ -103,18 +103,31 @@ def listener_cpu(hsn, usn, psw, out, svr_name, st_time, ste_time):
 if __name__ == "__main__":
 
     threads = []
-
-    svrname = input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.qtesvr_a["hostname"],))
-    svrname1 = input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.qtesvr_b["hostname"],))
+    svrname = []
+    for m in range(len(config.svr_info)):
+        svrname.append( input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.svr_info[m]["hostname"],)))
+    #svrname1 = input("请输入 %s 服务器的某些服务的服务名(以逗号分隔)："%(config.qtesvr_b["hostname"],))
     set_time = input("请输入 间隔多少秒 监控一次(秒)：" )
     state_time = input("请输入 监控多长分钟（分）：")
 
+    for i in range(len(config.svr_info)):
+        t = threading.Thread(target=listener_cpu, args=(
+        config.svr_info[i]["hostname"], config.svr_info[i]["username"], config.svr_info[i]["psw"], config.svr_info[i]["out_txt"],
+        svrname[i], set_time, state_time))
+        threads.append(t)
+
+
+    for j in range(len(config.svr_info)):
+        threads[j].start()
+
+    for k in range(len(config.svr_info)):
+        threads[k].join()
     #分两个进程，同步运行
-    t = threading.Thread(target=listener_cpu, args=(config.qtesvr_a["hostname"], config.qtesvr_a["username"], config.qtesvr_a["psw"], config.qtesvr_a["out_txt"], svrname, set_time, state_time))
-    t1 = threading.Thread(target=listener_cpu, args=(config.qtesvr_b["hostname"], config.qtesvr_b["username"], config.qtesvr_b["psw"], config.qtesvr_b["out_txt"], svrname1, set_time, state_time))
-
-    t.start()
-    t1.start()
-
-    t.join()
-    t1.join()
+    # t = threading.Thread(target=listener_cpu, args=(config.qtesvr_a["hostname"], config.qtesvr_a["username"], config.qtesvr_a["psw"], config.qtesvr_a["out_txt"], svrname, set_time, state_time))
+    # t1 = threading.Thread(target=listener_cpu, args=(config.qtesvr_b["hostname"], config.qtesvr_b["username"], config.qtesvr_b["psw"], config.qtesvr_b["out_txt"], svrname1, set_time, state_time))
+    #
+    # t.start()
+    # t1.start()
+    #
+    # t.join()
+    # t1.join()

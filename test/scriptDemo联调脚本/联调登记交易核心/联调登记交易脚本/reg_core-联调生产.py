@@ -104,7 +104,7 @@ def modefy_reg_conf(ipp,unm,passd,ser_list,conf_name,back_dir):  ##修改 conf�
                 if '"name"' in line and mark1 == False:
                     line_rownum = data.index(line)
                     nstr = cfg[:-4]
-                    new_line = '    "name" : "/ssd/log/%s",\n'%nstr
+                    new_line = '    "name" : "/home/reg1/ssd/log/%s",\n'%nstr
                     data[line_rownum] = new_line
                     print('更新 %s 文件log参数 成功 。'%cfg)
                     mark1 = True
@@ -133,7 +133,7 @@ def modefy_rescur(ipp,unm,passd,ser_list,conf_name,old_version_path):
                     data[num] = '"grp_cfg" : "/nfs/conf/reg_group.cfg",\n'
                 if '"name"' in line:
                     num = data.index(line)
-                    data[num] = '"name" : "/ssd/log/rescsvr",\n'
+                    data[num] = '"name" : "/home/reg1/ssd/log/rescsvr",\n'
             with open('rescsvr.cfg','w+') as fr2:
                 for line in data:
                     fr2.write(line)
@@ -147,7 +147,7 @@ def modefy_rescur(ipp,unm,passd,ser_list,conf_name,old_version_path):
                     data[num] = '"grp_cfg" : "./conf/group_sync.cfg",\n'
                 if '"name"' in line:
                     num = data.index(line)
-                    data[num] = '"name" : "/ssd/log/syncsvr-A",\n'
+                    data[num] = '"name" : "/home/reg1/ssd/log/syncsvr-A",\n'
                 if '"listen_port"' in line:
                     num = data.index(line)
                     data[num] = '"listen_port" : 9203,\n'
@@ -168,7 +168,7 @@ def modefy_rescur(ipp,unm,passd,ser_list,conf_name,old_version_path):
                     data[num] = '"grp_cfg" : "./conf/group_sync.cfg",\n'
                 if '"name"' in line:
                     num = data.index(line)
-                    data[num] = '"name" : "/ssd/log/syncsvr-B",\n'
+                    data[num] = '"name" : "/home/reg1/ssd/log/syncsvr-B",\n'
                 if '"listen_port"' in line:
                     num = data.index(line)
                     data[num] = '"listen_port" : 9204,\n'
@@ -189,7 +189,7 @@ def modefy_rescur(ipp,unm,passd,ser_list,conf_name,old_version_path):
                     data[num] = '"grp_cfg" : "/nfs/conf/reg_group.cfg",\n'
                 if '"name"' in line:
                     num = data.index(line)
-                    data[num] = '"name" : "/ssd/log/rescsvr_db",\n'
+                    data[num] = '"name" : "/home/reg1/ssd/log/rescsvr_db",\n'
                 if '"user_nm"' in line :
                     num = data.index(line)
                     data[num] = '"user_nm"   : "REG_USER",\n'
@@ -234,7 +234,7 @@ def complex_init(ipp,unm,passd,ser_list,conf_name,back_dir):
                     print('find name')
                     num = data.index(line) - 1
                     if '"log" : {' in data[num]:
-                        data[num+1] = '        "name":"/ssd/log/initsvr",\n'
+                        data[num+1] = '        "name":"/home/reg1/ssd/log/initsvr",\n'
                 if '"nfs_dir"' in line:
                     num = data.index(line)
                     data[num] = '        "nfs_dir":"/nfs/data"\n'

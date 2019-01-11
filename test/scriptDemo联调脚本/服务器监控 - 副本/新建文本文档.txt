@@ -1,0 +1,1 @@
+authsvr,corpsvr,bridgesvr,dealsvr,infosvr,loginsvr,qte_acsvr,quotaacsvr,qte_qy,mem2dbsvr
