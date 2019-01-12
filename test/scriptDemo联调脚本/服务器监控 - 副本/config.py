@@ -5,11 +5,17 @@
 """
 svr_info = [
     {
-        "hostname": '180.2.34.24',
-        "username": 'qte',
-        "psw": 'thisisapwd',
-        "out_txt": '3424'
+        "hostname": '47.105.140.34',
+        "username": 'root',
+        "psw": 'ryn812373?',
+        "out_txt": '14034'
     },
+    {
+        "hostname": '47.105.140.34',
+        "username": 'root',
+        "psw": 'ryn812373?',
+        "out_txt": '14035'
+    }
 
 ]
 
