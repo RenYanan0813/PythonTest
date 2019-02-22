@@ -5,15 +5,15 @@
 """
 svr_info = [
     {
-        "hostname": '47.105.140.3',
-        "username": 'root',
-        "psw": 'ryn',
+        "hostname": '180.2.34.24',
+        "username": 'qte',
+        "psw": 'thisisapwd',
         "out_txt": '14034'
     },
     {
-        "hostname": '47.105.140.3',
-        "username": 'root',
-        "psw": 'ryn',
+        "hostname": '180.2.35.195',
+        "username": 'sge',
+        "psw": 'sge',
         "out_txt": '14035'
     }
 
