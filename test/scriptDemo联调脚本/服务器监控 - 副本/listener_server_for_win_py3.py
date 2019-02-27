@@ -69,7 +69,7 @@ def listener_cpu(hsn, usn, psw, out, svr_name, sleep_time, listen_time):
             print("\n\n", file=open(svr_out, 'a'))
 
             #间隔几秒打印一次
-            sleep(stop_time)
+            # sleep(stop_time)
 
             #设置统计时间段
             end_time = time.time()
