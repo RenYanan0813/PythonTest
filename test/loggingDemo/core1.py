@@ -7,7 +7,7 @@ __author__ = "renyanan"
 
 import logging
 
-logger = logging.getLogger('main.core')
+logger = logging.getLogger('yaml_main.core1')
 
 def run():
     try:
@@ -17,3 +17,4 @@ def run():
         logger.debug('Core1 Debug')
         logger.error('Core1 Error', exc_info=True)
         logger.exception('error')
+

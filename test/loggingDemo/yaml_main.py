@@ -13,7 +13,7 @@ import logging.config
 import os
 
 
-def setup_logging(default_path='config.yaml', default_level=logging.INFO):
+def setup_logging(default_path, default_level=logging.DEBUG):
     path = default_path
     if os.path.exists(path):
         with open(path, 'r', encoding='utf-8') as f:
@@ -24,14 +24,12 @@ def setup_logging(default_path='config.yaml', default_level=logging.INFO):
 
 
 def log():
-    logging.debug('Start')
-    logging.info('Exec')
-    logging.info('Finished')
-
+    result = 5 / 0
+    print(result)
 
 if __name__ == '__main__':
+    # log()
     yaml_path = 'config.yaml'
     setup_logging(yaml_path)
+    # core1.run()
     log()
-    core.run()
-    core1.run()

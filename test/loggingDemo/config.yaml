@@ -14,12 +14,12 @@ handlers:
     class : logging.FileHandler
     formatter: simple
     level: DEBUG
-    filename: debug.log
+    filename: yaml_debug1.log
   error:
     class: logging.handlers.RotatingFileHandler
-    level: ERROR
+    level: DEBUG
     formatter: simple
-    filename: error.log
+    filename: yaml_error.log
     maxBytes: 10485760
     backupCount: 20
     encoding: utf8

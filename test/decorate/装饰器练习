@@ -1,0 +1,16 @@
+
+
+
+装饰器是可调用的对象，其参数是另一个函数（被装饰的函数）。 装饰器可能会处理被装
+饰的函数，然后把它返回，或者将其替换成另一个函数或可调用对象。
+假如有个名为 decorate 的装饰器：
+@decorate
+def target():
+    print('running target()')
+上述代码的效果与下述写法一样：
+def target():
+    print('running target()')
+
+target = decorate(target)
+两种写法的最终结果一样：上述两个代码片段执行完毕后得到的 target 不一定是原来那个
+target 函数，而是 decorate(target) 返回的函数。
