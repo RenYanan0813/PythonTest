@@ -203,7 +203,7 @@ def listener_svrs(hsn, usn, psw, out_txt, svr_name, sleep_tm, listener_tm):
                   file=open(svr_out, 'a'))
 
             for svr in range(len(server_name)):
-                comd = "top -bi -n 1 -d 0.02 | grep %s" % (server_name[svr])
+                comd = "top -bi -n 1 -d 0.01 | grep %s" % (server_name[svr])
                 stdin3, stdout3, stderr3 = ssh.exec_command(comd)
                 for line in stdout3:
                     print('... ' + line.strip('\n'), file=open(svr_out, 'a'))
