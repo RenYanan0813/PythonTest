@@ -6,3 +6,16 @@
 2018/06/29 21:25:06 - __main__ - DEBUG - 72 - baseConfigDemo - Debugging
 2018/06/29 21:25:06 - __main__ - WARNING - 73 - baseConfigDemo - Warning exists
 2018/06/29 21:25:06 - __main__ - INFO - 74 - baseConfigDemo - Finish
+2019-04-02 14:59:16,510 - __main__ - INFO - This is a log info
+2019-04-02 14:59:20,953 - __main__ - WARNING - Warning exists
+2019-04-02 14:59:22,963 - __main__ - INFO - Finish
+2019-04-02 15:00:53,815 - __main__ - INFO - This is a log info
+2019-04-02 15:00:55,848 - __main__ - DEBUG - Debugging
+2019-04-02 15:00:57,862 - __main__ - WARNING - Warning exists
+2019-04-02 15:00:59,874 - __main__ - INFO - Finish
+2019-04-02 15:36:48,224 - __main__ - INFO - This is a log info
+2019-04-02 15:36:50,278 - __main__ - DEBUG - Debugging
+2019-04-02 15:36:52,288 - __main__ - ERROR - error
+NoneType: None
+2019-04-02 15:36:54,301 - __main__ - WARNING - Warning exists
+2019-04-02 15:36:56,312 - __main__ - INFO - Finish

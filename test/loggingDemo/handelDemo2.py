@@ -19,7 +19,7 @@ logger.addHandler(stream_handler)
 
 # FileHandler
 file_handler = logging.FileHandler('output.log')
-file_handler.setLevel(level=logging.INFO)
+file_handler.setLevel(level=logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
@@ -31,5 +31,6 @@ logger.addHandler(http_handler)
 # Log
 logger.info('This is a log info')
 logger.debug('Debugging')
+logger.error('error', exc_info=True)
 logger.warning('Warning exists')
 logger.info('Finish')

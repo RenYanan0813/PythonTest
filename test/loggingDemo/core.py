@@ -13,3 +13,5 @@ def run():
     logger.info('Core Info')
     logger.debug('Core Debug')
     logger.error('Core Error')
+
+

@@ -11,6 +11,9 @@ __author__ = "renyanan"
     3. IO 监控命令： sar -b 1 3
     4. disk 监控命令： df -h
     5. mem 监控命令：  sar -r 1 3
+    
+    更新 20190227
+    1. 将服务监控命令改回 top -bi -n 1 -d 0.02， 并修改输出格式问题
 """
 
 import config
@@ -34,15 +37,17 @@ def listener_cpu(hsn, usn, psw, out_txt, sleep_tm, listener_tm):
     try:
         #设置起始时间
         start_time = time.time()
+
         while(flag):
             date = datetime.now().strftime('%Y%m%d %H:%M:%S')
 
-            print("*********************%s --- %s 服务器的---- cpu 使用情况 **********************"%(date, hsn), file=open(cpu_out, 'a'))
+            # print("*********************%s --- %s 服务器的---- cpu 使用情况 **********************"%(date, hsn), file=open(cpu_out, 'a'))
+            print("date time ip TIME PM     CPU     %user     %nice   %system   %iowait    %steal     %idle ", file=open(cpu_out, 'a'))
             command1 = "sar -u %s %s" %(sleep_tm, listener_time)
             stdin, stdout, stderr = ssh.exec_command(command1)
             print("正在监控 %s 的 cpu 中..."%(hsn))
             for line in stdout:
-                print('... ' + line.strip('\n'), file=open(cpu_out, 'a'))
+                print(date, hsn, line.strip('\n'), file=open(cpu_out, 'a'))
             print("\n\n", file=open(cpu_out, 'a'))
 
             #间隔几秒打印一次
@@ -78,13 +83,14 @@ def listener_mem(hsn, usn, psw, out_txt, sleep_tm, listener_tm):
         while(flag):
             date = datetime.now().strftime('%Y%m%d %H:%M:%S')
 
-            print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn), file=open(mem_out, 'a'))
+            # print("*********************%s --- %s 服务器的----  mem 使用情况 **********************"%(date, hsn), file=open(mem_out, 'a'))
+            print("date time ip TIME PM kbmemfree kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty ", file=open(mem_out, 'a'))
             # stdin1, stdout1, stderr1 = ssh.exec_command("free -h")
             command = "sar -r %s %s" %(sleep_tm, listener_time)
             stdin1, stdout1, stderr1 = ssh.exec_command(command)
             print("正在监控 %s 的 mem 中..." % (hsn))
             for line in stdout1:
-                print('... ' + line.strip('\n'), file=open(mem_out, 'a'))
+                print(date, hsn, line.strip('\n'), file=open(mem_out, 'a'))
             print("\n\n", file=open(mem_out, 'a'))
             #间隔几秒打印一次
             sleep(stop_time)
@@ -117,12 +123,13 @@ def listener_io(hsn, usn, psw, out_txt, sleep_tm, listener_tm):
         while(flag):
             date = datetime.now().strftime('%Y%m%d %H:%M:%S')
 
-            print("*********************%s --- %s 服务器的---- IO 使用情况 **********************"%(date, hsn), file=open(io_out, 'a'))
+            # print("*********************%s --- %s 服务器的---- IO 使用情况 **********************"%(date, hsn), file=open(io_out, 'a'))
+            print("date time ip TIME PM       tps      rtps      wtps   bread/s   bwrtn/s ", file=open(io_out, 'a'))
             command1 = "sar -b %s %s" %(sleep_tm, listener_time)
             stdin, stdout, stderr = ssh.exec_command(command1)
             print("正在监控 %s 的 IO 中..."%(hsn))
             for line in stdout:
-                print('... ' + line.strip('\n'), file=open(io_out, 'a'))
+                print(date, hsn, line.strip('\n'), file=open(io_out, 'a'))
             print("\n\n", file=open(io_out, 'a'))
 
             #间隔几秒打印一次
@@ -194,19 +201,18 @@ def listener_svrs(hsn, usn, psw, out_txt, svr_name, sleep_tm, listener_tm):
     try:
         # 设置起始时间
         start_time = time.time()
+        print("date time ip PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND \n",
+              file=open(svr_out, 'a'))
         while (flag):
             date = datetime.now().strftime('%Y%m%d %H:%M:%S')
 
             print("*********************%s --- %s 服务器的---- 某些服务使用 cpu 情况 **********************" % (date, hsn),
                   file=open(svr_out, 'a'))
-            print("...   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND \n",
-                  file=open(svr_out, 'a'))
-
             for svr in range(len(server_name)):
                 comd = "top -bi -n 1 -d 0.01 | grep %s" % (server_name[svr])
                 stdin3, stdout3, stderr3 = ssh.exec_command(comd)
                 for line in stdout3:
-                    print('... ' + line.strip('\n'), file=open(svr_out, 'a'))
+                    print(line.strip('\n'), file=open(svr_out, 'a'))
                 print(stderr3)
             print("\n\n", file=open(svr_out, 'a'))
 

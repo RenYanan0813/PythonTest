@@ -1,0 +1,15 @@
+2019-04-09 15:32:29,415 - main - INFO - Main Info
+2019-04-09 15:32:29,415 - main - ERROR - Main Error
+2019-04-09 15:32:29,415 - main.core - INFO - Core Info
+2019-04-09 15:32:29,415 - main.core - ERROR - Core Error
+2019-04-09 15:32:29,415 - main.core1 - INFO - Core1 Info
+2019-04-09 15:32:29,416 - main.core1 - ERROR - Core1 Error
+Traceback (most recent call last):
+  File "D:\gitRepository\PythonTest\test\loggingDemo\core1.py", line 14, in run
+    result = 5 / 0
+ZeroDivisionError: division by zero
+2019-04-09 15:32:29,416 - main.core1 - ERROR - error
+Traceback (most recent call last):
+  File "D:\gitRepository\PythonTest\test\loggingDemo\core1.py", line 14, in run
+    result = 5 / 0
+ZeroDivisionError: division by zero
